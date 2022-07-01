@@ -1,0 +1,32 @@
+@startmindmap
+<style>
+mindmapDiagram {
+  .green {
+    BackgroundColor lightgreen
+  }
+  .rose {
+    BackgroundColor #FFBBCC
+  }
+  .blue {
+    BackgroundColor lightblue
+  }
+}
+</style>
+* Manifold Vault Facility
+ * Continuous Stratagies <<rose>>
+  * Active-based <<blue>>
+   * OpenMEV <<blue>>
+    * Stablecoin-based <<green>>
+   * BentoVault <<blue>>
+    * Stablecoin-based <<green>>
+  * Passive-based <<blue>>
+   * BentoVault-based <<green>>
+ * Bonding Facility <<rose>>
+  * FOLD-based <<blue>>
+   * gFOLD-based <<green>>
+ * Validator Staking <<rose>>
+  * RocketPool-based <<blue>>
+   * rETH-based <<green>>
+  * LidoFinance-based <<blue>>
+   * stETH-based <<green>>
+@endmindmap

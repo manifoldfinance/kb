@@ -1,5 +1,3 @@
-
-
 # ERC20.sol
 
 Modern and gas efficient ERC20 + EIP-2612 implementation.
