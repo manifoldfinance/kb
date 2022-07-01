@@ -5,116 +5,23 @@ author: CommoidtyStream, Inc
 license: COPYRIGHT 2022, CommoidtyStream, Inc.
 sidebar_position: 1
 id: protocol-backbonev01
-description: Contributing and Community Dogma and Social Rules
+description: Backbone Network Reference
 ---
 
 # Backbone Network Reference
 
 v1.05 Specification Document
 
-> click to expand TOC
-
-<details>
-<summary>Table of Contents</summary>
-
-**Describe the bug** A clear and concise description of what the bug is.
-
--   [Backbone Network Reference](#backbone-network-reference)
-    -   [Mempool behavior](#mempool-behavior)
-    -   [Removing and replacing transactions](#removing-and-replacing-transactions)
-    *   [Automatic error messages](#automatic-error-messages)
-        -   [Logging](#logging)
-    *   [Supported hardforks](#supported-hardforks)
-        -   [Transaction ordering](#transaction-ordering)
-    *   [Golang](#golang)
--   [Custom RPC Methods](#custom-rpc-methods)
-    -   [Flashbots/MEV Geth RPC Methods](#flashbots-mev-geth-rpc-methods)
-        -   [`eth_sendBundle`](#-eth-sendbundle-)
-        -   [`eth_callBundle`](#-eth-callbundle-)
-        -   [`eth_callMultiBundle`](#-eth-callmultibundle-)
-    -   [Manifold Backbone Methods](#manifold-backbone-methods)
-        -   [`manifold_dropTransaction`](#-manifold-droptransaction-)
-        -   [`manifold_evictTransaction`](#-manifold-evicttransaction-)
-        -   [`manifold_setLoggingEnabled`](#-manifold-setloggingenabled-)
-        -   [`manifold_CreateAccessList`](#-manifold-createaccesslist-)
-        -   [`eth_multiCall`](#-eth-multicall-)
-    -   [Parity Methods](#parity-methods)
-        -   [`trace_call`](#-trace-call-)
-            -   [Parameters](#parameters)
-            -   [Returns](#returns)
-            -   [Request](#request)
-                -   [Response](#response)
-        -   [`trace_callMany`](#-trace-callmany-)
-            -   [Parameters](#parameters-1)
-            -   [Returns](#returns-1)
-            -   [Request](#request-1)
-            -   [Response](#response-1)
-        -   [`trace_rawTransaction`](#-trace-rawtransaction-)
-            -   [`Parameters`](#-parameters-)
-            -   [Returns](#returns-2)
-            -   [Request](#request-2)
-        -   [`trace_replayBlockTransactions`](#-trace-replayblocktransactions-)
-            -   [Parameters](#parameters-2)
-            -   [Returns](#returns-3)
-            -   [Request](#request-3)
-            -   [Response](#response-2)
-        -   [`trace_replayTransaction`](#-trace-replaytransaction-)
-            -   [Parameters](#parameters-3)
-            -   [Returns](#returns-4)
-            -   [Request](#request-4)
-            -   [Response](#response-3)
-        -   [`trace_block`](#-trace-block-)
-            -   [Parameters](#parameters-4)
-            -   [Returns](#returns-5)
-            -   [Request](#request-5)
-            -   [Response](#response-4)
-        -   [`trace_filter`](#-trace-filter-)
-            -   [Parameters](#parameters-5)
-            -   [Returns](#returns-6)
-            -   [Request](#request-6)
-            -   [Response](#response-5)
-        -   [`trace_get`](#-trace-get-)
-            -   [Parameters](#parameters-6)
-            -   [Returns](#returns-7)
-            -   [Request](#request-7)
-            -   [Response](#response-6)
-        -   [`trace_transaction`](#-trace-transaction-)
-            -   [Parameters](#parameters-7)
-            -   [Returns](#returns-8)
-            -   [Request](#request-8)
-    -   [Relay Switchboard](#relay-switchboard)
-    -   [Global Virtual Mempool](#global-virtual-mempool)
-        -   [`manifold_txpool_health`](#-manifold-txpool-health-)
-        -   [`manifold_txpool_map`](#-manifold-txpool-map-)
-            -   [Parameters](#parameters-8)
-        -   [`manifold_txpool_search`](#-manifold-txpool-search-)
-            -   [Parameters](#parameters-9)
--   [Statediff](#statediff)
-    -   [Statediff object](#statediff-object)
-    -   [Usage](#usage)
-        -   [CLI configuration](#cli-configuration)
-        -   [RPC endpoints](#rpc-endpoints)
-            -   [Subscription endpoint](#subscription-endpoint)
-            -   [Unary endpoints](#unary-endpoints)
-        -   [Direct indexing into Postgres](#direct-indexing-into-postgres)
-            -   [Postgres setup](#postgres-setup)
-            -   [Schema overview](#schema-overview)
-        -   [Optimization](#optimization)
-    -   [HEX value encoding](#hex-value-encoding)
-    -   [Appendix](#appendix)
-    </details>
 
 ## Overview
 
-### Features
-
--   **CDN**: CDN like block propagation network that utilizes optimizations for filtering and connecting nodes, i.e. using eth2 bitvector attrs for node connectivity
+-   **CDN**: CDN-like block propagation network that utilizes optimizations for filtering and connecting nodes
 
 -   **Front-running protection:** transactions will not be seen by generalized bots in the public mempool.
 
 -   **No failed transactions:** transactions will only be mined if it doesn't include any reverts, so users don't pay for failed transactions. Note: transactions could be included in uncle blocks, emitted to the mempool, and then included on-chain.
 
--   **Priority in blocks**: transactions sent via SecureRPC are mined either at the top OR bottom of blocks, giving end users flexability in their use caes.
+-   **Priority in blocks**: transactions sent via SecureRPC are mined either at the top OR bottom of blocks, giving end-users flexibility in their use cases.
 
 -   **Transaction Status integration:** users can see the status of their transactions on either Etherscan or via our API.
 
