@@ -1,6 +1,4 @@
-
 # Uint512.sol
-
 
 ```solidity
 /// @notice Calculates the product of two uint256

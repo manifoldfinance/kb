@@ -1,5 +1,3 @@
-
-
 # SafeTransferLib.sol
 
 Safe ETH and ERC20 transfer library that gracefully handles missing return values.

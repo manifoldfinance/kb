@@ -39,8 +39,8 @@ function swapAndStakeLiquidity(address tokenA, address tokenB, uint256 amountA, 
 
 #### Returns
 
-| Name      | Type    | Description                                            |
-| --------- | ------- | ------------------------------------------------------ |
+| Name      | Type    | Description                                              |
+| --------- | ------- | -------------------------------------------------------- |
 | liquidity | uint256 | amount of liquidity token received, sent to `msg.sender` |
 
 ### swapETHAndStakeLiquidity
@@ -86,4 +86,3 @@ function withdrawLiquidityAndSwap(address pairAddress, uint256 withdrawAmount, a
 | Name      | Type    | Description                     |
 | --------- | ------- | ------------------------------- |
 | amountOut | uint256 | Amount of desiredToken received |
-

@@ -1,5 +1,3 @@
-
-
 # IUniswapV2Router02.sol
 
 ## Methods

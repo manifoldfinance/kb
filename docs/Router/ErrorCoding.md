@@ -4,7 +4,6 @@ sidebar_position: 3
 
 # Custom Error Codes
 
-
 ## Errors
 
 ### IdenticalAddresses
