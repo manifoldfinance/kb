@@ -27,7 +27,10 @@ In Diátaxis, each of these modes (or types) answers to a different user need, f
 
 ## Resources
 
-→ [Telegram](https://t.me/manifoldfinace.com)
-→ [SecureRpc.com](https://securerpc.com)
+→ [Telegram](https://t.me/manifoldfinace.com)    
+→ [SecureRpc.com](https://securerpc.com)    
 
 
+## License
+
+Copyright 2022 (C) - CommodityStream Inc, & Manifold Finance, Inc. All Rights Reserved
