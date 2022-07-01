@@ -3,8 +3,6 @@
 
 [![nodejs](https://github.com/manifoldfinance/kb/actions/workflows/nodejs.yml/badge.svg)](https://github.com/manifoldfinance/kb/actions/workflows/nodejs.yml)
 
-## Overview
-
 > **Warning** <br />
 > This resource is in active development, content may be inaccurate or out of date!
 
@@ -27,11 +25,9 @@ Diátaxis identifies four modes of documentation - tutorials, how-to guides, tec
 
 In Diátaxis, each of these modes (or types) answers to a different user need, fulfils a different purpose and requires a different approach to its creation.
 
-## Overview
+## Resources
 
-This is a Docusarus Site templated with the Diataxis layout of creating and viewing documentation. 
+→ [Telegram](https://t.me/manifoldfinace.com)
+→ [SecureRpc.com](https://securerpc.com)
 
 
-### License
-
-[UPL-1.0](LICENSE.txt)
