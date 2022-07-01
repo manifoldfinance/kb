@@ -14,7 +14,7 @@ Enables permit-style approvals for all ERC20 tokens, regardless of whether they 
 function currentNonce(address) external view returns (uint256)
 ```
 
-:::note Details Owner -&gt; current nonce. :::
+:::note Details Owner and current nonce. :::
 
 #### Parameters
 

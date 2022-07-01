@@ -1,6 +1,4 @@
----
-description:
----
+
 
 # TwoStepOwnable.sol
 

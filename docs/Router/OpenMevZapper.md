@@ -4,7 +4,7 @@ description: OpenMevZapper
 
 # OpenMevZapper.sol
 
-Optimal UniswapV2Pair Liquidity deposits and withdrawls with a single token / eth (or relevant native currency)
+Optimal UniswapV2Pair Liquidity deposits and withdrawals with a single token / ETH (or relevant native currency)
 
 ## Methods
 
@@ -22,7 +22,7 @@ function router() external view returns (contract IOpenMevRouter)
 
 ### swapAndStakeLiquidity
 
-Adds liquidity to an ERC-20⇄ERC-20 pool from a single token. msg.sender should have already given the router an allowance of at least amountA on tokenA
+Adds liquidity to an ERC-20⇄ERC-20 pool from a single token. `msg.sender` should have already given the router an allowance of at least `amountA` on `tokenA`
 
 ```solidity title="Solidity"
 function swapAndStakeLiquidity(address tokenA, address tokenB, uint256 amountA, uint256 amountBMin) external nonpayable returns (uint256 liquidity)
@@ -41,7 +41,7 @@ function swapAndStakeLiquidity(address tokenA, address tokenB, uint256 amountA, 
 
 | Name      | Type    | Description                                            |
 | --------- | ------- | ------------------------------------------------------ |
-| liquidity | uint256 | amount of liquidity token received, sent to msg.sender |
+| liquidity | uint256 | amount of liquidity token received, sent to `msg.sender` |
 
 ### swapETHAndStakeLiquidity
 
@@ -87,70 +87,3 @@ function withdrawLiquidityAndSwap(address pairAddress, uint256 withdrawAmount, a
 | --------- | ------- | ------------------------------- |
 | amountOut | uint256 | Amount of desiredToken received |
 
-## Errors
-
-### IdenticalAddresses
-
-```solidity title="Solidity"
-error IdenticalAddresses()
-```
-
-### InsufficientAAmount
-
-```solidity title="Solidity"
-error InsufficientAAmount()
-```
-
-### InsufficientAllowance
-
-```solidity title="Solidity"
-error InsufficientAllowance()
-```
-
-### InsufficientBAmount
-
-```solidity title="Solidity"
-error InsufficientBAmount()
-```
-
-### InsufficientLiquidity
-
-```solidity title="Solidity"
-error InsufficientLiquidity()
-```
-
-### InsufficientOutputAmount
-
-```solidity title="Solidity"
-error InsufficientOutputAmount()
-```
-
-### InvalidPath
-
-```solidity title="Solidity"
-error InvalidPath()
-```
-
-### Overflow
-
-```solidity title="Solidity"
-error Overflow()
-```
-
-### TransferFailed
-
-```solidity title="Solidity"
-error TransferFailed()
-```
-
-### ZeroAddress
-
-```solidity title="Solidity"
-error ZeroAddress()
-```
-
-### ZeroAmount
-
-```solidity title="Solidity"
-error ZeroAmount()
-```

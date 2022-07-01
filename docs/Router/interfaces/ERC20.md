@@ -1,6 +1,4 @@
----
-description:
----
+
 
 # ERC20.sol
 

@@ -94,7 +94,7 @@ function cancelOwnershipTransfer() external payable
 
 ### executeOperation
 
-Called from Aave Lending pool after contract has received the flash loaned amount (https://docs.aave.com/developers/v/2.0/guides/flash-loans)
+Called from Aave Lending pool after the contract has received the flash loaned amount (https://docs.aave.com/developers/v/2.0/guides/flash-loans)
 
 ```solidity title="Solidity"
 function executeOperation(address[] assets, uint256[] amounts, uint256[] premiums, address initiator, bytes params) external nonpayable returns (bool)

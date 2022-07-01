@@ -1,0 +1,42 @@
+
+[build]
+  command = "yarn install && yarn run build"
+  publish = "build"
+
+  [build.processing]
+    skip_processing = false
+  [build.processing.css]
+    bundle = true
+    minify = true
+  [build.processing.js]
+    bundle = true
+    minify = true
+  [build.processing.html]
+    pretty_urls = true
+  [build.processing.images]
+    compress = true
+
+
+ [headers]
+# Define which paths this specific [[headers]] block will cover.
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+
+[build.analyze]
+  command = "ANALYZE=true gatsby build"
+
+#[[headers]]
+#  for = "/*" # This defines which paths this specific [[headers]] block will cover.
+#  [headers.values]
+#    X-Frame-Options = "DENY"
+#    X-XSS-Protection = "1; mode=block"
+#    Content-Security-Policy = "frame-ancestors https://www.facebook.com"
+#    # Multi-key header rules are expressed with multi-line strings
+#    Link = '''
+#    </assets/css/base.css>; rel=preload; as=style, \
+#    </assets/css/base2.css>; rel=preload; as=style, \
+#    </assets/css/base3.css>; rel=preload; as=style'''
+#    # Basic-Auth allows you to password protect your whole site but is only available
+#    # to paid accounts
+#    Basic-Auth = "someuser:somepassword anotheruser:anotherpassword"
