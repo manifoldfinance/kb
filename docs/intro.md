@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-id: docs-intro
+id: intro
 title: Introduction
 description: Preface and Introduction to the Knowledge Base
 ---
