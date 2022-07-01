@@ -11,17 +11,17 @@ To send a _single_ transaction without having to send it as a bundle, use the `s
 
 ```js
 const tx = {
-    from: wallet.address,
-    to: wallet.address,
-    value: "0x42",
-    gasPrice: BigNumber.from(99).mul(1e9), // 99 gwei
-    gasLimit: BigNumber.from(21000),
-}
+	from: wallet.address,
+	to: wallet.address,
+	value: "0x42",
+	gasPrice: BigNumber.from(99).mul(1e9), // 99 gwei
+	gasLimit: BigNumber.from(21000),
+};
 const privateTx = {
-    transaction: tx,
-    signer: wallet,
-}
-const res = await flashbotsProvider.sendPrivateTransaction(privateTx)
+	transaction: tx,
+	signer: wallet,
+};
+const res = await flashbotsProvider.sendPrivateTransaction(privateTx);
 ```
 
 Optionally, you can set the following parameters to fine-tune your submission:
@@ -31,8 +31,5 @@ Optionally, you can set the following parameters to fine-tune your submission:
 const maxBlockNumber = (await provider.getBlockNumber()) + 10;
 // timestamp for simulations
 const minTimestamp = 1645753192;
-const res = await flashbotsProvider.sendPrivateTransaction(
-  privateTx, 
-  {maxBlockNumber, minTimestamp}
-)
+const res = await flashbotsProvider.sendPrivateTransaction(privateTx, { maxBlockNumber, minTimestamp });
 ```
