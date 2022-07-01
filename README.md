@@ -1,41 +1,25 @@
-# Website
+# [Diátaxis](https://diataxis.fr/)
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+> A systematic framework for technical documentation authoring.
 
-### Installation
+> The Grand Unified Theory of Documentation
 
-```
-$ yarn
-```
+—David Laing
 
-### Local Development
+The Diátaxis framework aims to solve the problem of structure in technical documentation. It adopts a systematic approach to understanding the needs of documentation users in their cycle of interaction with a product.
 
-```
-$ yarn start
-```
+> **Note** <br />
+> The name Diátaxis comes from the Ancient Greek δῐᾰ́τᾰξῐς: dia (“across”) and taxis (“arrangement”).
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+Diátaxis identifies four modes of documentation - tutorials, how-to guides, technical reference and explanation. It derives its structure from the relationship between them.
 
-### Build
+In Diátaxis, each of these modes (or types) answers to a different user need, fulfils a different purpose and requires a different approach to its creation.
 
-```
-$ yarn build
-```
+## Overview
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+This is a Docusarus Site templated with the Diataxis layout of creating and viewing documentation. 
 
-### Deployment
 
-Using SSH:
+### License
 
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+[UPL-1.0](LICENSE.txt)
