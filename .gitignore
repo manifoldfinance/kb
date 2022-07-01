@@ -4,7 +4,9 @@ cache/
 artifacts/
 logs
 *.log
-
+docs/tmp/**/*
+docs/_workspace/
+_workspace/
 ## CVE-2021-21300 style exploits
 .\#*
 
