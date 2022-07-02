@@ -2,6 +2,7 @@
 id: ref-metrics
 title: Metrics and Key Performance Indicators
 description: Collected KPI's and Metrics
+sidebar_position: 4
 ---
 
 # Platform Metrics
