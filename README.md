@@ -1,10 +1,20 @@
-# [Diátaxis](https://diataxis.fr/)
+# [`kb.docs`](#)
 
-> A systematic framework for technical documentation authoring.
 
-> The Grand Unified Theory of Documentation
+[![nodejs](https://github.com/manifoldfinance/kb/actions/workflows/nodejs.yml/badge.svg)](https://github.com/manifoldfinance/kb/actions/workflows/nodejs.yml)
 
-—David Laing
+> **Warning** <br />
+> This resource is in active development, content may be inaccurate or out of date!
+
+This is the home of the `kb.docs` resource. V2 Documentation is maintained here. This resource follows the `Diátaxis` guidelines, which you can read more about below.
+
+If you have a question you can always post it on our discourse forums → [forums.manifoldfinance.com](https://forums.manifoldfinnce.com)
+
+### [Diátaxis](https://diataxis.fr/)
+
+> A systematic framework for technical documentation authoring. <br />
+> The Grand Unified Theory of Documentation <br />
+>             —David Laing
 
 The Diátaxis framework aims to solve the problem of structure in technical documentation. It adopts a systematic approach to understanding the needs of documentation users in their cycle of interaction with a product.
 
@@ -14,10 +24,10 @@ Diátaxis identifies four modes of documentation - tutorials, how-to guides, tec
 
 In Diátaxis, each of these modes (or types) answers to a different user need, fulfils a different purpose and requires a different approach to its creation.
 
-## Overview
+## Resources
 
 This is a Docusarus Site templated with the Diataxis layout of creating and viewing documentation.
 
-### License
+## License
 
-[UPL-1.0](LICENSE.txt)
+Copyright 2022 (C) - CommodityStream Inc, & Manifold Finance, Inc. All Rights Reserved
