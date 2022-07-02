@@ -45,43 +45,42 @@ Open `docs/intro.md` (this page) and edit some lines: the site **reloads automat
 
 ## Line highlighting
 
-Highlighting with comments
-You can use comments with highlight-next-line, highlight-start, and highlight-end to select which lines are highlighted.
+Highlighting with comments You can use comments with highlight-next-line, highlight-start, and highlight-end to select which lines are highlighted.
 
 ```js
 function HighlightSomeText(highlight) {
-  if (highlight) {
-    // highlight-next-line
-    return 'This text is highlighted!';
-  }
+	if (highlight) {
+		// highlight-next-line
+		return "This text is highlighted!";
+	}
 
-  return 'Nothing highlighted';
+	return "Nothing highlighted";
 }
 
 function HighlightMoreText(highlight) {
-  // highlight-start
-  if (highlight) {
-    return 'This range is highlighted!';
-  }
-  // highlight-end
+	// highlight-start
+	if (highlight) {
+		return "This range is highlighted!";
+	}
+	// highlight-end
 
-  return 'Nothing highlighted';
+	return "Nothing highlighted";
 }
 ```
 
-
 ### Line numbering
+
 You can enable line numbering for your code block by using showLineNumbers key within the language meta string (don't forget to add space directly before the key).
 
 ```jsx {1,4-6,11} showLineNumbers
-import React from 'react';
+import React from "react";
 
 function MyComponent(props) {
-  if (props.isBar) {
-    return <div>Bar</div>;
-  }
+	if (props.isBar) {
+		return <div>Bar</div>;
+	}
 
-  return <div>Foo</div>;
+	return <div>Foo</div>;
 }
 
 export default MyComponent;
@@ -112,7 +111,6 @@ contract CallTester  {
     }
 }
 ```
-
 
 ```solidity {1,4-6,11} showLineNumbers
 pragma solidity ^0.6.12 || ^0.7.0;

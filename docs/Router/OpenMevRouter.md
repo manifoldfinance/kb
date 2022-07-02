@@ -1,10 +1,9 @@
 ---
 sidebar_position: 1
 id: router-openmev
-title: OpenMev Swap Router 
+title: OpenMev Swap Router
 description: OpenMevRouterV01
 ---
-
 
 # OpenMevRouter
 
