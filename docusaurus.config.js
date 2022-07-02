@@ -1,5 +1,7 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
+const math = require('remark-math');
+const katex = require('rehype-katex');
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
@@ -31,9 +33,10 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          path: 'docs',
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
           editUrl:
             'https://github.com/manifoldfinance/kb/tree/trunk/',
         },
@@ -50,6 +53,15 @@ const config = {
       }),
     ],
   ],
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
+  ],
   themeConfig: {
     liveCodeBlock: {
       /**
@@ -60,9 +72,9 @@ const config = {
     },
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     navbar: {
-      title: 'My Site',
+      title: 'Manifold Finance',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Manifold',
         src: 'img/logo.svg',
       },
       items: [
@@ -128,6 +140,19 @@ const config = {
     prism: {
       theme: lightCodeTheme,
       darkTheme: darkCodeTheme,
+      additionalLanguages: ['solidity'],
+      magicComments: [
+        // Remember to extend the default highlight class name as well!
+        {
+          className: 'theme-code-block-highlighted-line',
+          line: 'highlight-next-line',
+          block: {start: 'highlight-start', end: 'highlight-end'},
+        },
+        {
+          className: 'code-block-dappspec-line',
+          line: '!Dappspec',
+        },
+      ],
     },
   },
 };

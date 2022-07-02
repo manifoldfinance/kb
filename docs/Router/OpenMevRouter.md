@@ -1,14 +1,18 @@
 ---
-description: OpenMevRouter
+sidebar_position: 1
+id: router-openmev
+title: OpenMev Swap Router 
+description: OpenMevRouterV01
 ---
 
-# OpenMevRouter.sol
+
+# OpenMevRouter
 
 Optimal MEV router contract (IUniswapV2Router compatible)
 
 ## Methods
 
-### WETH
+### WETH09
 
 ```solidity title="Solidity"
 function WETH() external pure returns (address)

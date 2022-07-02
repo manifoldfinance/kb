@@ -1,8 +1,15 @@
-# IOpenMevRouter.sol
+---
+sidebar_position: 2
+id: router-interface
+title: IOpenMevRoter
+description: Interface for OpenMevRouter
+---
+
+# IOpenMevRouter
 
 ## Methods
 
-### WETH
+### WETH09
 
 ```solidity title="Solidity"
 function WETH() external pure returns (address)

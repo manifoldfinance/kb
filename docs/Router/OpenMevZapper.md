@@ -1,8 +1,11 @@
 ---
-description: OpenMevZapper
+sidebar_position: 1
+id: router-zapper
+title: Atomic deposits and withdrawls
+description: OpenMevZapperV01
 ---
 
-# OpenMevZapper.sol
+# OpenMevZapper
 
 Optimal UniswapV2Pair Liquidity deposits and withdrawals with a single token / ETH (or relevant native currency)
 
@@ -10,7 +13,7 @@ Optimal UniswapV2Pair Liquidity deposits and withdrawals with a single token / E
 
 ### router
 
-```solidity title="Solidity"
+```solidity
 function router() external view returns (contract IOpenMevRouter)
 ```
 
@@ -24,7 +27,7 @@ function router() external view returns (contract IOpenMevRouter)
 
 Adds liquidity to an ERC-20⇄ERC-20 pool from a single token. `msg.sender` should have already given the router an allowance of at least `amountA` on `tokenA`
 
-```solidity title="Solidity"
+```solidity
 function swapAndStakeLiquidity(address tokenA, address tokenB, uint256 amountA, uint256 amountBMin) external nonpayable returns (uint256 liquidity)
 ```
 

@@ -1,3 +1,9 @@
+---
+id: ref-validator-rate
+title: Etherbase Overnight Rate
+description: Etherbase Overnight Rate Index Calculation 
+---
+
 ### EOR - Etherbase Overnight Rate
 
 The Ethereum 2 network is secured with a proof of stake mechanism. Users stake their ETH to become a validator on the network. Validators that are actively working to secure the network receive rewards to increase their staked balance, conversely, validators that perform actions to destabilize or attack the network risk having the balance reduced.

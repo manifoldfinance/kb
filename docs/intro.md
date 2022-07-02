@@ -5,9 +5,9 @@ title: Introduction
 description: Preface and Introduction to the Knowledge Base
 ---
 
-# Tutorial Intro
+# Ground Truth
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Stop thinking of documentation as a chore you do for others, and instead think of it as a way to explore your problem space. and the space in your head around your intuitions about the problem, so you can shine light into the murkier corners of both. Writing documentation can function as valuable knowledge capture about your problem domain even when you are the only expert about what you are trying to do.
 
 ## Getting Started
 
@@ -42,3 +42,98 @@ The `cd` command changes the directory you're working with. To work with your ne
 The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
 
 Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+
+## Line highlighting
+
+Highlighting with comments
+You can use comments with highlight-next-line, highlight-start, and highlight-end to select which lines are highlighted.
+
+```js
+function HighlightSomeText(highlight) {
+  if (highlight) {
+    // highlight-next-line
+    return 'This text is highlighted!';
+  }
+
+  return 'Nothing highlighted';
+}
+
+function HighlightMoreText(highlight) {
+  // highlight-start
+  if (highlight) {
+    return 'This range is highlighted!';
+  }
+  // highlight-end
+
+  return 'Nothing highlighted';
+}
+```
+
+
+### Line numbering
+You can enable line numbering for your code block by using showLineNumbers key within the language meta string (don't forget to add space directly before the key).
+
+```jsx {1,4-6,11} showLineNumbers
+import React from 'react';
+
+function MyComponent(props) {
+  if (props.isBar) {
+    return <div>Bar</div>;
+  }
+
+  return <div>Foo</div>;
+}
+
+export default MyComponent;
+```
+
+## Dappspec - Natspec support
+
+```solidity
+pragma solidity ^0.6.12 || ^0.7.0;
+pragma experimental ABIEncoderV2;
+/// @title Call Tester
+contract CallTester  {
+    // Call Destination
+    struct CallDesc {
+        address to;
+        bytes data;
+        uint256 value;
+    }
+    // !Dappspec
+    // make call to dest.
+    function makeCalls(CallDesc[] memory calls) external payable returns (bytes memory ret) {
+        for (uint i = 0; i < calls.length; i++) {
+            CallDesc memory c = calls[i];
+            (bool ok, bytes memory data) = c.to.call{value: c.value}(c.data);
+            require(ok, "ERR");
+            ret = data;
+        }
+    }
+}
+```
+
+
+```solidity {1,4-6,11} showLineNumbers
+pragma solidity ^0.6.12 || ^0.7.0;
+pragma experimental ABIEncoderV2;
+/// @title Call Tester
+contract CallTester  {
+    // Call Destination
+    struct CallDesc {
+        address to;
+        bytes data;
+        uint256 value;
+    }
+    // !Dappspec
+    // make call to dest.
+    function makeCalls(CallDesc[] memory calls) external payable returns (bytes memory ret) {
+        for (uint i = 0; i < calls.length; i++) {
+            CallDesc memory c = calls[i];
+            (bool ok, bytes memory data) = c.to.call{value: c.value}(c.data);
+            require(ok, "ERR");
+            ret = data;
+        }
+    }
+}
+```
