@@ -5,7 +5,6 @@ title: Custom Error codes
 description: Custom error codes for OpenMevRouter
 ---
 
-
 # Custom Error Codes
 
 ## Errors

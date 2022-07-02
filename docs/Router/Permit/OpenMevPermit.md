@@ -5,7 +5,6 @@ title: Permit Library
 description: OpenMEVpermitterV01
 ---
 
-
 # OpenMEVpermitter.sol
 
 Enables permit-style approvals for all ERC20 tokens, regardless of whether they implement EIP2612 or not.

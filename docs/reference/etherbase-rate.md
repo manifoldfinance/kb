@@ -1,7 +1,7 @@
 ---
 id: ref-validator-rate
 title: Etherbase Overnight Rate
-description: Etherbase Overnight Rate Index Calculation 
+description: Etherbase Overnight Rate Index Calculation
 ---
 
 ### EOR - Etherbase Overnight Rate

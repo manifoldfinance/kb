@@ -21,14 +21,14 @@ export const quickLinks = [
     title: 'Reference',
     href: '#',
     icon: InformationCircleIcon,
-    to: './docs/Developers/Overview',
+    to: './docs/Developers/intro',
     text: `Reference guides are technical descriptions of the machinery and how to operate it. Reference material is information-oriented`,
   },
   {
     title: 'Explanation',
     href: '#',
     icon: InformationCircleIcon,
-    to: './docs/Tutorials/Overview',
+    to: './docs/Tutorials/intro',
     text: `Explanation is discussion that clarifies and illuminates a particular topic. Explanation is understanding-oriented.`,
   },
 ];

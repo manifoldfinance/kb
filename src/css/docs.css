@@ -7,7 +7,7 @@
 
 /* You can override the default Infima variables here. */
 
-@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;1,400&family=Inter:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;1,400&family=Inter:wght@400;500;600&display=swap');
 
 :root {
   --ifm-color-primary: #3578e5;
@@ -36,8 +36,7 @@
 
   --ifm-global-shadow-lw: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
   --ifm-global-shadow-md: 0 5px 40px rgba(0, 0, 0, 0.1);
-  --ifm-global-shadow-tl: 0 12px 28px 0 rgba(0, 0, 0, 0.2),
-    0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  --ifm-global-shadow-tl: 0 12px 28px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 
   --ifm-global-spacing: 1.5rem;
 }
@@ -46,7 +45,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 .docusaurus-highlight-code-line {
   background-color: rgb(72, 77, 91);
   display: block;
@@ -54,7 +52,7 @@ html {
   padding: 0 var(--ifm-pre-padding);
 }
 
-html[data-theme="dark"] {
+html[data-theme='dark'] {
   --ifm-color-primary: white;
   --ifm-color-primary-dark: #5a91ea;
 
@@ -63,27 +61,29 @@ html[data-theme="dark"] {
 
   background-position: 0px -30vh;
   background-repeat: no-repeat;
-  background-image: radial-gradient(50% 50% at 50% 50%,
-      rgba(33, 114, 229, 0.1) 0%,
-      rgba(33, 36, 41, 0) 100%);
-
+  background-image: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(33, 114, 229, 0.1) 0%,
+    rgba(33, 36, 41, 0) 100%
+  );
 }
 
-html[data-theme="light"] {
+html[data-theme='light'] {
   --ifm-color-primary: black;
 
   background-position: 0px -20vh;
   background-repeat: no-repeat;
-  background-image: radial-gradient(50% 50% at 50% 50%,
-      rgba(255, 0, 122, 0.1) 0%,
-      rgba(255, 255, 255, 0) 100%);
-
+  background-image: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(255, 0, 122, 0.1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
 .html {
-  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
-    Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans,
+    sans-serif, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
   font-size: 16px;
   font-variant: none;
   -webkit-font-smoothing: antialiased;
@@ -143,22 +143,22 @@ h4 {
   align-items: center;
 }
 
-html[data-theme="dark"] .navbar {
+html[data-theme='dark'] .navbar {
   border-bottom: var(--ifm-toc-border-color) 1px solid;
 }
 
-html[data-theme="dark"] footer {
+html[data-theme='dark'] footer {
   background-color: rgb(75, 75, 75);
-  border-top: var(--ifm-toc-border-color) .5px solid;
+  border-top: var(--ifm-toc-border-color) 0.5px solid;
 }
 
-html[data-theme="light"] .navbar {
+html[data-theme='light'] .navbar {
   border-bottom: var(--ifm-toc-border-color) 1px solid;
 }
 
-html[data-theme="light"] footer {
+html[data-theme='light'] footer {
   background-color: rgb(192, 192, 192);
-  border-top: var(--ifm-toc-border-color) .5px solid;
+  border-top: var(--ifm-toc-border-color) 0.5px solid;
 }
 
 .container {
@@ -320,4 +320,3 @@ iframe {
   padding: 0 var(--ifm-pre-padding);
   border-left: 3px solid #ff000080;
 }
-

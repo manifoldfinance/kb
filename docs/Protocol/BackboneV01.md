@@ -1,5 +1,5 @@
 ---
-title:  SecureRpc Specification V01.601
+title: SecureRpc Specification V01.601
 version: 2022.05.11, 2022.06.01
 author: CommoidtyStream, Inc
 license: COPYRIGHT 2022, CommoidtyStream, Inc.
@@ -10,8 +10,7 @@ description: SecureRpc Network Reference
 
 # SecureRpc Network Reference
 
-v01.601  Specification Document
-
+v01.601 Specification Document
 
 ## Overview
 
