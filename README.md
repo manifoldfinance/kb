@@ -18,8 +18,7 @@ If you have a question you can always post it on our discourse forums → [forum
 
 The Diátaxis framework aims to solve the problem of structure in technical documentation. It adopts a systematic approach to understanding the needs of documentation users in their cycle of interaction with a product.
 
-> **Note** <br />
-> The name Diátaxis comes from the Ancient Greek δῐᾰ́τᾰξῐς: dia (“across”) and taxis (“arrangement”).
+> **Note** <br /> The name Diátaxis comes from the Ancient Greek δῐᾰ́τᾰξῐς: dia (“across”) and taxis (“arrangement”).
 
 Diátaxis identifies four modes of documentation - tutorials, how-to guides, technical reference and explanation. It derives its structure from the relationship between them.
 
@@ -27,9 +26,7 @@ In Diátaxis, each of these modes (or types) answers to a different user need, f
 
 ## Resources
 
-→ [Telegram](https://t.me/manifoldfinace.com)    
-→ [SecureRpc.com](https://securerpc.com)    
-
+This is a Docusarus Site templated with the Diataxis layout of creating and viewing documentation.
 
 ## License
 

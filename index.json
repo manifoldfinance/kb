@@ -1,0 +1,92 @@
+{
+    "docs": [
+        {
+            "Developers": [
+                "/docs/Developers/intro.md"
+            ]
+        },
+        {
+            "Protocol": [
+                "/docs/Protocol/BackboneV01.md",
+                "/docs/Protocol/_category_.json"
+            ]
+        },
+        {
+            "Router": [
+                {
+                    "Access": []
+                },
+                "/docs/Router/ErrorCoding.md",
+                {
+                    "Math": [
+                        "/docs/Router/Math/TwoStepOwnable.md",
+                        "/docs/Router/Math/Uint512.md"
+                    ]
+                },
+                "/docs/Router/OpenMevRouter.md",
+                "/docs/Router/OpenMevZapper.md",
+                {
+                    "Permit": [
+                        "/docs/Router/Permit/OpenMevPermit.md"
+                    ]
+                },
+                "/docs/Router/_category_.json",
+                "/docs/Router/index.md",
+                {
+                    "interfaces": [
+                        "/docs/Router/interfaces/ERC20.md",
+                        "/docs/Router/interfaces/IOpenMevRouter.md",
+                        "/docs/Router/interfaces/IUniswapV2Router02.md"
+                    ]
+                },
+                {
+                    "libraries": [
+                        "/docs/Router/libraries/OpenMevLibrary.md"
+                    ]
+                }
+            ]
+        },
+        {
+            "Tutorials": [
+                "/docs/Tutorials/_category_.json",
+                "/docs/Tutorials/intro.md"
+            ]
+        },
+        {
+            "articles": []
+        },
+        {
+            "community": []
+        },
+        {
+            "general": [
+                "/docs/general/_category_.json",
+                "/docs/general/contributing.md",
+                "/docs/general/governance.md",
+                "/docs/general/subsystems.md",
+                "/docs/general/token.md"
+            ]
+        },
+        {
+            "how-to": [
+                "/docs/how-to/_category_.json",
+                "/docs/how-to/send-private-tx.md"
+            ]
+        },
+        "/docs/intro.md",
+        {
+            "libraries": []
+        },
+        {
+            "reference": [
+                "/docs/reference/_category_.json",
+                "/docs/reference/etherbase-rate.md",
+                "/docs/reference/glossary.md",
+                "/docs/reference/metrics.md"
+            ]
+        },
+        {
+            "technical": []
+        }
+    ]
+}
