@@ -1,17 +1,17 @@
-endi:
-  name: Endilie Yacop Sucipto
-  title: Maintainer of Docusaurus
+sam:
+  name: Sam Bacha
+  title: Maintainer of Things
   url: https://github.com/endiliey
-  image_url: https://github.com/endiliey.png
+  image_url: https://d.pr/i/29mBPu.jpg
 
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
+janitor:
+  name: 0xJanitor
+  title: Cleaner of Things
+  url: https://github.com/0xjanitor
+  image_url: https://d.pr/i/29mBPu.jpg
 
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
+khan:
+  name: Sébastien Khan
+  title:  Maintainer
+  url: https:/github.com/manifoldfinance
+  image_url: https://d.pr/i/29mBPu.jpg
