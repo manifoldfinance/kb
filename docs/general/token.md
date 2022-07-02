@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 id: general-token
-title: FOLD Token Model and Mechanics
+title: FOLD Token
 description: FOLD Token Mechanics and Staking
 ---
 

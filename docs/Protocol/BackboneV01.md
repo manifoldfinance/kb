@@ -1,17 +1,16 @@
 ---
-title: Backbone Network Reference Verion 01.05.PC
+title: SecureRpc Specification V01.601
 version: 2022.05.11, 2022.06.01
 author: CommoidtyStream, Inc
 license: COPYRIGHT 2022, CommoidtyStream, Inc.
 sidebar_position: 1
 id: protocol-backbonev01
-description: Backbone Network Reference
+description: SecureRpc Network Reference
 ---
 
-# Backbone Network Reference
+# SecureRpc Network Reference
 
-v1.05 Specification Document
-
+v01.601 Specification Document
 
 ## Overview
 
@@ -29,7 +28,7 @@ v1.05 Specification Document
 
 ### Mempool behavior
 
-When `OpenMEV` is _disabled_, every sent transaction is added to the mempool, which contains all the transactions that could be mined in the future. By default, Backbone Network's mempool follows the same rules as Geth. This means, among other things, that:
+When `OpenMEV` is _disabled_, every sent transaction is added to the mempool, which contains all the transactions that could be mined in the future. By default, SecureRpc Network's mempool follows the same rules as Geth. This means, among other things, that:
 
 -   Transactions with a higher gas price are included first
 
@@ -50,7 +49,7 @@ blockGasLimit = BigNumber.from(pendingBlock.gasLimit);
 
 ### Transaction ordering
 
-Backbone Network can sort mempool transactions in two different ways. How they are sorted will alter which transactions from the mempool get included in the next block, and in which order.
+SecureRpc Network can sort mempool transactions in two different ways. How they are sorted will alter which transactions from the mempool get included in the next block, and in which order.
 
 The first ordering mode, called `"priority"`, mimics Geth's behavior. This means that it prioritizes transactions based on the fees paid to the miner. This is the default.
 
@@ -82,9 +81,9 @@ You can also replace a transaction by sending a new one with the same nonce as t
 
 ## Automatic error messages
 
-Backbone Network always knows why your transaction or call failed, and it uses this information to make debugging your contracts easier.
+SecureRpc Network always knows why your transaction or call failed, and it uses this information to make debugging your contracts easier.
 
-When a transaction fails without a reason, Backbone Network will create a clear error message in the following cases:
+When a transaction fails without a reason, SecureRpc Network will create a clear error message in the following cases:
 
 -   Calling a non-payable function with ETH
 -   Sending ETH to a contract without a payable fallback or receive function
@@ -99,7 +98,7 @@ When a transaction fails without a reason, Backbone Network will create a clear 
 
 ### Logging
 
-Backbone Network uses its tracing infrastructure to offer rich logging that will help you develop and debug smart contracts.
+SecureRpc Network uses its tracing infrastructure to offer rich logging that will help you develop and debug smart contracts.
 
 For example, a successful transaction and a failed call would look like this:
 
@@ -174,7 +173,7 @@ type CallBundleArgs struct {
 }
 ```
 
-## Manifold Backbone Methods
+## Manifold SecureRpc Methods
 
 ### `manifold_dropTransaction`
 
@@ -186,7 +185,7 @@ Remove a transaction from the mempool (admin only)
 
 ### `manifold_setLoggingEnabled`
 
-Enable or disable logging in Backbone Network (auth required)
+Enable or disable logging in SecureRpc Network (auth required)
 
 ### `manifold_CreateAccessList`
 

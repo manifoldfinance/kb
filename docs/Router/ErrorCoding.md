@@ -1,5 +1,8 @@
 ---
-sidebar_position: 3
+sidebar_position: 1
+id: router-errorcodes
+title: Custom Error codes
+description: Custom error codes for OpenMevRouter
 ---
 
 # Custom Error Codes

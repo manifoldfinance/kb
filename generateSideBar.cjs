@@ -1,5 +1,4 @@
-
-
+#!/usr/bin/en node
 //
 // Generates a sidebar based on file structure and
 // markdown frontmatter properties.

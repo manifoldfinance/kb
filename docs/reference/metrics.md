@@ -7,20 +7,20 @@ description: Collected KPI's and Metrics
 # Platform Metrics
 
 Latest Dollar Value - Send Transaction  
-[api.securerpc.com/v1](api.securerpc.com/v1)- SushiSwapV1  
-[api.securerpc.com/v1](api.securerpc.com/v1)- Uniswap2/V3
+[api.securerpc.com/v1](https://api.securerpc.com/v1)- SushiSwapV1  
+[api.securerpc.com/v1](https://api.securerpc.com/v1)- Uniswap2/V3
 
 Latest Dollar Value - External Successful Send Bundle - 14 day  
-[api.securerpc.com/v1](api.securerpc.com/v1)- SushiSwapV1  
-[api.securerpc.com/v1](api.securerpc.com/v1)- Uniswap2/V3
+[api.securerpc.com/v1](https://api.securerpc.com/v1)- SushiSwapV1  
+[api.securerpc.com/v1](https://api.securerpc.com/v1)- Uniswap2/V3
 
 Total Dollar Value - External Submitted Successful Bundles/Transactions 28day  
-[api.securerpc.com/v1](api.securerpc.com/v1)- SushiSwapV1  
-[api.securerpc.com/v1](api.securerpc.com/v1)- Uniswap2/V3
+[api.securerpc.com/v1](https://api.securerpc.com/v1)- SushiSwapV1  
+[api.securerpc.com/v1](https://api.securerpc.com/v1)- Uniswap2/V3
 
 Delta Dollar Value - External Successful Bundles 14day  
-[api.securerpc.com/v1](api.securerpc.com/v1)- SushiSwapV1  
-[api.securerpc.com/v1](api.securerpc.com/v1)- Uniswap2/V3
+[api.securerpc.com/v1](https://api.securerpc.com/v1)- SushiSwapV1  
+[api.securerpc.com/v1](https://api.securerpc.com/v1)- Uniswap2/V3
 
 ## Transaction and Bundle Metrics
 
