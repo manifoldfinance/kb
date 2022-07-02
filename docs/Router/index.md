@@ -7,51 +7,48 @@ description: Overview and introduction for OpenMevRouterV01
 
 # OpenMevRouter
 
+
 Optimal MEV router contract (IUniswapV2Router compatible)
 
 For the User it aims to offer:
-
-1. Better order routing for minimal slippage
-2. At source MEV
-3. Lower gas costs for swaps and liquidity changes
+  1. Better order routing for minimal slippage
+  2. At source MEV
+  3. Lower gas costs for swaps and liquidity changes
 
 For the Liquidity providers:
-
-1. Inclusive rewards
-2. Reduced impermanent loss
+  1. Inclusive rewards
+  2. Reduced impermanent loss
 
 For the Exchange providers:
-
-1. Inclusive rewards
-2. Increased adoption
+  1. Inclusive rewards
+  2. Increased adoption
 
 For the Ethereum environment:
-
-1. Reduced MEV attacks and fee spikes
-2. Healthy growth in MEV space with inclusive incentives
+  1. Reduced MEV attacks and fee spikes
+  2. Healthy growth in MEV space with inclusive incentives
 
 Version 1 MEV Strategies
-
--   cross-dex backruns for swaps
--   reduced slippage fallback router The contract leverages and depends on 3 external protocols:
-
-1. Uniswap V2 (or equivalent on another network) for backrun completion and fallback swaps
-2. BentoBox for flashloan backruns
-3. Aave V2 for flashloan backruns that require more liquidity than BentoBox has
+  - cross-dex backruns for swaps
+  - reduced slippage fallback router 
+The contract leverages and depends on 3 external protocols:
+  1. Uniswap V2 (or equivalent on another network) for backrun completion and fallback swaps
+  2. BentoBox for flashloan backruns
+  3. Aave V2 for flashloan backruns that require more liquidity than BentoBox has 
 
 Business logic
+  - Profits from backruns are retained on the contract to improve efficiency (gas cost and profit) of future backruns
+The contract should therefore be deployed or ownership transferred to a multisig address
+  - Harvest function can be called from the multisig owners to distribute profits by consensus 
 
--   Profits from backruns are retained on the contract to improve efficiency (gas cost and profit) of future backruns The contract should therefore be deployed or ownership transferred to a multisig address
--   Harvest function can be called from the multisig owners to distribute profits by consensus
 
 Dev Notes
+  - Normal sushiswap router functions. Swaps have 2 material changes:
+      1) slippage fallback router (uniswap v2)
+      2) backruns after user swap
+  - For gas and size efficiency, requirements are modified to revert with custom errors
+  - Factory hash is now passed to library functions because we are working with 2 factories
+  - Other changes are trade-offs for reducing contract size and / or gas usage and stack too deep errors
 
--   Normal sushiswap router functions. Swaps have 2 material changes:
-    1. slippage fallback router (uniswap v2)
-    2. backruns after user swap
--   For gas and size efficiency, requirements are modified to revert with custom errors
--   Factory hash is now passed to library functions because we are working with 2 factories
--   Other changes are trade-offs for reducing contract size and / or gas usage and stack too deep errors
 
 ## Methods
 
@@ -158,6 +155,7 @@ function executeOperation(address[] assets, uint256[] amounts, uint256[] premium
 | Name | Type | Description                |
 | ---- | ---- | -------------------------- |
 | \_0  | bool | success indicating success |
+
 
 ## Events
 
