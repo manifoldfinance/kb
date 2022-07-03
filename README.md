@@ -1,10 +1,8 @@
 # [`kb.docs`](#)
 
-
 [![nodejs](https://github.com/manifoldfinance/kb/actions/workflows/nodejs.yml/badge.svg)](https://github.com/manifoldfinance/kb/actions/workflows/nodejs.yml)
 
-> **Warning** <br />
-> This resource is in active development, content may be inaccurate or out of date!
+> **Warning** <br /> This resource is in active development, content may be inaccurate or out of date!
 
 This is the home of the `kb.docs` resource. V2 Documentation is maintained here. This resource follows the `Diátaxis` guidelines, which you can read more about below.
 
@@ -12,9 +10,7 @@ If you have a question you can always post it on our discourse forums → [forum
 
 ### [Diátaxis](https://diataxis.fr/)
 
-> A systematic framework for technical documentation authoring. <br />
-> The Grand Unified Theory of Documentation <br />
->             —David Laing
+> A systematic framework for technical documentation authoring. <br /> The Grand Unified Theory of Documentation <br /> —David Laing
 
 The Diátaxis framework aims to solve the problem of structure in technical documentation. It adopts a systematic approach to understanding the needs of documentation users in their cycle of interaction with a product.
 
