@@ -16,9 +16,9 @@ The Diátaxis framework aims to solve the problem of structure in technical docu
 
 > **Note** <br /> The name Diátaxis comes from the Ancient Greek δῐᾰ́τᾰξῐς: dia (“across”) and taxis (“arrangement”).
 
-Diátaxis identifies four modes of documentation - tutorials, how-to guides, technical reference and explanation. It derives its structure from the relationship between them.
+Diátaxis identifies four modes of documentation - tutorials, how-to guides, technical reference and explanations. It derives its structure from the relationship between them.
 
-In Diátaxis, each of these modes (or types) answers to a different user need, fulfils a different purpose and requires a different approach to its creation.
+In Diátaxis, each of these modes (or types) answers to a different user need, fulfills a different purpose and requires a different approach to its creation.
 
 ## Resources
 
@@ -27,3 +27,17 @@ This is a Docusarus Site templated with the Diataxis layout of creating and view
 ## License
 
 Copyright 2022 (C) - CommodityStream Inc, & Manifold Finance, Inc. All Rights Reserved
+
+## Code Examples License
+
+Example code provided is licensed under either of
+
+-   Universal Permissive License 1.0 ([LICENSE-UPL](LICENSE-UPL) or https://opensource.org/licenses/UPL)
+
+-   Apache License, Version 2.0 ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
+
+at your option.
+
+### Code Examples Contribution
+
+Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Universal Permissive License v 1.0 license, shall be dual licensed as above, without any additional terms or conditions.
