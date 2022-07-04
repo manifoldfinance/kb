@@ -1,0 +1,805 @@
+{
+  "files": [
+    {
+      "name": "txpool.proto",
+      "description": "",
+      "package": "txpool",
+      "hasEnums": true,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": true,
+      "enums": [
+        {
+          "name": "TxnType",
+          "longName": "AllReply.TxnType",
+          "fullName": "txpool.AllReply.TxnType",
+          "description": "",
+          "values": [
+            {
+              "name": "PENDING",
+              "number": "0",
+              "description": "All currently processable transactions"
+            },
+            {
+              "name": "QUEUED",
+              "number": "1",
+              "description": "Queued but non-processable transactions"
+            },
+            {
+              "name": "BASE_FEE",
+              "number": "2",
+              "description": "BaseFee not enough baseFee non-processable transactions"
+            }
+          ]
+        },
+        {
+          "name": "ImportResult",
+          "longName": "ImportResult",
+          "fullName": "txpool.ImportResult",
+          "description": "",
+          "values": [
+            {
+              "name": "SUCCESS",
+              "number": "0",
+              "description": ""
+            },
+            {
+              "name": "ALREADY_EXISTS",
+              "number": "1",
+              "description": ""
+            },
+            {
+              "name": "FEE_TOO_LOW",
+              "number": "2",
+              "description": ""
+            },
+            {
+              "name": "STALE",
+              "number": "3",
+              "description": ""
+            },
+            {
+              "name": "INVALID",
+              "number": "4",
+              "description": ""
+            },
+            {
+              "name": "INTERNAL_ERROR",
+              "number": "5",
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "AddReply",
+          "longName": "AddReply",
+          "fullName": "txpool.AddReply",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "imported",
+              "description": "",
+              "label": "repeated",
+              "type": "ImportResult",
+              "longType": "ImportResult",
+              "fullType": "txpool.ImportResult",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "errors",
+              "description": "",
+              "label": "repeated",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "AddRequest",
+          "longName": "AddRequest",
+          "fullName": "txpool.AddRequest",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "rlpTxs",
+              "description": "",
+              "label": "repeated",
+              "type": "bytes",
+              "longType": "bytes",
+              "fullType": "bytes",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "AllReply",
+          "longName": "AllReply",
+          "fullName": "txpool.AllReply",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "txs",
+              "description": "",
+              "label": "repeated",
+              "type": "Tx",
+              "longType": "AllReply.Tx",
+              "fullType": "txpool.AllReply.Tx",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "Tx",
+          "longName": "AllReply.Tx",
+          "fullName": "txpool.AllReply.Tx",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "txnType",
+              "description": "",
+              "label": "",
+              "type": "TxnType",
+              "longType": "AllReply.TxnType",
+              "fullType": "txpool.AllReply.TxnType",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "sender",
+              "description": "",
+              "label": "",
+              "type": "H160",
+              "longType": "types.H160",
+              "fullType": "types.H160",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "rlpTx",
+              "description": "",
+              "label": "",
+              "type": "bytes",
+              "longType": "bytes",
+              "fullType": "bytes",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "AllRequest",
+          "longName": "AllRequest",
+          "fullName": "txpool.AllRequest",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": false,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": []
+        },
+        {
+          "name": "NonceReply",
+          "longName": "NonceReply",
+          "fullName": "txpool.NonceReply",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "found",
+              "description": "",
+              "label": "",
+              "type": "bool",
+              "longType": "bool",
+              "fullType": "bool",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "nonce",
+              "description": "",
+              "label": "",
+              "type": "uint64",
+              "longType": "uint64",
+              "fullType": "uint64",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "NonceRequest",
+          "longName": "NonceRequest",
+          "fullName": "txpool.NonceRequest",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "address",
+              "description": "",
+              "label": "",
+              "type": "H160",
+              "longType": "types.H160",
+              "fullType": "types.H160",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "OnAddReply",
+          "longName": "OnAddReply",
+          "fullName": "txpool.OnAddReply",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "rplTxs",
+              "description": "",
+              "label": "repeated",
+              "type": "bytes",
+              "longType": "bytes",
+              "fullType": "bytes",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "OnAddRequest",
+          "longName": "OnAddRequest",
+          "fullName": "txpool.OnAddRequest",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": false,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": []
+        },
+        {
+          "name": "PendingReply",
+          "longName": "PendingReply",
+          "fullName": "txpool.PendingReply",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "txs",
+              "description": "",
+              "label": "repeated",
+              "type": "Tx",
+              "longType": "PendingReply.Tx",
+              "fullType": "txpool.PendingReply.Tx",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "Tx",
+          "longName": "PendingReply.Tx",
+          "fullName": "txpool.PendingReply.Tx",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "sender",
+              "description": "",
+              "label": "",
+              "type": "H160",
+              "longType": "types.H160",
+              "fullType": "types.H160",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "rlpTx",
+              "description": "",
+              "label": "",
+              "type": "bytes",
+              "longType": "bytes",
+              "fullType": "bytes",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "isLocal",
+              "description": "",
+              "label": "",
+              "type": "bool",
+              "longType": "bool",
+              "fullType": "bool",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "StatusReply",
+          "longName": "StatusReply",
+          "fullName": "txpool.StatusReply",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "pendingCount",
+              "description": "",
+              "label": "",
+              "type": "uint32",
+              "longType": "uint32",
+              "fullType": "uint32",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "queuedCount",
+              "description": "",
+              "label": "",
+              "type": "uint32",
+              "longType": "uint32",
+              "fullType": "uint32",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "baseFeeCount",
+              "description": "",
+              "label": "",
+              "type": "uint32",
+              "longType": "uint32",
+              "fullType": "uint32",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "StatusRequest",
+          "longName": "StatusRequest",
+          "fullName": "txpool.StatusRequest",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": false,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": []
+        },
+        {
+          "name": "TransactionsReply",
+          "longName": "TransactionsReply",
+          "fullName": "txpool.TransactionsReply",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "rlpTxs",
+              "description": "",
+              "label": "repeated",
+              "type": "bytes",
+              "longType": "bytes",
+              "fullType": "bytes",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "TransactionsRequest",
+          "longName": "TransactionsRequest",
+          "fullName": "txpool.TransactionsRequest",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "hashes",
+              "description": "",
+              "label": "repeated",
+              "type": "H256",
+              "longType": "types.H256",
+              "fullType": "types.H256",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "TxHashes",
+          "longName": "TxHashes",
+          "fullName": "txpool.TxHashes",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "hashes",
+              "description": "",
+              "label": "repeated",
+              "type": "H256",
+              "longType": "types.H256",
+              "fullType": "types.H256",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": [
+        {
+          "name": "Txpool",
+          "longName": "Txpool",
+          "fullName": "txpool.Txpool",
+          "description": "",
+          "methods": [
+            {
+              "name": "Version",
+              "description": "Version returns the service version number",
+              "requestType": "Empty",
+              "requestLongType": ".google.protobuf.Empty",
+              "requestFullType": "google.protobuf.Empty",
+              "requestStreaming": false,
+              "responseType": "VersionReply",
+              "responseLongType": ".types.VersionReply",
+              "responseFullType": "types.VersionReply",
+              "responseStreaming": false
+            },
+            {
+              "name": "FindUnknown",
+              "description": "preserves incoming order, changes amount, unknown hashes will be omitted",
+              "requestType": "TxHashes",
+              "requestLongType": "TxHashes",
+              "requestFullType": "txpool.TxHashes",
+              "requestStreaming": false,
+              "responseType": "TxHashes",
+              "responseLongType": "TxHashes",
+              "responseFullType": "txpool.TxHashes",
+              "responseStreaming": false
+            },
+            {
+              "name": "Add",
+              "description": "Expecting signed transactions. Preserves incoming order and amount\nAdding txs as local (use P2P to add remote txs)",
+              "requestType": "AddRequest",
+              "requestLongType": "AddRequest",
+              "requestFullType": "txpool.AddRequest",
+              "requestStreaming": false,
+              "responseType": "AddReply",
+              "responseLongType": "AddReply",
+              "responseFullType": "txpool.AddReply",
+              "responseStreaming": false
+            },
+            {
+              "name": "Transactions",
+              "description": "preserves incoming order and amount, if some transaction doesn't exists in pool - returns nil in this slot",
+              "requestType": "TransactionsRequest",
+              "requestLongType": "TransactionsRequest",
+              "requestFullType": "txpool.TransactionsRequest",
+              "requestStreaming": false,
+              "responseType": "TransactionsReply",
+              "responseLongType": "TransactionsReply",
+              "responseFullType": "txpool.TransactionsReply",
+              "responseStreaming": false
+            },
+            {
+              "name": "All",
+              "description": "returns all transactions from tx pool",
+              "requestType": "AllRequest",
+              "requestLongType": "AllRequest",
+              "requestFullType": "txpool.AllRequest",
+              "requestStreaming": false,
+              "responseType": "AllReply",
+              "responseLongType": "AllReply",
+              "responseFullType": "txpool.AllReply",
+              "responseStreaming": false
+            },
+            {
+              "name": "Pending",
+              "description": "Returns all pending (processable) transactions, in ready-for-mining order",
+              "requestType": "Empty",
+              "requestLongType": ".google.protobuf.Empty",
+              "requestFullType": "google.protobuf.Empty",
+              "requestStreaming": false,
+              "responseType": "PendingReply",
+              "responseLongType": "PendingReply",
+              "responseFullType": "txpool.PendingReply",
+              "responseStreaming": false
+            },
+            {
+              "name": "OnAdd",
+              "description": "subscribe to new transactions add event",
+              "requestType": "OnAddRequest",
+              "requestLongType": "OnAddRequest",
+              "requestFullType": "txpool.OnAddRequest",
+              "requestStreaming": false,
+              "responseType": "OnAddReply",
+              "responseLongType": "OnAddReply",
+              "responseFullType": "txpool.OnAddReply",
+              "responseStreaming": true
+            },
+            {
+              "name": "Status",
+              "description": "returns high level status",
+              "requestType": "StatusRequest",
+              "requestLongType": "StatusRequest",
+              "requestFullType": "txpool.StatusRequest",
+              "requestStreaming": false,
+              "responseType": "StatusReply",
+              "responseLongType": "StatusReply",
+              "responseFullType": "txpool.StatusReply",
+              "responseStreaming": false
+            },
+            {
+              "name": "Nonce",
+              "description": "returns nonce for given account",
+              "requestType": "NonceRequest",
+              "requestLongType": "NonceRequest",
+              "requestFullType": "txpool.NonceRequest",
+              "requestStreaming": false,
+              "responseType": "NonceReply",
+              "responseLongType": "NonceReply",
+              "responseFullType": "txpool.NonceReply",
+              "responseStreaming": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "scalarValueTypes": [
+    {
+      "protoType": "double",
+      "notes": "",
+      "cppType": "double",
+      "csType": "double",
+      "goType": "float64",
+      "javaType": "double",
+      "phpType": "float",
+      "pythonType": "float",
+      "rubyType": "Float"
+    },
+    {
+      "protoType": "float",
+      "notes": "",
+      "cppType": "float",
+      "csType": "float",
+      "goType": "float32",
+      "javaType": "float",
+      "phpType": "float",
+      "pythonType": "float",
+      "rubyType": "Float"
+    },
+    {
+      "protoType": "int32",
+      "notes": "Uses variable-length encoding. Inefficient for encoding negative numbers – if your field is likely to have negative values, use sint32 instead.",
+      "cppType": "int32",
+      "csType": "int",
+      "goType": "int32",
+      "javaType": "int",
+      "phpType": "integer",
+      "pythonType": "int",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "int64",
+      "notes": "Uses variable-length encoding. Inefficient for encoding negative numbers – if your field is likely to have negative values, use sint64 instead.",
+      "cppType": "int64",
+      "csType": "long",
+      "goType": "int64",
+      "javaType": "long",
+      "phpType": "integer/string",
+      "pythonType": "int/long",
+      "rubyType": "Bignum"
+    },
+    {
+      "protoType": "uint32",
+      "notes": "Uses variable-length encoding.",
+      "cppType": "uint32",
+      "csType": "uint",
+      "goType": "uint32",
+      "javaType": "int",
+      "phpType": "integer",
+      "pythonType": "int/long",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "uint64",
+      "notes": "Uses variable-length encoding.",
+      "cppType": "uint64",
+      "csType": "ulong",
+      "goType": "uint64",
+      "javaType": "long",
+      "phpType": "integer/string",
+      "pythonType": "int/long",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "sint32",
+      "notes": "Uses variable-length encoding. Signed int value. These more efficiently encode negative numbers than regular int32s.",
+      "cppType": "int32",
+      "csType": "int",
+      "goType": "int32",
+      "javaType": "int",
+      "phpType": "integer",
+      "pythonType": "int",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "sint64",
+      "notes": "Uses variable-length encoding. Signed int value. These more efficiently encode negative numbers than regular int64s.",
+      "cppType": "int64",
+      "csType": "long",
+      "goType": "int64",
+      "javaType": "long",
+      "phpType": "integer/string",
+      "pythonType": "int/long",
+      "rubyType": "Bignum"
+    },
+    {
+      "protoType": "fixed32",
+      "notes": "Always four bytes. More efficient than uint32 if values are often greater than 2^28.",
+      "cppType": "uint32",
+      "csType": "uint",
+      "goType": "uint32",
+      "javaType": "int",
+      "phpType": "integer",
+      "pythonType": "int",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "fixed64",
+      "notes": "Always eight bytes. More efficient than uint64 if values are often greater than 2^56.",
+      "cppType": "uint64",
+      "csType": "ulong",
+      "goType": "uint64",
+      "javaType": "long",
+      "phpType": "integer/string",
+      "pythonType": "int/long",
+      "rubyType": "Bignum"
+    },
+    {
+      "protoType": "sfixed32",
+      "notes": "Always four bytes.",
+      "cppType": "int32",
+      "csType": "int",
+      "goType": "int32",
+      "javaType": "int",
+      "phpType": "integer",
+      "pythonType": "int",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "sfixed64",
+      "notes": "Always eight bytes.",
+      "cppType": "int64",
+      "csType": "long",
+      "goType": "int64",
+      "javaType": "long",
+      "phpType": "integer/string",
+      "pythonType": "int/long",
+      "rubyType": "Bignum"
+    },
+    {
+      "protoType": "bool",
+      "notes": "",
+      "cppType": "bool",
+      "csType": "bool",
+      "goType": "bool",
+      "javaType": "boolean",
+      "phpType": "boolean",
+      "pythonType": "boolean",
+      "rubyType": "TrueClass/FalseClass"
+    },
+    {
+      "protoType": "string",
+      "notes": "A string must always contain UTF-8 encoded or 7-bit ASCII text.",
+      "cppType": "string",
+      "csType": "string",
+      "goType": "string",
+      "javaType": "String",
+      "phpType": "string",
+      "pythonType": "str/unicode",
+      "rubyType": "String (UTF-8)"
+    },
+    {
+      "protoType": "bytes",
+      "notes": "May contain any arbitrary sequence of bytes.",
+      "cppType": "string",
+      "csType": "ByteString",
+      "goType": "[]byte",
+      "javaType": "ByteString",
+      "phpType": "string",
+      "pythonType": "str",
+      "rubyType": "String (ASCII-8BIT)"
+    }
+  ]
+}

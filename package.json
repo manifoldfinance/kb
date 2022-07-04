@@ -1,6 +1,6 @@
 {
-  "name": "base",
-  "version": "0.0.0",
+  "name": "manifold-kb",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -27,9 +27,12 @@
     "@svgr/webpack": "^6.2.1",
     "clsx": "^1.1.1",
     "color": "^4.2.3",
+    "docusaurus-protobuffet": "^0.3.2",
     "docusaurus-theme-redoc": "^1.2.2",
     "file-loader": "^6.2.0",
     "hast-util-is-element": "1.1.0",
+    "mdx-mermaid": "^1.2.3",
+    "mermaid": "^9.1.3",
     "prism-react-renderer": "^1.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

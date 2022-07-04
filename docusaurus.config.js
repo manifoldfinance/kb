@@ -29,6 +29,20 @@ const config = {
   plugins: ['@docusaurus/theme-live-codeblock'],
   presets: [
     [
+      'docusaurus-protobuffet',
+      {
+        protobuffet: {
+          fileDescriptorsPath: './fixtures/proto_workspace.json',
+          protoDocsPath: './protodocs',
+          sidebarPath: './generatedSidebarsProtodocs.js'
+        },
+        docs: {
+          routeBasePath: 'protobuf',
+          sidebarPath: './sidebars.js',
+        }
+      }
+    ],
+    [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
@@ -138,8 +152,7 @@ const config = {
       copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
     prism: {
-      theme: lightCodeTheme,
-      darkTheme: darkCodeTheme,
+  theme: require('prism-react-renderer/themes/dracula'),
       additionalLanguages: ['solidity'],
       magicComments: [
         // Remember to extend the default highlight class name as well!
