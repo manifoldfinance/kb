@@ -96,7 +96,7 @@ const config = {
           type: 'doc',
           docId: 'intro',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Knowledge Base',
         },
         { to: '/blog', label: 'Blog', position: 'left' },
         {
@@ -104,6 +104,12 @@ const config = {
           label: 'GitHub',
           position: 'right',
         },
+        {
+          to: 'protodocs/txpool.proto',
+          activeBasePath: 'protodocs',
+          label: 'Network',
+          position: 'left',
+        }
       ],
     },
     footer: {
@@ -149,7 +155,7 @@ const config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Manifold Finance, Inc. All Rights Reservved.`,
     },
     prism: {
   theme: require('prism-react-renderer/themes/dracula'),
