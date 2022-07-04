@@ -1,7 +1,7 @@
 syntax = "proto3";
 
-import "google/protobuf/empty.proto";
-import "types/types.proto";
+import "empty.proto";
+import "types.proto";
 
 option go_package = "./downloader;downloader";
 
