@@ -26,7 +26,18 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-  plugins: ['@docusaurus/theme-live-codeblock'],
+  plugins: [
+    '@docusaurus/theme-live-codeblock',
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        docsRouteBasePath: ['docs', 'protodocs'],
+        docsDir: ['docs', 'protodocs'],
+        indexBlog: false,
+      },
+    ],
+],
   presets: [
     [
       'docusaurus-protobuffet',
@@ -38,7 +49,7 @@ const config = {
         },
         docs: {
           routeBasePath: 'protobuf',
-          sidebarPath: './sidebars.js',
+          sidebarPath: './sidebarsProtodocs.js',
         }
       }
     ],
