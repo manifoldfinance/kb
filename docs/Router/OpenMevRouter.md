@@ -38,7 +38,7 @@ Details Transfers ownership of the contract to the caller. Can only be called by
 
 ### addLiquidity
 
-Adds liquidity to an ERC-20⇄ERC-20 pool. `msg.sender` should have already given the router an allowance of at least `amountADesired`/`amountBDesired` on `tokenA`/`tokenB`.
+Adds liquidity to an ERC-20⇄ERC-20 pool. ``msg.sender`` should have already given the router an allowance of at least `amountADesired`/`amountBDesired` on `tokenA`/`tokenB`.
 
 
 ```solidity title="addLiquidity"
@@ -83,7 +83,7 @@ Adds liquidity to an ERC-20⇄ERC-20 pool. `msg.sender` should have already give
 
 ### addLiquidityETH
 
-Adds liquidity to an ERC-20⇄WETH pool with ETH. msg.sender should have already given the router an allowance of at least `amountTokenDesired` on the token. `msg.value` is treated as a `amountETHDesired`. Leftover ETH, if any, is returned to `msg.sender`
+Adds liquidity to an ERC-20⇄WETH pool with ETH. `msg.sender` should have already given the router an allowance of at least `amountTokenDesired` on the token. `msg.value` is treated as a `amountETHDesired`. Leftover ETH, if any, is returned to ``msg.sender``
 
 ```solidity title="Solidity"
 function addLiquidityETH(address token, uint256 amountTokenDesired, uint256 amountTokenMin, uint256 amountETHMin, address to, uint256 deadline) external payable returns (uint256 amountToken, uint256 amountETH, uint256 liquidity)
@@ -348,7 +348,7 @@ function quote(uint256 amountA, uint256 reserveA, uint256 reserveB) external pur
 
 ### removeLiquidity
 
-Removes liquidity from an ERC-20⇄ERC-20 pool. msg.sender should have already given the router an allowance of at least liquidity on the pool.
+Removes liquidity from an ERC-20⇄ERC-20 pool. `msg.sender` should have already given the router an allowance of at least liquidity on the pool.
 
 ```solidity title="Solidity"
 function removeLiquidity(address tokenA, address tokenB, uint256 liquidity, uint256 amountAMin, uint256 amountBMin, address to, uint256 deadline) external nonpayable returns (uint256 amountA, uint256 amountB)
@@ -375,7 +375,7 @@ function removeLiquidity(address tokenA, address tokenB, uint256 liquidity, uint
 
 ### removeLiquidityETH
 
-Removes liquidity from an ERC-20⇄WETH pool and receive ETH. msg.sender should have already given the router an allowance of at least liquidity on the pool.
+Removes liquidity from an ERC-20⇄WETH pool and receive ETH. `msg.sender` should have already given the router an allowance of at least liquidity on the pool.
 
 ```solidity title="Solidity"
 function removeLiquidityETH(address token, uint256 liquidity, uint256 amountTokenMin, uint256 amountETHMin, address to, uint256 deadline) external nonpayable returns (uint256 amountToken, uint256 amountETH)
@@ -401,7 +401,7 @@ function removeLiquidityETH(address token, uint256 liquidity, uint256 amountToke
 
 ### removeLiquidityETHSupportingFeeOnTransferTokens
 
-Identical to removeLiquidityETH, but succeeds for tokens that take a fee on transfer. msg.sender should have already given the router an allowance of at least liquidity on the pool.
+Identical to removeLiquidityETH, but succeeds for tokens that take a fee on transfer. `msg.sender` should have already given the router an allowance of at least liquidity on the pool.
 
 ```solidity title="Solidity"
 function removeLiquidityETHSupportingFeeOnTransferTokens(address token, uint256 liquidity, uint256 amountTokenMin, uint256 amountETHMin, address to, uint256 deadline) external nonpayable returns (uint256 amountETH)
@@ -516,7 +516,7 @@ function removeLiquidityWithPermit(address tokenA, address tokenB, uint256 liqui
 
 ### swapETHForExactTokens
 
-Receive an exact amount of tokens for as little ETH as possible, along the route determined by the path. The first element of path must be WETH. Leftover ETH, if any, is returned to msg.sender. amountInMax = msg.value
+Receive an exact amount of tokens for as little ETH as possible, along the route determined by the path. The first element of path must be WETH. Leftover ETH, if any, is returned to `msg.sender`. amountInMax = msg.value
 
 ```solidity title="Solidity"
 function swapETHForExactTokens(uint256 amountOut, address[] path, address to, uint256 deadline) external payable returns (uint256[] amounts)
@@ -631,7 +631,7 @@ function swapExactTokensForETHSupportingFeeOnTransferTokens(uint256 amountIn, ui
 
 ### swapExactTokensForTokens
 
-Swaps an exact amount of input tokens for as many output tokens as possible, along the route determined by the path. The first element of path is the input token, the last is the output token, and any intermediate elements represent intermediate pairs to trade through. msg.sender should have already given the router an allowance of at least amountIn on the input token.
+Swaps an exact amount of input tokens for as many output tokens as possible, along the route determined by the path. The first element of path is the input token, the last is the output token, and any intermediate elements represent intermediate pairs to trade through. `msg.sender` should have already given the router an allowance of at least amountIn on the input token.
 
 ```solidity title="Solidity"
 function swapExactTokensForTokens(uint256 amountIn, uint256 amountOutMin, address[] path, address to, uint256 deadline) external nonpayable returns (uint256[] amounts)
@@ -657,7 +657,7 @@ function swapExactTokensForTokens(uint256 amountIn, uint256 amountOutMin, addres
 
 ### swapExactTokensForTokensSupportingFeeOnTransferTokens
 
-Identical to swapExactTokensForTokens, but succeeds for tokens that take a fee on transfer. msg.sender should have already given the router an allowance of at least amountIn on the input token.
+Identical to swapExactTokensForTokens, but succeeds for tokens that take a fee on transfer. `msg.sender` should have already given the router an allowance of at least amountIn on the input token.
 
 ```solidity title="Solidity"
 function swapExactTokensForTokensSupportingFeeOnTransferTokens(uint256 amountIn, uint256 amountOutMin, address[] path, address to, uint256 deadline) external nonpayable
@@ -677,13 +677,17 @@ function swapExactTokensForTokensSupportingFeeOnTransferTokens(uint256 amountIn,
 
 ### swapTokensForExactETH
 
-Receive an exact amount of ETH for as few input tokens as possible, along the route determined by the path. The first element of path is the input token, the last must be WETH. msg.sender should have already given the router an allowance of at least amountInMax on the input token.
+Receive an exact amount of ETH for as few input tokens as possible, along the route determined by the path. The first element of path is the input token, the last must be `WETH`. `msg.sender` should have already given the router an allowance of at least amountInMax on the input token.
 
-```solidity title="Solidity"
+```solidity title="swapTokensForExactETH"
 function swapTokensForExactETH(uint256 amountOut, uint256 amountInMax, address[] path, address to, uint256 deadline) external nonpayable returns (uint256[] amounts)
 ```
 
-:::note Details Require has been replaced with revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps. :::
+:::note
+
+ Details Require has been replaced with a revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps.
+ 
+ :::
 
 #### Parameters
 
@@ -703,13 +707,17 @@ function swapTokensForExactETH(uint256 amountOut, uint256 amountInMax, address[]
 
 ### swapTokensForExactTokens
 
-Receive an exact amount of output tokens for as few input tokens as possible, along the route determined by the path. msg.sender should have already given the router an allowance of at least amountInMax on the input token.
+Receive an exact amount of output tokens for as few input tokens as possible, along the route determined by the path. `msg.sender` should have already given the router an allowance of at least amountInMax on the input token.
 
-```solidity title="Solidity"
+```solidity title="swapTokensForExactTokens"
 function swapTokensForExactTokens(uint256 amountOut, uint256 amountInMax, address[] path, address to, uint256 deadline) external nonpayable returns (uint256[] amounts)
 ```
 
-:::note Details Require has been replaced with revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps. :::
+:::note
+
+ Details Require has been replaced with a revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps. 
+ 
+ :::
 
 #### Parameters
 
@@ -729,11 +737,15 @@ function swapTokensForExactTokens(uint256 amountOut, uint256 amountInMax, addres
 
 ### transferOwnership
 
-```solidity title="Solidity"
+```solidity title="transferOwnership"
 function transferOwnership(address newOwner) external payable
 ```
 
-:::note Details Allows a new account (`newOwner`) to accept ownership. Can only be called by the current owner. :::
+:::note
+
+ Details Allows a new account (`newOwner`) to accept ownership. Can only be called by the current owner. 
+ 
+ :::
 
 #### Parameters
 
@@ -745,7 +757,7 @@ function transferOwnership(address newOwner) external payable
 
 Update internal Aave asset flag
 
-```solidity title="Solidity"
+```solidity title="updateAaveAsset"
 function updateAaveAsset(bool isActive, address asset) external payable
 ```
 
@@ -760,7 +772,7 @@ function updateAaveAsset(bool isActive, address asset) external payable
 
 Update all internal Aave assets
 
-```solidity title="Solidity"
+```solidity title="updateAllAaveAssets"
 function updateAllAaveAssets() external payable
 ```
 
@@ -769,6 +781,7 @@ function updateAllAaveAssets() external payable
 ### LoanError
 
 ```solidity title="Solidity"
+/// @custom:emit
 event LoanError(bool indexed isAave, address indexed token, uint256 amountIn)
 ```
 
@@ -782,7 +795,8 @@ event LoanError(bool indexed isAave, address indexed token, uint256 amountIn)
 
 ### OpenMEV
 
-```solidity title="Solidity"
+```solidity title="OpenMEV"
+/// @custom:emit
 event OpenMEV(address indexed user, address indexed token, uint256 value)
 ```
 
@@ -796,7 +810,8 @@ event OpenMEV(address indexed user, address indexed token, uint256 value)
 
 ### OwnershipTransferred
 
-```solidity title="Solidity"
+```solidity title="OwnershipTransferred"
+/// @custom:emit
 event OwnershipTransferred(address indexed previousOwner, address indexed newOwner)
 ```
 
@@ -811,114 +826,133 @@ event OwnershipTransferred(address indexed previousOwner, address indexed newOwn
 
 ### ExcessiveInputAmount
 
-```solidity title="Solidity"
+```solidity title="ExcessiveInputAmount"
+/// @custom:error
 error ExcessiveInputAmount()
 ```
 
 ### ExecuteNotAuthorized
 
-```solidity title="Solidity"
+```solidity title="ExecuteNotAuthorized"
+/// @custom:error
 error ExecuteNotAuthorized()
 ```
 
 ### Expired
 
 ```solidity title="Solidity"
+/// @custom:error
 error Expired()
 ```
 
 ### IdenticalAddresses
 
 ```solidity title="Solidity"
+/// @custom:error
 error IdenticalAddresses()
 ```
 
 ### InsufficientAAmount
 
 ```solidity title="Solidity"
+/// @custom:error
 error InsufficientAAmount()
 ```
 
 ### InsufficientAllowance
 
 ```solidity title="Solidity"
+/// @custom:error
 error InsufficientAllowance()
 ```
 
 ### InsufficientBAmount
 
 ```solidity title="Solidity"
+/// @custom:error
 error InsufficientBAmount()
 ```
 
 ### InsufficientLiquidity
 
 ```solidity title="Solidity"
+/// @custom:error
 error InsufficientLiquidity()
 ```
 
 ### InsufficientOutputAmount
 
-```solidity title="Solidity"
+```solidity title="InsufficientOutputAmount"
+/// @custom:error
 error InsufficientOutputAmount()
 ```
 
 ### InvalidPath
 
 ```solidity title="Solidity"
+/// @custom:error
 error InvalidPath()
 ```
 
 ### NoReceivers
 
 ```solidity title="Solidity"
+/// @custom:error
 error NoReceivers()
 ```
 
 ### NoTokens
 
 ```solidity title="Solidity"
+/// @custom:error
 error NoTokens()
 ```
 
 ### NotPercent
 
 ```solidity title="Solidity"
+/// @custom:error
 error NotPercent()
 ```
 
 ### Overflow
 
 ```solidity title="Solidity"
+/// @custom:error
 error Overflow()
 ```
 
 ### TokenIsFeeOnTransfer
 
 ```solidity title="Solidity"
+/// @custom:error
 error TokenIsFeeOnTransfer()
 ```
 
 ### TransferFailed
 
 ```solidity title="Solidity"
+/// @custom:error
 error TransferFailed()
 ```
 
 ### Unauthorized
 
 ```solidity title="Solidity"
+/// @custom:error
 error Unauthorized()
 ```
 
 ### ZeroAddress
 
 ```solidity title="Solidity"
+/// @custom:error
 error ZeroAddress()
 ```
 
 ### ZeroAmount
 
 ```solidity title="Solidity"
+/// @custom:error
 error ZeroAmount()
 ```
