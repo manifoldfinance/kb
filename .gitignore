@@ -1,4 +1,5 @@
 # -*- mode: gitignore; -*-
+dict.txt
 /out
 cache/
 artifacts/

@@ -21,7 +21,7 @@ function WETH() external pure returns (address)
 
 | Name | Type    | Description |
 | ---- | ------- | ----------- |
-| \_0  | address | undefined   |
+| WETH09  | address | 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2   |
 
 ### acceptOwnership
 
@@ -29,14 +29,35 @@ function WETH() external pure returns (address)
 function acceptOwnership() external nonpayable
 ```
 
-:::note Details Transfers ownership of the contract to the caller. Can only be called by a new potential owner set by the current owner. :::
+<!-- prettier-ignore -->
+:::note 
+
+Details Transfers ownership of the contract to the caller. Can only be called by a new potential owner set by the current owner. 
+
+:::
 
 ### addLiquidity
 
-Adds liquidity to an ERC-20⇄ERC-20 pool. msg.sender should have already given the router an allowance of at least amountADesired/amountBDesired on tokenA/tokenB
+Adds liquidity to an ERC-20⇄ERC-20 pool. `msg.sender` should have already given the router an allowance of at least `amountADesired`/`amountBDesired` on `tokenA`/`tokenB`.
 
-```solidity title="Solidity"
-function addLiquidity(address tokenA, address tokenB, uint256 amountADesired, uint256 amountBDesired, uint256 amountAMin, uint256 amountBMin, address to, uint256 deadline) external nonpayable returns (uint256 amountA, uint256 amountB, uint256 liquidity)
+
+```solidity title="addLiquidity"
+    function addLiquidityETH(
+        address token,
+        uint256 amountTokenDesired,
+        uint256 amountTokenMin,
+        uint256 amountETHMin,
+        address to,
+        uint256 deadline
+    )
+        external
+        payable
+        virtual
+        returns (
+            uint256 amountToken,
+            uint256 amountETH,
+            uint256 liquidity
+    )
 ```
 
 #### Parameters
@@ -62,7 +83,7 @@ function addLiquidity(address tokenA, address tokenB, uint256 amountADesired, ui
 
 ### addLiquidityETH
 
-Adds liquidity to an ERC-20⇄WETH pool with ETH. msg.sender should have already given the router an allowance of at least amountTokenDesired on token. msg.value is treated as a amountETHDesired. Leftover ETH, if any, is returned to msg.sender
+Adds liquidity to an ERC-20⇄WETH pool with ETH. msg.sender should have already given the router an allowance of at least `amountTokenDesired` on the token. `msg.value` is treated as a `amountETHDesired`. Leftover ETH, if any, is returned to `msg.sender`
 
 ```solidity title="Solidity"
 function addLiquidityETH(address token, uint256 amountTokenDesired, uint256 amountTokenMin, uint256 amountETHMin, address to, uint256 deadline) external payable returns (uint256 amountToken, uint256 amountETH, uint256 liquidity)
@@ -93,17 +114,32 @@ function addLiquidityETH(address token, uint256 amountTokenDesired, uint256 amou
 function cancelOwnershipTransfer() external payable
 ```
 
-:::note Details Cancel a transfer of ownership to a new account. Can only be called by the current owner. :::
+:::note 
+
+Details Cancel a transfer of ownership to a new account. Can only be called by the current owner. 
+
+:::
 
 ### executeOperation
 
 Called from Aave Lending pool after the contract has received the flash loaned amount (https://docs.aave.com/developers/v/2.0/guides/flash-loans)
 
-```solidity title="Solidity"
-function executeOperation(address[] assets, uint256[] amounts, uint256[] premiums, address initiator, bytes params) external nonpayable returns (bool)
+```solidity title="executeOperation"
+    function executeOperation(
+        address[] calldata assets,
+        uint256[] calldata amounts,
+        uint256[] calldata premiums,
+        address initiator,
+        bytes calldata params
+    ) external returns (bool)
 ```
 
-:::note Details Reverts if not profitable. :::
+<!-- prettier-ignore -->
+:::note 
+
+Details Reverts if not profitable. 
+
+:::
 
 #### Parameters
 
@@ -233,7 +269,12 @@ function harvest(uint256 percentage, address[] tokens, address[] receivers) exte
 function isOwner() external view returns (bool)
 ```
 
-:::note Details Returns true if the caller is the current owner. :::
+<!-- prettier-ignore -->
+:::note 
+
+Details Returns true if the caller is the current owner.
+
+ :::
 
 #### Returns
 
@@ -243,13 +284,18 @@ function isOwner() external view returns (bool)
 
 ### onFlashLoan
 
-Called from BentoBox Lending pool after contract has received the flash loaned amount
+Called from BentoBox Lending pool after the contract has received the flash loaned amount
 
 ```solidity title="Solidity"
 function onFlashLoan(address sender, address token, uint256 amount, uint256 fee, bytes data) external nonpayable
 ```
 
-:::note Details Reverts if not profitable. :::
+<!-- prettier-ignore -->
+:::note  onFlashLoan
+
+Details Reverts if not profitable. 
+
+:::
 
 #### Parameters
 
@@ -267,7 +313,12 @@ function onFlashLoan(address sender, address token, uint256 amount, uint256 fee,
 function owner() external view returns (address)
 ```
 
-:::note Details Returns the address of the current owner. :::
+<!-- prettier-ignore -->
+:::note 
+
+Details the return address of the current owner. 
+
+:::
 
 #### Returns
 
