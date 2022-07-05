@@ -83,7 +83,7 @@ Value transaction from an account with a balance of 0. The node determines this 
 }
 ```
 
-The node doesn't uses the account management most implementations provide but forwards a transaction to an external signing service. When this service could not be reached the node can return the following error:
+The node doesn't use the account management most implementations provide but forwards a transaction to an external signing service. When this service could not be reached the node can return the following error:
 
 ```jsonc
 {

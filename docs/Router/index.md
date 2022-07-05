@@ -63,7 +63,7 @@ Dev Notes
 
 ### acceptOwnership
 
-```solidity title="Solidity"
+```solidity title="acceptOwnership"
 function acceptOwnership() external nonpayable
 ```
 
@@ -77,7 +77,7 @@ Details Transfers ownership of the contract to the caller. Can only be called by
 
 Adds liquidity to an ERC-20⇄ERC-20 pool. `msg.sender` should have already given the router an allowance of at least `amountADesired`/`amountBDesired` on `tokenA`/`tokenB`
 
-```solidity title="Solidity"
+```solidity title="addLiquidity"
 function addLiquidity(address tokenA, address tokenB, uint256 amountADesired, uint256 amountBDesired, uint256 amountAMin, uint256 amountBMin, address to, uint256 deadline) external nonpayable returns (uint256 amountA, uint256 amountB, uint256 liquidity)
 ```
 
@@ -136,6 +136,7 @@ function cancelOwnershipTransfer() external payable
 ```
 
 :::note
+
  Details Cancel a transfer of ownership to a new account. Can only be called by the current owner. 
 
 :::
@@ -149,7 +150,9 @@ function executeOperation(address[] assets, uint256[] amounts, uint256[] premium
 ```
 
 :::note 
+
 Details Reverts if not profitable. 
+
 :::
 
 #### Parameters
