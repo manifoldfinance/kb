@@ -16,7 +16,11 @@ Below type description can also be found in [EIP-1474](https://eips.ethereum.org
 
 ### `Quantity`
 
-Values of a field of `QUANTITY` type **MUST** be encoded as a hexadecimal string with a `0x` prefix and the leading 0s stripped (except for the case of encoding the value `0`) matching the regular expression `^0x(?:0|(?:[a-fA-F1-9][a-fA-F0-9]*))$`.
+Values of a field of `QUANTITY` type **MUST** be encoded as a hexadecimal string with a `0x` prefix and the leading 0s stripped (except for the case of encoding the value `0`) matching the regular expression 
+
+```
+^0x(?:0|(?:[a-fA-F1-9][a-fA-F0-9]*))
+```
 
 - A `Quantity` value **MUST** be hex-encoded.
 - A `Quantity` value **MUST** be "0x"-prefixed.
@@ -25,7 +29,11 @@ Values of a field of `QUANTITY` type **MUST** be encoded as a hexadecimal string
 
 ### `Data`
 
-Values of a field of `DATA` type **MUST** be encoded as a hexadecimal string with a `0x` prefix matching the regular expression `^0x(?:[a-fA-F0-9]{2})*$`.
+Values of a field of `DATA` type **MUST** be encoded as a hexadecimal string with a `0x` prefix matching the regular expression `
+
+```
+^0x(?:[a-fA-F0-9]{2})*
+```
 
 - A `Data` value **MUST** be hex-encoded.
 - A `Data` value **MUST** be “0x”-prefixed.
