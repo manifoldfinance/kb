@@ -49,7 +49,7 @@ Since there is no way to clearly distinguish between a `Data` parameter and a `Q
 | `0B` | `blockHash` | `Data` | The block uniquely identified by this hash. The blockNumber and blockHash properties are mutually exclusive; exactly one of them must be set. |
 | `1B` | `requireCanonical` | `boolean` | (optional) Whether to throw an error if the block is not in the canonical chain as described below. Only allowed in conjunction with the blockHash tag. Defaults to false. |
 
-If the block is not found, the callee SHOULD raise a JSON-RPC error (the recommended error code is `-32001: Resource not found`. If the tag is `blockHash` and `requireCanonical` is `true`, the callee SHOULD additionally raise a JSON-RPC error if the block is not in the canonical chain (the recommended error code is `-32000: Invalid input` and in any case should be different than the error code for the block not found case so that the caller can distinguish the cases). The block-not-found check SHOULD take precedence over the block-is-canonical check, so that if the block is not found the callee raises block-not-found rather than block-not-canonical.
+If the block is not found, the callee SHOULD raise a JSON-RPC error (the recommended error code is `-32001: Resource not found`. If the tag is `blockHash` and `requireCanonical` is `true`, the callee *SHOULD* additionally raise a JSON-RPC error if the block is not in the canonical chain (the recommended error code is `-32000: Invalid input` and in any case should be different than the error code for the block not found case so that the caller can distinguish the cases). The block-not-found check *SHOULD* take precedence over the block-is-canonical check, so that if the block is not found the callee raises block-not-found rather than block-not-canonical.
 
 
 ## Errors
@@ -92,10 +92,16 @@ They will be contained in the `data` field of the RPC error message as follows:
 | 104 | Rejected | Should be used when an action was rejected, e.g. because of its content (too long contract code, containing wrong characters ?, should differ from `-32602` - Invalid params). |
 | 105 | Ether too low | Should be used when a to low value of Ether was given. |
 
+#### Ethereum Generic Codes
+
 | Code | Possible Return message | Description                                                             |
 | ---- | ----------------------- | ----------------------------------------------------------------------- |
 | 106  | Timeout                 | Should be used when an action timedout.                                 |
 | 107  | Conflict                | Should be used when an action conflicts with another (ongoing?) action. |
+
+
+
+## Flashbots RPC Methods Parameters
 
 | **Parameters** | **Description** |
 | --- | --- |
@@ -105,19 +111,18 @@ They will be contained in the `data` field of the RPC error message as follows:
 | maxTimestamp(Optional) | Number, the minimum timestamp for which this bundle is valid, in seconds since the unix epoch |
 | revertingTxHashes(Optional) | Array[String], list of tx hashes within the bundle that are allowed to revert |
 
-### Default Parameters {#default-block}
+### Default Parameters
 
 The default block parameter
 The following methods have an extra default block parameter:
 
-<pre>
-eth_getBalance
-eth_getCode
-eth_getTransactionCount
-eth_getStorageAt
-eth_call
-<pre>
 
+- eth_getBalance    
+- eth_getCode    
+- eth_getTransactionCount    
+- eth_getStorageAt    
+- eth_call   
+    
 When requests are made that act on the state of Ethereum, the last default block parameter determines the height of the block.
 
 The following options are possible for the defaultBlock parameter:
@@ -128,3 +133,79 @@ The following options are possible for the defaultBlock parameter:
 | String       | "earliest" | for the earliest/genesis block     |
 | String       | "latest"   | for the latest mined block         |
 | String       | "pending"  | for the pending state/transactions |
+
+
+
+| **Type** 	| **Code** 	| **Description** 	| **0** 	|
+|---	|---	|---	|---	|
+| PARSE_ERROR: 	| -32700, 	| Parse error 	| 1 	|
+| INVALID_REQUEST: 	| -32600, 	| Invalid Request 	| 2 	|
+| METHOD_NOT_FOUND: 	| -32601, 	| Method not found 	| 3 	|
+| INVALID_PARAMS: 	| -32602, 	| Invalid params 	| 4 	|
+| INTERNAL_ERROR: 	| -32603, 	| Internal error 	| 5 	|
+| SERVER_ERROR: 	| -32000, 	| Server error 	| 6 	|
+
+
+---
+
+### Reference: WalletConnect Typescript Error Encoding
+
+```typescript
+// source: https://github.com/WalletConnect/walletconnect-utils/blob/master/jsonrpc/utils/src/constants.ts#L1-#L20
+export const PARSE_ERROR = "PARSE_ERROR";
+export const INVALID_REQUEST = "INVALID_REQUEST";
+export const METHOD_NOT_FOUND = "METHOD_NOT_FOUND";
+export const INVALID_PARAMS = "INVALID_PARAMS";
+export const INTERNAL_ERROR = "INTERNAL_ERROR";
+export const SERVER_ERROR = "SERVER_ERROR";
+
+export const RESERVED_ERROR_CODES = [-32700, -32600, -32601, -32602, -32603];
+export const SERVER_ERROR_CODE_RANGE = [-32000, -32099];
+
+export const STANDARD_ERROR_MAP = {
+  [PARSE_ERROR]: { code: -32700, message: "Parse error" },
+  [INVALID_REQUEST]: { code: -32600, message: "Invalid Request" },
+  [METHOD_NOT_FOUND]: { code: -32601, message: "Method not found" },
+  [INVALID_PARAMS]: { code: -32602, message: "Invalid params" },
+  [INTERNAL_ERROR]: { code: -32603, message: "Internal error" },
+  [SERVER_ERROR]: { code: -32000, message: "Server error" },
+};
+
+export const DEFAULT_ERROR = SERVER_ERROR;
+```
+
+
+### Reference: Anvil Error Codes
+
+```rust
+// https://github.com/foundry-rs/foundry/blob/master/anvil/rpc/src/error.rs#L103-#L124
+impl ErrorCode {
+    /// Returns the error code as `i64`
+    pub fn code(&self) -> i64 {
+        match *self {
+            ErrorCode::ParseError => -32700,
+            ErrorCode::InvalidRequest => -32600,
+            ErrorCode::MethodNotFound => -32601,
+            ErrorCode::InvalidParams => -32602,
+            ErrorCode::InternalError => -32603,
+            ErrorCode::TransactionRejected => -32003,
+            ErrorCode::ExecutionError => 3,
+            ErrorCode::ServerError(c) => c,
+        }
+    }
+
+    /// Returns the message associated with the error
+    pub const fn message(&self) -> &'static str {
+        match *self {
+            ErrorCode::ParseError => "Parse error",
+            ErrorCode::InvalidRequest => "Invalid request",
+            ErrorCode::MethodNotFound => "Method not found",
+            ErrorCode::InvalidParams => "Invalid params",
+            ErrorCode::InternalError => "Internal error",
+            ErrorCode::TransactionRejected => "Transaction rejected",
+            ErrorCode::ServerError(_) => "Server error",
+            ErrorCode::ExecutionError => "Execution error",
+        }
+    }
+}
+```
