@@ -13,19 +13,18 @@ Type and data information for validation and conformance.
 
 Below type description can also be found in [EIP-1474](https://eips.ethereum.org/EIPS/eip-1474)
 
-
 ### `Quantity`
 
-Values of a field of `QUANTITY` type **MUST** be encoded as a hexadecimal string with a `0x` prefix and the leading 0s stripped (except for the case of encoding the value `0`) matching the regular expression 
+Values of a field of `QUANTITY` type **MUST** be encoded as a hexadecimal string with a `0x` prefix and the leading 0s stripped (except for the case of encoding the value `0`) matching the regular expression
 
 ```
 ^0x(?:0|(?:[a-fA-F1-9][a-fA-F0-9]*))
 ```
 
-- A `Quantity` value **MUST** be hex-encoded.
-- A `Quantity` value **MUST** be "0x"-prefixed.
-- A `Quantity` value **MUST** be expressed using the fewest possible hex digits per byte.
-- A `Quantity` value **MUST** express zero as "0x0".
+-   A `Quantity` value **MUST** be hex-encoded.
+-   A `Quantity` value **MUST** be "0x"-prefixed.
+-   A `Quantity` value **MUST** be expressed using the fewest possible hex digits per byte.
+-   A `Quantity` value **MUST** express zero as "0x0".
 
 ### `Data`
 
@@ -35,9 +34,9 @@ Values of a field of `DATA` type **MUST** be encoded as a hexadecimal string wit
 ^0x(?:[a-fA-F0-9]{2})*
 ```
 
-- A `Data` value **MUST** be hex-encoded.
-- A `Data` value **MUST** be “0x”-prefixed.
-- A `Data` value **MUST** be expressed using two hex digits per byte.
+-   A `Data` value **MUST** be hex-encoded.
+-   A `Data` value **MUST** be “0x”-prefixed.
+-   A `Data` value **MUST** be expressed using two hex digits per byte.
 
 ### `Block Identifier`
 
@@ -49,26 +48,24 @@ Since there is no way to clearly distinguish between a `Data` parameter and a `Q
 | `0B` | `blockHash` | `Data` | The block uniquely identified by this hash. The blockNumber and blockHash properties are mutually exclusive; exactly one of them must be set. |
 | `1B` | `requireCanonical` | `boolean` | (optional) Whether to throw an error if the block is not in the canonical chain as described below. Only allowed in conjunction with the blockHash tag. Defaults to false. |
 
-If the block is not found, the callee SHOULD raise a JSON-RPC error (the recommended error code is `-32001: Resource not found`. If the tag is `blockHash` and `requireCanonical` is `true`, the callee *SHOULD* additionally raise a JSON-RPC error if the block is not in the canonical chain (the recommended error code is `-32000: Invalid input` and in any case should be different than the error code for the block not found case so that the caller can distinguish the cases). The block-not-found check *SHOULD* take precedence over the block-is-canonical check, so that if the block is not found the callee raises block-not-found rather than block-not-canonical.
-
+If the block is not found, the callee SHOULD raise a JSON-RPC error (the recommended error code is `-32001: Resource not found`. If the tag is `blockHash` and `requireCanonical` is `true`, the callee _SHOULD_ additionally raise a JSON-RPC error if the block is not in the canonical chain (the recommended error code is `-32000: Invalid input` and in any case should be different than the error code for the block not found case so that the caller can distinguish the cases). The block-not-found check _SHOULD_ take precedence over the block-is-canonical check, so that if the block is not found the callee raises block-not-found rather than block-not-canonical.
 
 ## Errors
 
 The list of error codes introduced by this specification can be found below.
 
-| Code | Message | Meaning |
-| - | - | - |
-| -32700 | Parse error | Invalid JSON was received by the server. |
-| -32600 | Invalid Request | The JSON sent is not a valid Request object. |
-| -32601 | Method not found | The method does not exist / is not available. |
-| -32602 | Invalid params | Invalid method parameter(s). | 
-| -32603 | Internal error | Internal JSON-RPC error. |
-| -32000 | Server error | Generic client error while processing request. |
-| -38001 | Unknown payload | Payload does not exist / is not available. |
+| Code   | Message                    | Meaning                                        |
+| ------ | -------------------------- | ---------------------------------------------- |
+| -32700 | Parse error                | Invalid JSON was received by the server.       |
+| -32600 | Invalid Request            | The JSON sent is not a valid Request object.   |
+| -32601 | Method not found           | The method does not exist / is not available.  |
+| -32602 | Invalid params             | Invalid method parameter(s).                   |
+| -32603 | Internal error             | Internal JSON-RPC error.                       |
+| -32000 | Server error               | Generic client error while processing request. |
+| -38001 | Unknown payload            | Payload does not exist / is not available.     |
 | -38002 | Invalid payload attributes | Payload attributes are invalid / inconsistent. |
 
 Each error returns a `null` `data` value, except `-32000` which returns the `data` object with a `err` member that explains the error encountered.
-
 
 ### Authorization Error Codes
 
@@ -99,8 +96,6 @@ They will be contained in the `data` field of the RPC error message as follows:
 | 106  | Timeout                 | Should be used when an action timedout.                                 |
 | 107  | Conflict                | Should be used when an action conflicts with another (ongoing?) action. |
 
-
-
 ## Flashbots RPC Methods Parameters
 
 | **Parameters** | **Description** |
@@ -113,38 +108,34 @@ They will be contained in the `data` field of the RPC error message as follows:
 
 ### Default Parameters
 
-The default block parameter
-The following methods have an extra default block parameter:
+The default block parameter The following methods have an extra default block parameter:
+
+-   eth_getBalance
+-   eth_getCode
+-   eth_getTransactionCount
+-   eth_getStorageAt
+-   eth_call  
 
 
-- eth_getBalance    
-- eth_getCode    
-- eth_getTransactionCount    
-- eth_getStorageAt    
-- eth_call   
-    
 When requests are made that act on the state of Ethereum, the last default block parameter determines the height of the block.
 
 The following options are possible for the defaultBlock parameter:
 
 | **Encoding** | **param**  | **description**                    |
-|--------------|------------|------------------------------------|
+| ------------ | ---------- | ---------------------------------- |
 | HEX          | String     | an integer block number            |
 | String       | "earliest" | for the earliest/genesis block     |
 | String       | "latest"   | for the latest mined block         |
 | String       | "pending"  | for the pending state/transactions |
 
-
-
-| **Type** 	| **Code** 	| **Description** 	| **0** 	|
-|---	|---	|---	|---	|
-| PARSE_ERROR: 	| -32700, 	| Parse error 	| 1 	|
-| INVALID_REQUEST: 	| -32600, 	| Invalid Request 	| 2 	|
-| METHOD_NOT_FOUND: 	| -32601, 	| Method not found 	| 3 	|
-| INVALID_PARAMS: 	| -32602, 	| Invalid params 	| 4 	|
-| INTERNAL_ERROR: 	| -32603, 	| Internal error 	| 5 	|
-| SERVER_ERROR: 	| -32000, 	| Server error 	| 6 	|
-
+| **Type**          | **Code** | **Description**  | **0** |
+| ----------------- | -------- | ---------------- | ----- |
+| PARSE_ERROR:      | -32700,  | Parse error      | 1     |
+| INVALID_REQUEST:  | -32600,  | Invalid Request  | 2     |
+| METHOD_NOT_FOUND: | -32601,  | Method not found | 3     |
+| INVALID_PARAMS:   | -32602,  | Invalid params   | 4     |
+| INTERNAL_ERROR:   | -32603,  | Internal error   | 5     |
+| SERVER_ERROR:     | -32000,  | Server error     | 6     |
 
 ---
 
@@ -163,17 +154,16 @@ export const RESERVED_ERROR_CODES = [-32700, -32600, -32601, -32602, -32603];
 export const SERVER_ERROR_CODE_RANGE = [-32000, -32099];
 
 export const STANDARD_ERROR_MAP = {
-  [PARSE_ERROR]: { code: -32700, message: "Parse error" },
-  [INVALID_REQUEST]: { code: -32600, message: "Invalid Request" },
-  [METHOD_NOT_FOUND]: { code: -32601, message: "Method not found" },
-  [INVALID_PARAMS]: { code: -32602, message: "Invalid params" },
-  [INTERNAL_ERROR]: { code: -32603, message: "Internal error" },
-  [SERVER_ERROR]: { code: -32000, message: "Server error" },
+	[PARSE_ERROR]: { code: -32700, message: "Parse error" },
+	[INVALID_REQUEST]: { code: -32600, message: "Invalid Request" },
+	[METHOD_NOT_FOUND]: { code: -32601, message: "Method not found" },
+	[INVALID_PARAMS]: { code: -32602, message: "Invalid params" },
+	[INTERNAL_ERROR]: { code: -32603, message: "Internal error" },
+	[SERVER_ERROR]: { code: -32000, message: "Server error" },
 };
 
 export const DEFAULT_ERROR = SERVER_ERROR;
 ```
-
 
 ### Reference: Anvil Error Codes
 

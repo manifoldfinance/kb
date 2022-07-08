@@ -9,7 +9,7 @@ description: Contributing and Community Dogma and Social Rules
 
 :::caution
 
-These guidelines are a  **living document**
+These guidelines are a **living document**
 
 :::
 
@@ -54,7 +54,6 @@ Any organization that does not wish to end up corrupted by ideological malconten
 An example is when **DerbyCon** shutdown [citing the increasing difficulty of holding conferences in the face of "a small, yet vocal group of people creating negativity, polarization, and disruption](https://web.archive.org/web/20190428142347/https://www.derbycon.com/blog/derbycon-9-0-every-beginning-has-an-end/#:~:text=This%20year%2C%20we,were%20in%20tears).[^4]
 
 :::
-
 
 ## Principles
 
@@ -117,7 +116,8 @@ This document is distributed under a [Creative Commons Attribution-ShareAlike li
 
 > Citations and Attributions
 
-The Recurse Community, https://www.recurse.com/about; 2022 June 10 <br /> 
+<!-- prettier-ignore-start -->
+
 The Scala Community, https://scala-lang.org/conduct/; 2022 June 10 <br /> 
 The ZIO Community, https://github.com/zio; 2022 June 10 <br /> 
 The Rust Code of Conduct, https://www.rust-lang.org/policies/code-of-conduct 2022 June 10 <br /> 
@@ -128,6 +128,8 @@ The Node.js Policy on Trolling, https://blog.izs.me/post/30036893703/policy-on-t
 ["The Right to be Rude"](http://esr.ibiblio.org/?p=8609), 2022 July 01 <br /> 
 ["Tracking down Conquest’s law on organisations", Martin Vogel](https://vogelwakefield.com/2018/12/tracking-down-conquests-law-on-organisations/), 2022 July 01 <br />
 [DerbyCon2019 - Every Beginning has an End, DerbyCon Team](https://web.archive.org/web/20190428142347/https://www.derbycon.com/blog/derbycon-9-0-every-beginning-has-an-end/#:~:text=This%20year%2C%20we,were%20in%20tears).
+
+<!-- prettier-ignore-end -->
 
 #### Footnotes
 
