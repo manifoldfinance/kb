@@ -69,7 +69,7 @@ function acceptOwnership() external nonpayable
 
 :::note acceptOwnership
 
-Details Transfers ownership of the contract to the caller. Can only be called by a new potential owner set by the current owner. 
+Details Transfers ownership of the contract to the caller. Can only be called by a new potential owner set by the current owner.
 
 :::
 
@@ -137,7 +137,7 @@ function cancelOwnershipTransfer() external payable
 
 :::note
 
- Details Cancel a transfer of ownership to a new account. Can only be called by the current owner. 
+Details Cancel a transfer of ownership to a new account. Can only be called by the current owner.
 
 :::
 
@@ -149,9 +149,9 @@ Called from Aave Lending pool after the contract has received the flash loaned a
 function executeOperation(address[] assets, uint256[] amounts, uint256[] premiums, address initiator, bytes params) external nonpayable returns (bool)
 ```
 
-:::note 
+:::note
 
-Details Reverts if not profitable. 
+Details Reverts if not profitable.
 
 :::
 

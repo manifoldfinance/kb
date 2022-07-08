@@ -33,7 +33,6 @@ const bundleReceipt = await flashbotsProvider.sendRawBundle(
 )
 ```
 
-
 ### Referenes
 
 [Flashbots, Bundles](https://github.com/flashbots/flashbots-docs/blob/main/docs/flashbots-auction/searchers/advanced/understanding-bundles.mdx)

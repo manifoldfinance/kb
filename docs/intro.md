@@ -5,8 +5,7 @@ title: Manifold Finance Introduction
 description: An introduction to Manifold Finance
 ---
 
-
-## Ethereum2 
+## Ethereum2
 
 Ethereum will soon transition from a Proof of Work (PoW) to a Proof of Stake (PoS) consensus protocol. This transition has been worked on for years and is happening in multiple steps.
 
@@ -18,18 +17,16 @@ Manifold Finance enables and provides access to high-value transaction pools on 
 
 This appears to create a positive feedback situation, leading to the end result of a single large high-value transaction pool, and a single major builder. Smaller transaction pools may survive if backed by validators willing to sacrifice financial rewards for some other value, however, validators that are monetarily driven will end up taking the block from the single major builder.
 
-
 ## Reading this documentation
 
-- Guides, for broad hands-on understanding and connections to other learning resources
-- Tutorials, intended to teach a particular process or project
-- Cookbooks, collections of tips and tricks
-- Reference, full manuals and technical coverage
-- Pedias, for encyclopedic description
+-   Guides, for broad hands-on understanding and connections to other learning resources
+-   Tutorials, intended to teach a particular process or project
+-   Cookbooks, collections of tips and tricks
+-   Reference, full manuals and technical coverage
+-   Pedias, for encyclopedic description
 
-+ If information is more encyclopedic (with a similar scope and tone to pages on Wikipedia), a page would be considered a pedia.
-+ If information is less encyclopedic and more similar to a compendium, study guide, or bibliographic guide, a page would be considered a guide.
-+ If information is more about direct instruction to achieve a specific task, a page would be considered a tutorial.
-+ If a page is more just a set of tips and tricks (less instructive than a tutorial), it would be a cookbook.
-+ If a page is a detailed reference (like a man page or full software manual), it would fit under references.
-
+*   If information is more encyclopedic (with a similar scope and tone to pages on Wikipedia), a page would be considered a pedia.
+*   If information is less encyclopedic and more similar to a compendium, study guide, or bibliographic guide, a page would be considered a guide.
+*   If information is more about direct instruction to achieve a specific task, a page would be considered a tutorial.
+*   If a page is more just a set of tips and tricks (less instructive than a tutorial), it would be a cookbook.
+*   If a page is a detailed reference (like a man page or full software manual), it would fit under references.

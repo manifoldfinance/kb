@@ -19,9 +19,9 @@ function WETH() external pure returns (address)
 
 #### Returns
 
-| Name | Type    | Description |
-| ---- | ------- | ----------- |
-| WETH09  | address | 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2   |
+| Name   | Type    | Description                                |
+| ------ | ------- | ------------------------------------------ |
+| WETH09 | address | 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2 |
 
 ### acceptOwnership
 
@@ -30,16 +30,15 @@ function acceptOwnership() external nonpayable
 ```
 
 <!-- prettier-ignore -->
-:::note 
+:::note
 
-Details Transfers ownership of the contract to the caller. Can only be called by a new potential owner set by the current owner. 
+Details Transfers ownership of the contract to the caller. Can only be called by a new potential owner set by the current owner.
 
 :::
 
 ### addLiquidity
 
-Adds liquidity to an ERC-20⇄ERC-20 pool. ``msg.sender`` should have already given the router an allowance of at least `amountADesired`/`amountBDesired` on `tokenA`/`tokenB`.
-
+Adds liquidity to an ERC-20⇄ERC-20 pool. `msg.sender` should have already given the router an allowance of at least `amountADesired`/`amountBDesired` on `tokenA`/`tokenB`.
 
 ```solidity title="addLiquidity"
     function addLiquidityETH(
@@ -83,7 +82,7 @@ Adds liquidity to an ERC-20⇄ERC-20 pool. ``msg.sender`` should have already gi
 
 ### addLiquidityETH
 
-Adds liquidity to an ERC-20⇄WETH pool with ETH. `msg.sender` should have already given the router an allowance of at least `amountTokenDesired` on the token. `msg.value` is treated as a `amountETHDesired`. Leftover ETH, if any, is returned to ``msg.sender``
+Adds liquidity to an ERC-20⇄WETH pool with ETH. `msg.sender` should have already given the router an allowance of at least `amountTokenDesired` on the token. `msg.value` is treated as a `amountETHDesired`. Leftover ETH, if any, is returned to `msg.sender`
 
 ```solidity title="Solidity"
 function addLiquidityETH(address token, uint256 amountTokenDesired, uint256 amountTokenMin, uint256 amountETHMin, address to, uint256 deadline) external payable returns (uint256 amountToken, uint256 amountETH, uint256 liquidity)
@@ -114,9 +113,9 @@ function addLiquidityETH(address token, uint256 amountTokenDesired, uint256 amou
 function cancelOwnershipTransfer() external payable
 ```
 
-:::note 
+:::note
 
-Details Cancel a transfer of ownership to a new account. Can only be called by the current owner. 
+Details Cancel a transfer of ownership to a new account. Can only be called by the current owner.
 
 :::
 
@@ -135,9 +134,9 @@ Called from Aave Lending pool after the contract has received the flash loaned a
 ```
 
 <!-- prettier-ignore -->
-:::note 
+:::note
 
-Details Reverts if not profitable. 
+Details Reverts if not profitable.
 
 :::
 
@@ -270,11 +269,11 @@ function isOwner() external view returns (bool)
 ```
 
 <!-- prettier-ignore -->
-:::note 
+:::note
 
 Details Returns true if the caller is the current owner.
 
- :::
+:::
 
 #### Returns
 
@@ -293,7 +292,7 @@ function onFlashLoan(address sender, address token, uint256 amount, uint256 fee,
 <!-- prettier-ignore -->
 :::note  onFlashLoan
 
-Details Reverts if not profitable. 
+Details Reverts if not profitable.
 
 :::
 
@@ -314,9 +313,9 @@ function owner() external view returns (address)
 ```
 
 <!-- prettier-ignore -->
-:::note 
+:::note
 
-Details the return address of the current owner. 
+Details the return address of the current owner.
 
 :::
 
@@ -685,9 +684,9 @@ function swapTokensForExactETH(uint256 amountOut, uint256 amountInMax, address[]
 
 :::note
 
- Details Require has been replaced with a revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps.
- 
- :::
+Details Require has been replaced with a revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps.
+
+:::
 
 #### Parameters
 
@@ -715,9 +714,9 @@ function swapTokensForExactTokens(uint256 amountOut, uint256 amountInMax, addres
 
 :::note
 
- Details Require has been replaced with a revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps. 
- 
- :::
+Details Require has been replaced with a revert for gas optimization. Fallback alternate router check for insufficient output amount. Attempt to back-run swaps.
+
+:::
 
 #### Parameters
 
@@ -743,9 +742,9 @@ function transferOwnership(address newOwner) external payable
 
 :::note
 
- Details Allows a new account (`newOwner`) to accept ownership. Can only be called by the current owner. 
- 
- :::
+Details Allows a new account (`newOwner`) to accept ownership. Can only be called by the current owner.
+
+:::
 
 #### Parameters
 
