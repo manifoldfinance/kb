@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 9
 id: router-errorcodes
 title: Custom Error codes
 description: Custom error codes for OpenMevRouter
@@ -11,37 +11,37 @@ description: Custom error codes for OpenMevRouter
 
 ### IdenticalAddresses
 
-```solidity title="Solidity"
+```solidity title="IdenticalAddresses"
 error IdenticalAddresses()
 ```
 
 ### InsufficientAAmount
 
-```solidity title="Solidity"
+```solidity title="InsufficientAAmount"
 error InsufficientAAmount()
 ```
 
 ### InsufficientAllowance
 
-```solidity title="Solidity"
+```solidity title="InsufficientAllowance"
 error InsufficientAllowance()
 ```
 
 ### InsufficientBAmount
 
-```solidity title="Solidity"
+```solidity title="InsufficientBAmount"
 error InsufficientBAmount()
 ```
 
 ### InsufficientLiquidity
 
-```solidity title="Solidity"
+```solidity title="InsufficientLiquidity"
 error InsufficientLiquidity()
 ```
 
 ### InsufficientOutputAmount
 
-```solidity title="Solidity"
+```solidity title="InsufficientOutputAmount"
 error InsufficientOutputAmount()
 ```
 
@@ -53,24 +53,24 @@ error InvalidPath()
 
 ### Overflow
 
-```solidity title="Solidity"
+```solidity title="Overflow"
 error Overflow()
 ```
 
 ### TransferFailed
 
-```solidity title="Solidity"
+```solidity title="TransferFailed"
 error TransferFailed()
 ```
 
 ### ZeroAddress
 
-```solidity title="Solidity"
+```solidity title="ZeroAddress"
 error ZeroAddress()
 ```
 
 ### ZeroAmount
 
-```solidity title="Solidity"
+```solidity title="ZeroAmount"
 error ZeroAmount()
 ```

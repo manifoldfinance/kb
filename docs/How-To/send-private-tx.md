@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 id: howto-send_private_tx
 title: Sending a Private Transaction
 description: How to guide on Sending a Private Transaction tto SecureRpc

@@ -1,0 +1,11 @@
+.docusaurus
+protodocs/
+fixtures
+*.html
+*.css
+*.scss
+*.svg
+*.min.js
+*.proto
+*.json
+generatedSidebarsProtodocs.js
