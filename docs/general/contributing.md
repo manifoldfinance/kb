@@ -7,17 +7,11 @@ description: Contributing and Community Dogma and Social Rules
 
 # Contributing and Community Dogma
 
--   [Contributing and Community Dogma](#contributing-and-community-dogma)
-    -   [Preface](#preface)
-    -   [Motivation](#motivation)
-    -   [Principles](#principles)
-        -   [Pro Community](#pro-community)
-        -   [Pro Professionalism](#pro-professionalism)
-        -   [The Ethereum Ecosystem](#the-ethereum-ecosystem)
-    -   [Social Rules](#social-rules)
-        -   [Why have social rules?](#why-have-social-rules)
-    -   [License](#license)
-    -   [Citations / Attributions](#citations)
+:::caution
+
+These guidelines are a  **living document**
+
+:::
 
 ## Preface
 
@@ -55,7 +49,12 @@ Which we can reduce to the following principle:
 
 Any organization that does not wish to end up corrupted by ideological malcontents must explicitly codify and aggressively enforce its ideals. As an organization grows and becomes more complex, it ends up acting primarily to ensure its perpetuation. The purpose for which it was founded becomes secondary to its survival. In fact, for many in the organization, possibly the vast majority, its continued survival becomes confused with the purpose it was originally founded to deliver. This can lead to behaviors that seem rational when viewed from the perspective of perpetuating the organization but look counter-intuitive when considered from the perspective of what the organization ostensibly exists to do. [^3, Tracking down conquests' [law on ](https://vogelwakefield.com/2018/12/tracking-down-conquests-law-on-organisations/)organizations](https://vogelwakefield.com/2018/12/tracking-down-conquests-law-on-organisations/)
 
-We, therefore, resolve to explicitly to enforce a non-accretive approach towards developing specifications: Kelvin Versioning. [See _Kelvin Versioning_](https://jtobin.io/kelvin-versioning).[^1 the Wrapped Ether Contract, WETH9, uses this versioning style]
+:::info
+
+An example is when **DerbyCon** shutdown [citing the increasing difficulty of holding conferences in the face of "a small, yet vocal group of people creating negativity, polarization, and disruption](https://web.archive.org/web/20190428142347/https://www.derbycon.com/blog/derbycon-9-0-every-beginning-has-an-end/#:~:text=This%20year%2C%20we,were%20in%20tears).[^4]
+
+:::
+
 
 ## Principles
 
@@ -118,4 +117,18 @@ This document is distributed under a [Creative Commons Attribution-ShareAlike li
 
 > Citations and Attributions
 
-The Recurse Community, https://www.recurse.com/about; 2022 June 10 <br /> The Scala Community, https://scala-lang.org/conduct/; 2022 June 10 <br /> The ZIO Community, https://github.com/zio; 2022 June 10 <br /> The Rust Code of Conduct, https://www.rust-lang.org/policies/code-of-conduct 2022 June 10 <br /> The Node.js Policy on Trolling, https://blog.izs.me/post/30036893703/policy-on-trolling <br /> ["ZIO Professionalism"](https://degoes.net/articles/zio-professionalism), 2022 June 10 <br /> ["Big Tent"](https://degoes.net/articles/big-tent). 2022 June 10 <br /> ["Travis Brown, Abuser"](https://degoes.net/articles/travis-brown-abuser). 2022 June 10 <br /> ["The Right to be Rude"](http://esr.ibiblio.org/?p=8609), 2022 July 01 <br /> ["Tracking down Conquest’s law on organisations", Martin Vogel](https://vogelwakefield.com/2018/12/tracking-down-conquests-law-on-organisations/), 2022 July 01 <br />
+The Recurse Community, https://www.recurse.com/about; 2022 June 10 <br /> 
+The Scala Community, https://scala-lang.org/conduct/; 2022 June 10 <br /> 
+The ZIO Community, https://github.com/zio; 2022 June 10 <br /> 
+The Rust Code of Conduct, https://www.rust-lang.org/policies/code-of-conduct 2022 June 10 <br /> 
+The Node.js Policy on Trolling, https://blog.izs.me/post/30036893703/policy-on-trolling 
+<br /> ["ZIO Professionalism"](https://degoes.net/articles/zio-professionalism), 2022 June 10 <br /> 
+["Big Tent"](https://degoes.net/articles/big-tent). 2022 June 10 <br /> 
+["Travis Brown, Abuser"](https://degoes.net/articles/travis-brown-abuser). 2022 June 10 <br /> 
+["The Right to be Rude"](http://esr.ibiblio.org/?p=8609), 2022 July 01 <br /> 
+["Tracking down Conquest’s law on organisations", Martin Vogel](https://vogelwakefield.com/2018/12/tracking-down-conquests-law-on-organisations/), 2022 July 01 <br />
+[DerbyCon2019 - Every Beginning has an End, DerbyCon Team](https://web.archive.org/web/20190428142347/https://www.derbycon.com/blog/derbycon-9-0-every-beginning-has-an-end/#:~:text=This%20year%2C%20we,were%20in%20tears).
+
+#### Footnotes
+
+[^4]: [See, DerbyCon Clarifications, Inclusiveness, and Gender](https://web.archive.org/web/20190428142347/https://www.derbycon.com/blog/derbycon-clarifications-inclusiveness-and-gender/#:~:text=However%2C%20we%20do,found%20so%20concerning)
