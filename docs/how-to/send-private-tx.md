@@ -2,7 +2,7 @@
 sidebar_position: 1
 id: howto-send_private_tx
 title: Sending a Private Transaction
-description: How to guide on Sending a Private Transaction tto SecureRpc
+description: How to guide on Sending a Private Transaction to SecureRpc
 ---
 
 ## Sending a Private Transaction
