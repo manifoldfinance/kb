@@ -26,8 +26,33 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-  plugins: ['@docusaurus/theme-live-codeblock'],
+  plugins: [
+    '@docusaurus/theme-live-codeblock',
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        docsRouteBasePath: ['docs', 'protodocs'],
+        docsDir: ['docs', 'protodocs'],
+        indexBlog: false,
+      },
+    ],
+],
   presets: [
+    [
+      'docusaurus-protobuffet',
+      {
+        protobuffet: {
+          fileDescriptorsPath: './fixtures/proto_workspace.json',
+          protoDocsPath: './protodocs',
+          sidebarPath: './generatedSidebarsProtodocs.js'
+        },
+        docs: {
+          routeBasePath: 'protobuf',
+          sidebarPath: './sidebarsProtodocs.js',
+        }
+      }
+    ],
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
@@ -82,7 +107,7 @@ const config = {
           type: 'doc',
           docId: 'intro',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Knowledge Base',
         },
         { to: '/blog', label: 'Blog', position: 'left' },
         {
@@ -90,6 +115,12 @@ const config = {
           label: 'GitHub',
           position: 'right',
         },
+        {
+          to: 'protodocs/txpool.proto',
+          activeBasePath: 'protodocs',
+          label: 'Network',
+          position: 'left',
+        }
       ],
     },
     footer: {
@@ -135,11 +166,10 @@ const config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Manifold Finance, Inc. All Rights Reservved.`,
     },
     prism: {
-      theme: lightCodeTheme,
-      darkTheme: darkCodeTheme,
+  theme: require('prism-react-renderer/themes/dracula'),
       additionalLanguages: ['solidity'],
       magicComments: [
         // Remember to extend the default highlight class name as well!
