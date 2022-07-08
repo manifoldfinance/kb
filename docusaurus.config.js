@@ -116,8 +116,9 @@ const config = {
           position: 'right',
         },
         {
-          to: 'protodocs/txpool.proto',
-          activeBasePath: 'protodocs',
+          type: 'doc',
+          docId: 'intro',
+          activeBasePath: 'network',
           label: 'Network',
           position: 'left',
         }
