@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
-id: intro
-title: Introduction
-description: Preface and Introduction to the Knowledge Base
+sidebar_position: 2
+id: contributing
+title: Contributing to the Knowledge Base
+description: Preface and Introduction contributing to the Knowledge Base
 ---
 
 # Ground Truth
