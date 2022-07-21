@@ -1,12 +1,6 @@
 # Partner
 
-
-
 > Partner
-
-
-
-
 
 ## Methods
 
@@ -16,16 +10,11 @@
 function companyBeneficiary() external view returns (address payable)
 ```
 
-
-
-
-
-
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | address payable | undefined |
+| Name | Type            | Description |
+| ---- | --------------- | ----------- |
+| \_0  | address payable | undefined   |
 
 ### companyPercentage
 
@@ -33,16 +22,11 @@ function companyBeneficiary() external view returns (address payable)
 function companyPercentage() external view returns (uint256)
 ```
 
-
-
-
-
-
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | uint256 | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_0  | uint256 | undefined   |
 
 ### getTotalFeePercentage
 
@@ -50,16 +34,11 @@ function companyPercentage() external view returns (uint256)
 function getTotalFeePercentage() external view returns (uint256)
 ```
 
-
-
-
-
-
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | uint256 | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_0  | uint256 | undefined   |
 
 ### init
 
@@ -67,19 +46,15 @@ function getTotalFeePercentage() external view returns (uint256)
 function init(contract PartnerRegistry _registry, address payable _overrideCompanyBeneficiary, uint256 _overrideCompanyPercentage, address payable _partnerBeneficiary, uint256 _partnerPercentage) external nonpayable
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _registry | contract PartnerRegistry | undefined |
-| _overrideCompanyBeneficiary | address payable | undefined |
-| _overrideCompanyPercentage | uint256 | undefined |
-| _partnerBeneficiary | address payable | undefined |
-| _partnerPercentage | uint256 | undefined |
+| Name                         | Type                     | Description |
+| ---------------------------- | ------------------------ | ----------- |
+| \_registry                   | contract PartnerRegistry | undefined   |
+| \_overrideCompanyBeneficiary | address payable          | undefined   |
+| \_overrideCompanyPercentage  | uint256                  | undefined   |
+| \_partnerBeneficiary         | address payable          | undefined   |
+| \_partnerPercentage          | uint256                  | undefined   |
 
 ### overrideCompanyBeneficiary
 
@@ -87,16 +62,11 @@ function init(contract PartnerRegistry _registry, address payable _overrideCompa
 function overrideCompanyBeneficiary() external view returns (address payable)
 ```
 
-
-
-
-
-
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | address payable | undefined |
+| Name | Type            | Description |
+| ---- | --------------- | ----------- |
+| \_0  | address payable | undefined   |
 
 ### overrideCompanyPercentage
 
@@ -104,16 +74,11 @@ function overrideCompanyBeneficiary() external view returns (address payable)
 function overrideCompanyPercentage() external view returns (uint256)
 ```
 
-
-
-
-
-
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | uint256 | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_0  | uint256 | undefined   |
 
 ### partnerBeneficiary
 
@@ -121,16 +86,11 @@ function overrideCompanyPercentage() external view returns (uint256)
 function partnerBeneficiary() external view returns (address payable)
 ```
 
-
-
-
-
-
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | address payable | undefined |
+| Name | Type            | Description |
+| ---- | --------------- | ----------- |
+| \_0  | address payable | undefined   |
 
 ### partnerPercentage
 
@@ -138,16 +98,11 @@ function partnerBeneficiary() external view returns (address payable)
 function partnerPercentage() external view returns (uint256)
 ```
 
-
-
-
-
-
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | uint256 | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_0  | uint256 | undefined   |
 
 ### payout
 
@@ -155,15 +110,11 @@ function partnerPercentage() external view returns (uint256)
 function payout(address[] tokens) external nonpayable
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| tokens | address[] | undefined |
+| Name   | Type      | Description |
+| ------ | --------- | ----------- |
+| tokens | address[] | undefined   |
 
 ### registry
 
@@ -171,18 +122,11 @@ function payout(address[] tokens) external nonpayable
 function registry() external view returns (contract PartnerRegistry)
 ```
 
-
-
-
-
-
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | contract PartnerRegistry | undefined |
-
-
+| Name | Type                     | Description |
+| ---- | ------------------------ | ----------- |
+| \_0  | contract PartnerRegistry | undefined   |
 
 ## Events
 
@@ -192,16 +136,9 @@ function registry() external view returns (contract PartnerRegistry)
 event LogPayout(address[] tokens, uint256[] amount)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| tokens  | address[] | undefined |
-| amount  | uint256[] | undefined |
-
-
-
+| Name   | Type      | Description |
+| ------ | --------- | ----------- |
+| tokens | address[] | undefined   |
+| amount | uint256[] | undefined   |

@@ -1,12 +1,8 @@
 # ZeroExSwitchBoard
 
-
-
 > ZeroExSwitchBoard
 
 Handles the all ZeroExExchange trades for the primary contract
-
-
 
 ## Methods
 
@@ -18,13 +14,13 @@ function addArecibo(address _areciboPrimary) external nonpayable
 
 addArecibo Function which enables ONLY the owner to change the address of areciboPrimary
 
-*onlyOwner modifier only enables the contract owner to run the code*
+_onlyOwner modifier only enables the contract owner to run the code_
 
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _areciboPrimary | address | Address of the contract to be set as areciboPrimary |
+| Name             | Type    | Description                                         |
+| ---------------- | ------- | --------------------------------------------------- |
+| \_areciboPrimary | address | Address of the contract to be set as areciboPrimary |
 
 ### authorizedPrimaries
 
@@ -32,21 +28,17 @@ addArecibo Function which enables ONLY the owner to change the address of arecib
 function authorizedPrimaries(address) external view returns (bool)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | address | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_0  | address | undefined   |
 
 #### Returns
 
 | Name | Type | Description |
-|---|---|---|
-| _0 | bool | undefined |
+| ---- | ---- | ----------- |
+| \_0  | bool | undefined   |
 
 ### exchange
 
@@ -54,16 +46,11 @@ function authorizedPrimaries(address) external view returns (bool)
 function exchange() external view returns (contract IExchangeCore)
 ```
 
-
-
-
-
-
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | contract IExchangeCore | undefined |
+| Name | Type                   | Description |
+| ---- | ---------------------- | ----------- |
+| \_0  | contract IExchangeCore | undefined   |
 
 ### owner
 
@@ -71,16 +58,13 @@ function exchange() external view returns (contract IExchangeCore)
 function owner() external view returns (address)
 ```
 
-
-
-*Returns the address of the current owner.*
-
+_Returns the address of the current owner._
 
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | address | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_0  | address | undefined   |
 
 ### performOrder
 
@@ -88,23 +72,21 @@ function owner() external view returns (address)
 function performOrder(bytes genericPayload, uint256 availableToSpend, uint256 targetAmount) external payable returns (uint256 amountSpentOnOrder, uint256 amountReceivedFromOrder)
 ```
 
-
-
-*Fills the input order.*
+_Fills the input order._
 
 #### Parameters
 
 | Name | Type | Description |
-|---|---|---|
+| --- | --- | --- |
 | genericPayload | bytes | Encoded data for this order. This is specific to exchange and is done by encoding a per-exchange struct |
 | availableToSpend | uint256 | The amount of assets that are available for the ward to spend. |
 | targetAmount | uint256 | The target for amount of assets to spend - it may spend less than this and return the change. |
 
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| amountSpentOnOrder | uint256 | The amount of source asset spent on this order. |
+| Name                    | Type    | Description                                               |
+| ----------------------- | ------- | --------------------------------------------------------- |
+| amountSpentOnOrder      | uint256 | The amount of source asset spent on this order.           |
 | amountReceivedFromOrder | uint256 | The amount of destination asset received from this order. |
 
 ### removeArecibo
@@ -115,13 +97,13 @@ function removeArecibo(address _areciboPrimary) external nonpayable
 
 removeArecibo Function which enables ONLY the owner to change the address of areciboPrimary
 
-*onlyOwner modifier only enables the contract owner to run the code*
+_onlyOwner modifier only enables the contract owner to run the code_
 
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _areciboPrimary | address | Address of the contract to be set as areciboPrimary |
+| Name             | Type    | Description                                         |
+| ---------------- | ------- | --------------------------------------------------- |
+| \_areciboPrimary | address | Address of the contract to be set as areciboPrimary |
 
 ### renounceOwnership
 
@@ -129,10 +111,7 @@ removeArecibo Function which enables ONLY the owner to change the address of are
 function renounceOwnership() external nonpayable
 ```
 
-
-
-*Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.*
-
+_Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner._
 
 ### transferOwnership
 
@@ -140,15 +119,13 @@ function renounceOwnership() external nonpayable
 function transferOwnership(address newOwner) external nonpayable
 ```
 
-
-
-*Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.*
+_Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner._
 
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| newOwner | address | undefined |
+| Name     | Type    | Description |
+| -------- | ------- | ----------- |
+| newOwner | address | undefined   |
 
 ### withdrawETH
 
@@ -158,13 +135,13 @@ function withdrawETH(uint256 _amount) external nonpayable
 
 Withdraw ether contained in this contract and send it back to owner
 
-*onlyOwner modifier only allows the contract owner to run the code*
+_onlyOwner modifier only allows the contract owner to run the code_
 
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _amount | uint256 | The amount of ether that the caller wants to withdraw |
+| Name     | Type    | Description                                           |
+| -------- | ------- | ----------------------------------------------------- |
+| \_amount | uint256 | The amount of ether that the caller wants to withdraw |
 
 ### withdrawToken
 
@@ -174,16 +151,14 @@ function withdrawToken(address _token, uint256 _amount) external nonpayable
 
 Withdraw ether contained in this contract and send it back to owner
 
-*onlyOwner modifier only allows the contract owner to run the code*
+_onlyOwner modifier only allows the contract owner to run the code_
 
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _token | address | The address of the token that the user wants to withdraw |
-| _amount | uint256 | The amount of tokens that the caller wants to withdraw |
-
-
+| Name     | Type    | Description                                              |
+| -------- | ------- | -------------------------------------------------------- |
+| \_token  | address | The address of the token that the user wants to withdraw |
+| \_amount | uint256 | The amount of tokens that the caller wants to withdraw   |
 
 ## Events
 
@@ -193,16 +168,9 @@ Withdraw ether contained in this contract and send it back to owner
 event OwnershipTransferred(address indexed previousOwner, address indexed newOwner)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| previousOwner `indexed` | address | undefined |
-| newOwner `indexed` | address | undefined |
-
-
-
+| Name                    | Type    | Description |
+| ----------------------- | ------- | ----------- |
+| previousOwner `indexed` | address | undefined   |
+| newOwner `indexed`      | address | undefined   |

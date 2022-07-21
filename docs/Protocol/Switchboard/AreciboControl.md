@@ -1,12 +1,8 @@
 # AreciboControl
 
+> A contract which can be used to ensure only the AreciboPrimary contract can call some functions
 
-
-> A contract which can be used to ensure only the     AreciboPrimary contract can call some functions
-
-
-
-*Defines a modifier which should be used when only the arecibo     contract should able able to call a function*
+_Defines a modifier which should be used when only the arecibo contract should able able to call a function_
 
 ## Methods
 
@@ -18,13 +14,13 @@ function addArecibo(address _areciboPrimary) external nonpayable
 
 addArecibo Function which enables ONLY the owner to change the address of areciboPrimary
 
-*onlyOwner modifier only enables the contract owner to run the code*
+_onlyOwner modifier only enables the contract owner to run the code_
 
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _areciboPrimary | address | Address of the contract to be set as areciboPrimary |
+| Name             | Type    | Description                                         |
+| ---------------- | ------- | --------------------------------------------------- |
+| \_areciboPrimary | address | Address of the contract to be set as areciboPrimary |
 
 ### authorizedPrimaries
 
@@ -32,21 +28,17 @@ addArecibo Function which enables ONLY the owner to change the address of arecib
 function authorizedPrimaries(address) external view returns (bool)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | address | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_0  | address | undefined   |
 
 #### Returns
 
 | Name | Type | Description |
-|---|---|---|
-| _0 | bool | undefined |
+| ---- | ---- | ----------- |
+| \_0  | bool | undefined   |
 
 ### owner
 
@@ -54,16 +46,13 @@ function authorizedPrimaries(address) external view returns (bool)
 function owner() external view returns (address)
 ```
 
-
-
-*Returns the address of the current owner.*
-
+_Returns the address of the current owner._
 
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | address | undefined |
+| Name | Type    | Description |
+| ---- | ------- | ----------- |
+| \_0  | address | undefined   |
 
 ### removeArecibo
 
@@ -73,13 +62,13 @@ function removeArecibo(address _areciboPrimary) external nonpayable
 
 removeArecibo Function which enables ONLY the owner to change the address of areciboPrimary
 
-*onlyOwner modifier only enables the contract owner to run the code*
+_onlyOwner modifier only enables the contract owner to run the code_
 
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| _areciboPrimary | address | Address of the contract to be set as areciboPrimary |
+| Name             | Type    | Description                                         |
+| ---------------- | ------- | --------------------------------------------------- |
+| \_areciboPrimary | address | Address of the contract to be set as areciboPrimary |
 
 ### renounceOwnership
 
@@ -87,10 +76,7 @@ removeArecibo Function which enables ONLY the owner to change the address of are
 function renounceOwnership() external nonpayable
 ```
 
-
-
-*Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.*
-
+_Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner._
 
 ### transferOwnership
 
@@ -98,17 +84,13 @@ function renounceOwnership() external nonpayable
 function transferOwnership(address newOwner) external nonpayable
 ```
 
-
-
-*Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.*
+_Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner._
 
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| newOwner | address | undefined |
-
-
+| Name     | Type    | Description |
+| -------- | ------- | ----------- |
+| newOwner | address | undefined   |
 
 ## Events
 
@@ -118,16 +100,9 @@ function transferOwnership(address newOwner) external nonpayable
 event OwnershipTransferred(address indexed previousOwner, address indexed newOwner)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| previousOwner `indexed` | address | undefined |
-| newOwner `indexed` | address | undefined |
-
-
-
+| Name                    | Type    | Description |
+| ----------------------- | ------- | ----------- |
+| previousOwner `indexed` | address | undefined   |
+| newOwner `indexed`      | address | undefined   |

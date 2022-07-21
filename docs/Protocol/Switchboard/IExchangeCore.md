@@ -1,13 +1,5 @@
 # IExchangeCore
 
-
-
-
-
-
-
-
-
 ## Methods
 
 ### ZRX_ASSET_DATA
@@ -16,16 +8,11 @@
 function ZRX_ASSET_DATA() external view returns (bytes)
 ```
 
-
-
-
-
-
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | bytes | undefined |
+| Name | Type  | Description |
+| ---- | ----- | ----------- |
+| \_0  | bytes | undefined   |
 
 ### fillOrder
 
@@ -33,23 +20,19 @@ function ZRX_ASSET_DATA() external view returns (bytes)
 function fillOrder(LibOrder.Order order, uint256 takerAssetFillAmount, bytes signature) external nonpayable returns (struct LibFillResults.FillResults fillResults)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| order | LibOrder.Order | undefined |
-| takerAssetFillAmount | uint256 | undefined |
-| signature | bytes | undefined |
+| Name                 | Type           | Description |
+| -------------------- | -------------- | ----------- |
+| order                | LibOrder.Order | undefined   |
+| takerAssetFillAmount | uint256        | undefined   |
+| signature            | bytes          | undefined   |
 
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| fillResults | LibFillResults.FillResults | undefined |
+| Name        | Type                       | Description |
+| ----------- | -------------------------- | ----------- |
+| fillResults | LibFillResults.FillResults | undefined   |
 
 ### fillOrderNoThrow
 
@@ -57,23 +40,19 @@ function fillOrder(LibOrder.Order order, uint256 takerAssetFillAmount, bytes sig
 function fillOrderNoThrow(LibOrder.Order order, uint256 takerAssetFillAmount, bytes signature) external nonpayable returns (struct LibFillResults.FillResults fillResults)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| order | LibOrder.Order | undefined |
-| takerAssetFillAmount | uint256 | undefined |
-| signature | bytes | undefined |
+| Name                 | Type           | Description |
+| -------------------- | -------------- | ----------- |
+| order                | LibOrder.Order | undefined   |
+| takerAssetFillAmount | uint256        | undefined   |
+| signature            | bytes          | undefined   |
 
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| fillResults | LibFillResults.FillResults | undefined |
+| Name        | Type                       | Description |
+| ----------- | -------------------------- | ----------- |
+| fillResults | LibFillResults.FillResults | undefined   |
 
 ### getAssetProxy
 
@@ -81,21 +60,19 @@ function fillOrderNoThrow(LibOrder.Order order, uint256 takerAssetFillAmount, by
 function getAssetProxy(bytes4 assetProxyId) external view returns (address)
 ```
 
-
-
-*Gets an asset proxy.*
+_Gets an asset proxy._
 
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
+| Name         | Type   | Description            |
+| ------------ | ------ | ---------------------- |
 | assetProxyId | bytes4 | Id of the asset proxy. |
 
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| _0 | address | The asset proxy registered to assetProxyId. Returns 0x0 if no proxy is registered. |
+| Name | Type    | Description                                                                        |
+| ---- | ------- | ---------------------------------------------------------------------------------- |
+| \_0  | address | The asset proxy registered to assetProxyId. Returns 0x0 if no proxy is registered. |
 
 ### getOrderInfo
 
@@ -103,21 +80,17 @@ function getAssetProxy(bytes4 assetProxyId) external view returns (address)
 function getOrderInfo(LibOrder.Order order) external view returns (struct LibOrder.OrderInfo orderInfo)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| order | LibOrder.Order | undefined |
+| Name  | Type           | Description |
+| ----- | -------------- | ----------- |
+| order | LibOrder.Order | undefined   |
 
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| orderInfo | LibOrder.OrderInfo | undefined |
+| Name      | Type               | Description |
+| --------- | ------------------ | ----------- |
+| orderInfo | LibOrder.OrderInfo | undefined   |
 
 ### isValidSignature
 
@@ -125,24 +98,16 @@ function getOrderInfo(LibOrder.Order order) external view returns (struct LibOrd
 function isValidSignature(bytes32 hash, address signerAddress, bytes signature) external view returns (bool isValid)
 ```
 
-
-
-
-
 #### Parameters
 
-| Name | Type | Description |
-|---|---|---|
-| hash | bytes32 | undefined |
-| signerAddress | address | undefined |
-| signature | bytes | undefined |
+| Name          | Type    | Description |
+| ------------- | ------- | ----------- |
+| hash          | bytes32 | undefined   |
+| signerAddress | address | undefined   |
+| signature     | bytes   | undefined   |
 
 #### Returns
 
-| Name | Type | Description |
-|---|---|---|
-| isValid | bool | undefined |
-
-
-
-
+| Name    | Type | Description |
+| ------- | ---- | ----------- |
+| isValid | bool | undefined   |
