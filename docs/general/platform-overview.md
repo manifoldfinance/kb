@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-id: dev-pltform
+id: dev-platform
 title: Platform Overview
 description: An overview of the Manifold Platform
 ---
