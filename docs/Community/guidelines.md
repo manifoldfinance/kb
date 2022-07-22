@@ -1,6 +1,6 @@
 ---
-sidebar_position: 2
-id: community-guidelines
+sidebar_position: 1
+id: intro
 title: Contributing and Community Dogma
 description: Contributing and Community Dogma and Social Rules
 ---

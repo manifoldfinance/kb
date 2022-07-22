@@ -114,8 +114,7 @@ The default block parameter The following methods have an extra default block pa
 -   eth_getCode
 -   eth_getTransactionCount
 -   eth_getStorageAt
--   eth_call  
-
+-   eth_call
 
 When requests are made that act on the state of Ethereum, the last default block parameter determines the height of the block.
 
