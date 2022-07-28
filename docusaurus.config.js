@@ -109,10 +109,17 @@ const config = {
           position: 'left',
           label: 'Knowledge Base',
         },
-        { to: '/blog', label: 'Blog', position: 'left' },
+        { to: '/Block-Construction', label: 'Block Construction', position: 'left' },
+        { to: '/general/general-model', label: 'General Model', position: 'left' },
+        { to: '/Protocol/protocol-backbonev01', label: 'ProtocolV01', position: 'left' },
         {
           href: 'https://github.com/manifoldfinance/kb',
           label: 'GitHub',
+          position: 'right',
+        },
+                {
+          href: 'https://t.me/manifoldfinance',
+          label: 'Telegram',
           position: 'right',
         },
         {
