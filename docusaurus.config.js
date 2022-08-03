@@ -47,43 +47,26 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          // numberPrefixParser: true,
-          sidebarItemsGenerator: async function ({
-            defaultSidebarItemsGenerator,
-            numberPrefixParser,
-            item,
-            version,
-            docs,
-            options,
-          }) {
-            // Example: return an hardcoded list of static sidebar items
-            const initialItems = await defaultSidebarItemsGenerator({
-              options,
-              item,
-              version,
-              docs,
-              numberPrefixParser,
-            });
-            const dirs = createSidebarDirs(numberPrefixParser, initialItems);
-            return dirs;
+            path: 'docs',
+            sidebarPath: require.resolve('./sidebars.js'),
+            remarkPlugins: [math],
+            rehypePlugins: [katex],
+            editUrl:
+              'https://github.com/manifoldfinance/kb/tree/trunk/',
           },
-          sidebarPath: require.resolve('./sidebars.js'),
-          remarkPlugins: [math],
-          rehypePlugins: [katex],
-          editUrl: 'https://github.com/manifoldfinance/kb/tree/trunk/',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/manifoldfinance/kb/tree/trunk/',
-        },
-        theme: {
-          customCss: require.resolve('./src/css/docs.css'),
-        },
-      }),
+          blog: {
+            showReadingTime: true,
+            // Please change this to your repo.
+            // Remove this to remove the "edit this page" links.
+            editUrl:
+              'https://github.com/manifoldfinance/kb/tree/trunk/',
+          },
+          theme: {
+            customCss: require.resolve('./src/css/docs.css'),
+          },
+        }),
+      ],
     ],
-  ],
   stylesheets: [
     {
       href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
