@@ -1,35 +1,35 @@
 // @interface TagProps
 interface TagProps {
-  tag: string
-  children: any
+  tag: string;
+  children: any;
 }
 
-/** 
-*
-* @export Tag
-* 
-*/ 
+/**
+ *
+ * @export Tag
+ *
+ */
 export default function Tag(props: TagProps) {
-  const { tag, children } = props
+  const { tag, children } = props;
   const getColor = (key: string) => {
     switch (key) {
       case 'function':
-        return 'red'
+        return 'red';
       case 'user-option':
-        return 'blue'
+        return 'blue';
       case 'variable':
-        return 'green'
+        return 'green';
       case 'special form':
-        return 'yellow'
+        return 'yellow';
     }
-  }
+  };
 
-  const color = getColor(tag)
+  const color = getColor(tag);
   return (
     <span
       style={{ color: color, backgroundColor: color, fontWeight: 300, fontFamily: 'monospace' }}
     >
       {children}
     </span>
-  )
-};
+  );
+}
