@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 title: Manifold Finance Knowledgebase
 message: >-
-  Please cite this software using the metadata from
-  'preferred-citation'
+  Please cite this software using the metadata from 'preferred-citation'
+
 type: software
 authors:
   - name-particle: Sam

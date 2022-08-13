@@ -1,11 +1,10 @@
-
 name: nodejs
 
-on: 
+on:
   push:
-     paths:
-      - "**/**"
-      - "!**/*.md/**"
+    paths:
+      - '**/**'
+      - '!**/*.md/**'
 env:
   CI: ''
   COMMIT_SHA: ${{ github.event.pull_request.head.sha }}
@@ -14,7 +13,6 @@ env:
   FORCE_COLOR: 2
 #  NEXT_TELEMETRY_DISABLED: 1
 #  NODE_ENV: production
-
 
 jobs:
   pipeline:

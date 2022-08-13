@@ -5,8 +5,7 @@ tags: [mev boost, eth2, flashbots]
 author: V. Buterin
 ---
 
-
-# Paths Toward single-slot finality 
+# Paths Toward single-slot finality
 
 > source: https://notes.ethereum.org/@vbuterin/single_slot_finality
 
@@ -41,8 +40,6 @@ There are a few key reasons to try to move away from the status quo and bring th
 ![](https://storage.googleapis.com/ethereum-hackmd/upload_3e4e25bcf33b0b0ceba47e25dcf64dec.png)
 
 _If a committee fails to confirm, the chain keeps progressing using the fork choice to determine the head and the offline validators leak until their balances are diluted to the point where > 2/3 of the remaining validator balances are online the committee can confirm._
-
-  
 
 ### [](https://notes.ethereum.org/@vbuterin/single_slot_finality#Secondary-benefits-of-switching-to-super-committees "Secondary-benefits-of-switching-to-super-committees")Secondary benefits of switching to super-committees
 
