@@ -1,137 +1,38 @@
 ---
 sidebar_position: 1
 id: intro
-title: Introduction
-description: Preface and Introduction to the Knowledge Base
+title: Manifold Finance Introduction
+description: An introduction to Manifold Finance
 ---
 
-# Ground Truth
+# Ethereum network
 
-Stop thinking of documentation as a chore you do for others, and instead think of it as a way to explore your problem space. and the space in your head around your intuitions about the problem, so you can shine light into the murkier corners of both. Writing documentation can function as valuable knowledge capture about your problem domain even when you are the only expert about what you are trying to do.
+The Ethereum network is a distributed consensus platform that allows users to write and compute smart contracts in a distributed manner. Smart contracts are essentially Turing complete programs that are available at a unique address of the network. When the smart contract is run as part of a transaction, the result and the current state of the contract are stored in a verifiable consensus that is agreed upon by the entire network of nodes.
 
-## Getting Started
+## Ethereum2
 
-Get started by **creating a new site**.
+Ethereum will soon transition from a Proof of Work (PoW) to a Proof of Stake (PoS) consensus protocol. This transition has been worked on for years and is happening in multiple steps.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Ethereum’s consensus is currently secured by miners who run hardware optimized to solve the proof of work challenge. The move from a PoW to a PoS consensus means the network becomes secured by validators, who stake security deposits of 32 ETH and vote to come to a consensus on the state of the beacon chain. Validators are economically incentivized to do this via rewards for good behavior and penalties (slashing) for downtime or malicious behavior.
 
-### What you'll need
+### Block Construction in Eth2
 
--   [Node.js](https://nodejs.org/en/download/) version 14 or above:
-    -   When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+Manifold Finance enables and provides access to high-value transaction pools on EVM-compatible chains, through our infrastructure: _SecureRPC_. We aggregate multiple endpoints along with maintaining direct access to disparate mining pools/validator nodes.
 
-## Generate a new page
+> In short, we believe that access to transaction sets will be **the defining advantage for block builders** in Ethereum2. The **ultimate goal for a block builder is to build the highest-value block that it can**. To do this, it needs to build from high-value transactions. **The combined value of MEV opportunities at any point in time will in general outweigh any delta that could be obtained by smart block building algorithms, so access to a high-value transaction pool will be the defining advantage for block builders**. The only logical choice is to send it to the single builder that already has the highest-value transaction pool. And as searchers are financially driven, they are all likely to make the same choice.
 
-Front matter quires the following
+This appears to create a positive feedback situation, leading to the end result of a single large high-value transaction pool, and a single major builder. Smaller transaction pools may survive if backed by validators willing to sacrifice financial rewards for some other value, however, validators that are monetarily driven will end up taking the block from the single major builder.
 
-```yaml
-id: intro
-```
+## Reading this documentation
 
-## Start the development server
+-   Guides, for broad hands-on understanding and connections to other learning resources
+-   Tutorials, intended to teach a particular process or project
+-   Cookbooks, collections of tips and tricks
+-   Reference, full manuals and technical coverage
+-   Pedias, for encyclopedic description
 
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. To work with your newly created site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
-
-## Line highlighting
-
-Highlighting with comments You can use comments with highlight-next-line, highlight-start, and highlight-end to select which lines are highlighted.
-
-```js
-function HighlightSomeText(highlight) {
-	if (highlight) {
-		// highlight-next-line
-		return "This text is highlighted!";
-	}
-
-	return "Nothing highlighted";
-}
-
-function HighlightMoreText(highlight) {
-	// highlight-start
-	if (highlight) {
-		return "This range is highlighted!";
-	}
-	// highlight-end
-
-	return "Nothing highlighted";
-}
-```
-
-### Line numbering
-
-You can enable line numbering for your code block by using showLineNumbers key within the language meta string (don't forget to add space directly before the key).
-
-```jsx {1,4-6,11} showLineNumbers
-import React from "react";
-
-function MyComponent(props) {
-	if (props.isBar) {
-		return <div>Bar</div>;
-	}
-
-	return <div>Foo</div>;
-}
-
-export default MyComponent;
-```
-
-## Dappspec - Natspec support
-
-```solidity
-pragma solidity ^0.6.12 || ^0.7.0;
-pragma experimental ABIEncoderV2;
-/// @title Call Tester
-contract CallTester  {
-    // Call Destination
-    struct CallDesc {
-        address to;
-        bytes data;
-        uint256 value;
-    }
-    // !Dappspec
-    // make call to dest.
-    function makeCalls(CallDesc[] memory calls) external payable returns (bytes memory ret) {
-        for (uint i = 0; i < calls.length; i++) {
-            CallDesc memory c = calls[i];
-            (bool ok, bytes memory data) = c.to.call{value: c.value}(c.data);
-            require(ok, "ERR");
-            ret = data;
-        }
-    }
-}
-```
-
-```solidity {1,4-6,11} showLineNumbers
-pragma solidity ^0.6.12 || ^0.7.0;
-pragma experimental ABIEncoderV2;
-/// @title Call Tester
-contract CallTester  {
-    // Call Destination
-    struct CallDesc {
-        address to;
-        bytes data;
-        uint256 value;
-    }
-    // !Dappspec
-    // make call to dest.
-    function makeCalls(CallDesc[] memory calls) external payable returns (bytes memory ret) {
-        for (uint i = 0; i < calls.length; i++) {
-            CallDesc memory c = calls[i];
-            (bool ok, bytes memory data) = c.to.call{value: c.value}(c.data);
-            require(ok, "ERR");
-            ret = data;
-        }
-    }
-}
-```
+*   If information is more encyclopedic (with a similar scope and tone to pages on Wikipedia), a page would be considered a pedia.
+*   If information is less encyclopedic and more similar to a compendium, study guide, or bibliographic guide, a page would be considered a guide.
+*   If information is more about direct instruction to achieve a specific task, a page would be considered a tutorial.
+*   If a page is more just a set of tips and tricks (less instructive than a tutorial), it would be a cookbook.
+*   If a page is a detailed reference (like a man page or full software manual), it would fit under references.

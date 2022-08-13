@@ -1,0 +1,128 @@
+{
+    "docs": [
+        {
+            "Community": [
+                "./docs/Community/_category_.json",
+                "./docs/Community/guidelines.md",
+                "./docs/Community/intro.md"
+            ]
+        },
+        {
+            "Developers": [
+                "./docs/Developers/_category_.json",
+                "./docs/Developers/intro-to-bundles.md",
+                "./docs/Developers/intro.md",
+                "./docs/Developers/release-schedule.md"
+            ]
+        },
+        {
+            "How-To": [
+                "./docs/How-To/LICENSE.txt",
+                "./docs/How-To/_category_.json",
+                "./docs/How-To/call-getBlockNumber.md",
+                "./docs/How-To/send-private-tx.md",
+                "./docs/How-To/sending-bundles.md",
+                "./docs/How-To/use-sushiguard.md"
+            ]
+        },
+        {
+            "Protocol": [
+                "./docs/Protocol/BackboneV01.md",
+                {
+                    "Switchboard": [
+                        "./docs/Protocol/Switchboard/AreciboControl.md",
+                        "./docs/Protocol/Switchboard/AreciboPrimary.md",
+                        "./docs/Protocol/Switchboard/IExchangeCore.md",
+                        "./docs/Protocol/Switchboard/Partner.md",
+                        "./docs/Protocol/Switchboard/PartnerRegistry.md",
+                        "./docs/Protocol/Switchboard/SwitchBoard.md",
+                        "./docs/Protocol/Switchboard/TokenBalanceLibrary.md",
+                        "./docs/Protocol/Switchboard/TokenTransferProxy.md",
+                        "./docs/Protocol/Switchboard/UniswapV2Ward.md",
+                        "./docs/Protocol/Switchboard/ZeroExSwitchBoard.md",
+                        "./docs/Protocol/Switchboard/ZeroExV3SwitchBoard.md"
+                    ]
+                },
+                "./docs/Protocol/_category_.json"
+            ]
+        },
+        {
+            "Router": [
+                "./docs/Router/ErrorCoding.md",
+                {
+                    "Math": [
+                        "./docs/Router/Math/TwoStepOwnable.md",
+                        "./docs/Router/Math/Uint512.md"
+                    ]
+                },
+                "./docs/Router/OpenMevRouter.md",
+                "./docs/Router/OpenMevZapper.md",
+                {
+                    "Permit": [
+                        "./docs/Router/Permit/OpenMevPermit.md"
+                    ]
+                },
+                "./docs/Router/_category_.json",
+                "./docs/Router/index.md",
+                {
+                    "interfaces": [
+                        "./docs/Router/interfaces/ERC20.md",
+                        "./docs/Router/interfaces/IOpenMevRouter.md",
+                        "./docs/Router/interfaces/IUniswapV2Router02.md"
+                    ]
+                },
+                {
+                    "libraries": [
+                        "./docs/Router/libraries/OpenMevLibrary.md"
+                    ]
+                }
+            ]
+        },
+        {
+            "Rpc": [
+                "./docs/Rpc/ErrorTypes.md",
+                "./docs/Rpc/_category_.json",
+                "./docs/Rpc/errorCategory.json",
+                "./docs/Rpc/index.md"
+            ]
+        },
+        {
+            "Staking": [
+                "./docs/Staking/_category_.json",
+                "./docs/Staking/intro.md"
+            ]
+        },
+        {
+            "Stratagies": [
+                "./docs/Stratagies/Sushi-Guard.md"
+            ]
+        },
+        {
+            "Tutorials": [
+                "./docs/Tutorials/_category_.json",
+                "./docs/Tutorials/intro.md"
+            ]
+        },
+        {
+            "general": [
+                "./docs/general/_category_.json",
+                "./docs/general/contributing.md",
+                "./docs/general/governance.md",
+                "./docs/general/platform-overview.md",
+                "./docs/general/quickstart.md",
+                "./docs/general/subsystems.md",
+                "./docs/general/token.md"
+            ]
+        },
+        "./docs/intro.md",
+        {
+            "reference": [
+                "./docs/reference/Authentication.md",
+                "./docs/reference/_category_.json",
+                "./docs/reference/etherbase-rate.md",
+                "./docs/reference/glossary.md",
+                "./docs/reference/metrics.md"
+            ]
+        }
+    ]
+}

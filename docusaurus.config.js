@@ -4,7 +4,8 @@ const math = require('remark-math');
 const katex = require('rehype-katex');
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+//const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const darkCodeTheme = require('./src/css/mfdoom');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -26,8 +27,21 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-  plugins: ['@docusaurus/theme-live-codeblock'],
   presets: [
+    [
+      'docusaurus-protobuffet',
+      {
+        protobuffet: {
+          fileDescriptorsPath: './fixtures/proto_workspace.json',
+          protoDocsPath: './protodocs',
+          sidebarPath: './generatedSidebarsProtodocs.js',
+        },
+        docs: {
+          routeBasePath: 'protobuf',
+          sidebarPath: './sidebarsProtodocs.js',
+        },
+      },
+    ],
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
@@ -37,18 +51,16 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           remarkPlugins: [math],
           rehypePlugins: [katex],
-          editUrl:
-            'https://github.com/manifoldfinance/kb/tree/trunk/',
+          editUrl: 'https://github.com/manifoldfinance/kb/tree/trunk/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/manifoldfinance/kb/tree/trunk/',
+          editUrl: 'https://github.com/manifoldfinance/kb/tree/trunk/',
         },
         theme: {
-          customCss: require.resolve('./src/css/docs.css'),
+          customCss: require.resolve('./src/css/mfdoom'),
         },
       }),
     ],
@@ -57,8 +69,7 @@ const config = {
     {
       href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
       type: 'text/css',
-      integrity:
-        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      integrity: 'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
       crossorigin: 'anonymous',
     },
   ],
@@ -82,13 +93,39 @@ const config = {
           type: 'doc',
           docId: 'intro',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Knowledge Base',
         },
-        { to: '/blog', label: 'Blog', position: 'left' },
+        {
+          to: '/Block-Construction',
+          label: 'Block Construction',
+          position: 'left',
+        },
+        {
+          to: '/general/general-model',
+          label: 'General Model',
+          position: 'left',
+        },
+        {
+          to: '/Protocol/protocol-backbonev01',
+          label: 'ProtocolV01',
+          position: 'left',
+        },
         {
           href: 'https://github.com/manifoldfinance/kb',
           label: 'GitHub',
           position: 'right',
+        },
+        {
+          href: 'https://t.me/manifoldfinance',
+          label: 'Telegram',
+          position: 'right',
+        },
+        {
+          type: 'doc',
+          docId: 'intro',
+          activeBasePath: 'network',
+          label: 'Network',
+          position: 'left',
         },
       ],
     },
@@ -135,7 +172,7 @@ const config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Manifold Finance, Inc. All Rights Reservved.`,
     },
     prism: {
       theme: lightCodeTheme,
@@ -146,7 +183,7 @@ const config = {
         {
           className: 'theme-code-block-highlighted-line',
           line: 'highlight-next-line',
-          block: {start: 'highlight-start', end: 'highlight-end'},
+          block: { start: 'highlight-start', end: 'highlight-end' },
         },
         {
           className: 'code-block-dappspec-line',
@@ -154,7 +191,37 @@ const config = {
         },
       ],
     },
+    respectsPrefersColorScheme: true,
+    switchConfig: {
+      darkIcon: '🌙',
+      lightIcon: '☀️',
+    },
   },
+  plugins: [
+    '@docusaurus/theme-live-codeblock',
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        language: 'en',
+        docsRouteBasePath: [
+          'docs/Protocol',
+          'docs/Strategies',
+          'docs/Rpc',
+          'docs/Block-Construction',
+          'protodocs',
+        ],
+        docsDir: [
+          'docs/Staking',
+          'docs/Block-Construction',
+          'docs/Rpc',
+          'docs/Switchboard',
+          'protodocs',
+        ],
+        indexBlog: false,
+      },
+    ],
+  ],
 };
 
 module.exports = config;

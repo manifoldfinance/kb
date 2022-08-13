@@ -1,0 +1,6 @@
+["Code","Category","Meaning"]
+["-32000","INVALID_VALUE","Parameter Contains Invalid Value"]
+["-32001","NOT_FOUND","Requested Resource Not Found"]
+["-32002","UNAVAILABLE","Resource Not Available"]
+["-32003","TX_REJECTED","Transaction Rejected"]
+["-32099","MISC","Error, Allow Nodes To Send Custom Errors"]

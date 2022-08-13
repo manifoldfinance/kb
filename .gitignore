@@ -1,4 +1,5 @@
 # -*- mode: gitignore; -*-
+dict.txt
 /out
 cache/
 artifacts/
@@ -9,6 +10,7 @@ docs/_workspace/
 _workspace/
 ## CVE-2021-21300 style exploits
 .\#*
+docs/tmp/
 
 ## General ##
 *~
@@ -59,3 +61,4 @@ coverage/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+docs/workspace

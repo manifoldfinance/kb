@@ -63,17 +63,21 @@ Dev Notes
 
 ### acceptOwnership
 
-```solidity title="Solidity"
+```solidity title="acceptOwnership"
 function acceptOwnership() external nonpayable
 ```
 
-:::note Details Transfers ownership of the contract to the caller. Can only be called by a new potential owner set by the current owner. :::
+:::note acceptOwnership
+
+Details Transfers ownership of the contract to the caller. Can only be called by a new potential owner set by the current owner.
+
+:::
 
 ### addLiquidity
 
-Adds liquidity to an ERC-20⇄ERC-20 pool. msg.sender should have already given the router an allowance of at least amountADesired/amountBDesired on tokenA/tokenB
+Adds liquidity to an ERC-20⇄ERC-20 pool. `msg.sender` should have already given the router an allowance of at least `amountADesired`/`amountBDesired` on `tokenA`/`tokenB`
 
-```solidity title="Solidity"
+```solidity title="addLiquidity"
 function addLiquidity(address tokenA, address tokenB, uint256 amountADesired, uint256 amountBDesired, uint256 amountAMin, uint256 amountBMin, address to, uint256 deadline) external nonpayable returns (uint256 amountA, uint256 amountB, uint256 liquidity)
 ```
 
@@ -100,7 +104,7 @@ function addLiquidity(address tokenA, address tokenB, uint256 amountADesired, ui
 
 ### addLiquidityETH
 
-Adds liquidity to an ERC-20⇄WETH pool with ETH. msg.sender should have already given the router an allowance of at least amountTokenDesired on token. msg.value is treated as a amountETHDesired. Leftover ETH, if any, is returned to msg.sender
+Adds liquidity to an ERC-20⇄WETH pool with ETH. msg.sender should have already given the router an allowance of at least amountTokenDesired on token. msg.value is treated as a `amountETHDesired`. Leftover ETH, if any, is returned to msg.sender
 
 ```solidity title="Solidity"
 function addLiquidityETH(address token, uint256 amountTokenDesired, uint256 amountTokenMin, uint256 amountETHMin, address to, uint256 deadline) external payable returns (uint256 amountToken, uint256 amountETH, uint256 liquidity)
@@ -131,17 +135,25 @@ function addLiquidityETH(address token, uint256 amountTokenDesired, uint256 amou
 function cancelOwnershipTransfer() external payable
 ```
 
-:::note Details Cancel a transfer of ownership to a new account. Can only be called by the current owner. :::
+:::note
+
+Details Cancel a transfer of ownership to a new account. Can only be called by the current owner.
+
+:::
 
 ### executeOperation
 
-Called from Aave Lending pool after contract has received the flash loaned amount (https://docs.aave.com/developers/v/2.0/guides/flash-loans)
+Called from Aave Lending pool after the contract has received the flash loaned amount [^1]
 
 ```solidity title="Solidity"
 function executeOperation(address[] assets, uint256[] amounts, uint256[] premiums, address initiator, bytes params) external nonpayable returns (bool)
 ```
 
-:::note Details Reverts if not profitable. :::
+:::note
+
+Details Reverts if not profitable.
+
+:::
 
 #### Parameters
 
@@ -201,3 +213,5 @@ event OwnershipTransferred(address indexed previousOwner, address indexed newOwn
 | ----------------------- | ------- | ----------- |
 | previousOwner `indexed` | address | undefined   |
 | newOwner `indexed`      | address | undefined   |
+
+[^1]: see the Aave documentation for more information: <https://docs.aave.com/developers/v/2.0/guides/flash-loans>

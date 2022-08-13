@@ -2711,7 +2711,7 @@ nav {
 }
 
 html[data-theme='light'] {
-  --docsearch-searchbox-background: #ffe5c7;
+  --docsearch-searchbox-background: #ffffff;
 }
 
 .theme-code-block-highlighted-line {

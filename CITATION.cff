@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+title: Manifold Finance Knowledgebase
+message: >-
+  Please cite this software using the metadata from 'preferred-citation'
+
+type: software
+authors:
+  - name-particle: Sam
+    family-names: Bacha
+    email: sam@manifoldfinance.com
+    orcid: 'https://orcid.org/0000-0002-5508-426X'
+    affiliation: Manifold Finance

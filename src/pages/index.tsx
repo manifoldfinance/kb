@@ -4,7 +4,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import ThemedImage from '@theme/ThemedImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-//import SearchBar from '@theme-original/SearchBar';
+import SearchBar from '@theme-original/SearchBar';
 import { InformationCircleIcon, CodeIcon } from '@heroicons/react/outline';
 import styled from '@emotion/styled';
 import * as color from 'color';
@@ -221,13 +221,6 @@ export default function Home() {
           >
             <h1 style={{ fontWeight: '700' }}> Manifold Finance Docs</h1>
           </div>
-          <StyledTitleImage
-            alt=""
-            sources={{
-              light: useBaseUrl('/img/bg.jpg'),
-              dark: useBaseUrl('/img/bg.jpg'),
-            }}
-          />
           <Row>
             {quickLinks.map((link) => (
               <Link style={{ textDecoration: 'none' }} to={link.to}>
@@ -237,15 +230,6 @@ export default function Home() {
                       {/** @ts-ignore */}
                       <link.icon style={{ width: '24px' }} color={link.color} />
                     </IconWrapper>
-
-                    <svg
-                      style={{ width: '24px', opacity: 0.2 }}
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M20 4h1a1 1 0 00-1-1v1zm-1 12a1 1 0 102 0h-2zM8 3a1 1 0 000 2V3zM3.293 19.293a1 1 0 101.414 1.414l-1.414-1.414zM19 4v12h2V4h-2zm1-1H8v2h12V3zm-.707.293l-16 16 1.414 1.414 16-16-1.414-1.414z" />
-                    </svg>
                   </TopSection>
                   {/** @ts-ignore */}
                   <h3 style={{ marginBottom: '.75rem', color: link.color }}>{link.title}</h3>
