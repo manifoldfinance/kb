@@ -5,7 +5,6 @@ title: Manifold Finance Network Introduction
 description: Network Introduction
 ---
 
-
 ## Reading this documentation
 
 -   Guides, for broad hands-on understanding and connections to other learning resources
