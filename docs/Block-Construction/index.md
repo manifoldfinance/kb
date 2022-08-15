@@ -23,10 +23,13 @@ In general, CommodityStream views government or civil requests to block content 
 
 Given the broad extraterritorial effect, if CommodityStream were to receive written requests from law enforcement and government agencies to block access to network nodes, RPC gateways, or content through the _SecureRpc Gateway_ or to block access to network nodes, domains or content, CommodityStream would pursue its legal remedies before complying with such a request. We also commit to documenting any government request to block access in our semi-annual transparency report, unless legally prohibited from doing so.
 
+## Does CommodityStream utilize any sort of 'blacklist'/'denylist'?
+
+We utilize an AS/IP address denylist, which you can see in the [Appendix](#Appendix)
+
 ## Warrant Canary 
 
 See [https://securerpc.com/.well-known/canary.json](https://securerpc.com/.well-known/canary.json)
-
 
 
 ## Networking and Peering Requirements
@@ -41,13 +44,20 @@ Our Backbone Interconnect service provides additional connection options for Val
 
 - Up to date service documentation
 
+- Ability to participate in secured e2e chat (e.g. secured Slack chat room).
+
 
 ## Peering 
 
--   Publicly routable address space (at least one /24)
--   24x7 NOC contact capable of resolving technical/routing issues (response time t.b.d.).
+-   Publicly routable address space (static, at least /24)
+-   24x7 NOC/DevOps contact capable of resolving technical/routing issues (response time t.b.d.).
 -   Presence at one or more of the datacenter/peering interconnection facilities listed (OVHCloud, Hetzner, etc)
 
+:::info
+
+This ASN List is non-exhaustive. Last updated on 2022.08.13
+
+:::
 
 | **ASN** 	| **Name** 	| **Traffic** 	|
 |---	|---	|---	|
