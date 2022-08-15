@@ -10,7 +10,7 @@ const darkCodeTheme = require('./src/css/mfdoom');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Manifold Finance KB',
-  tagline: 'Knowledge base and documentation for Manifold Finance',
+  tagline: 'Knowledge base for Manifold Finance',
   url: 'https://manifold-kb.netlify.app',
   baseUrl: '/',
   onBrokenLinks: 'warn',
@@ -85,7 +85,7 @@ const config = {
     navbar: {
       title: 'Manifold Finance',
       logo: {
-        alt: 'Manifold',
+        alt: 'Manifold Finance logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -93,21 +93,21 @@ const config = {
           type: 'doc',
           docId: 'intro',
           position: 'left',
-          label: 'Knowledge Base',
+          label: 'KB',
         },
         {
-          to: '/Block-Construction',
+          to: '/docs/Block-Construction',
           label: 'Block Construction',
           position: 'left',
         },
         {
-          to: '/general/general-model',
-          label: 'General Model',
+          to: '/docs/Rpc/ref-json-rpc',
+          label: 'RPC Methods',
           position: 'left',
         },
         {
-          to: '/Protocol/protocol-backbonev01',
-          label: 'ProtocolV01',
+          to: '/docs/Protocol/protocol-backbonev01',
+          label: 'Network Specification',
           position: 'left',
         },
         {
@@ -121,10 +121,15 @@ const config = {
           position: 'right',
         },
         {
+          href: 'https://forums.manifoldfinance.com',
+          label: 'Forums',
+          position: 'right',
+        },
+        {
           type: 'doc',
           docId: 'intro',
           activeBasePath: 'network',
-          label: 'Network',
+          label: 'Ethereum',
           position: 'left',
         },
       ],
@@ -172,7 +177,7 @@ const config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Manifold Finance, Inc. All Rights Reservved.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Manifold Finance, Inc & CommodityStream, Inc. All Rights Reservved.`,
     },
     prism: {
       theme: lightCodeTheme,
@@ -207,15 +212,21 @@ const config = {
         docsRouteBasePath: [
           'docs/Protocol',
           'docs/Strategies',
+          'docs/How-To',
           'docs/Rpc',
+          'docs/general',
+          'docs/reference',
           'docs/Block-Construction',
           'protodocs',
         ],
         docsDir: [
           'docs/Staking',
           'docs/Block-Construction',
+          'docs/How-To',
           'docs/Rpc',
           'docs/Switchboard',
+          'docs/general',
+          'docs/reference',
           'protodocs',
         ],
         indexBlog: false,
