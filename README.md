@@ -2,6 +2,8 @@
 
 [![nodejs](https://github.com/manifoldfinance/kb/actions/workflows/nodejs.yml/badge.svg)](https://github.com/manifoldfinance/kb/actions/workflows/nodejs.yml)
 
+> [https://kb-manifold.vercel.app/](https://kb-manifold.vercel.app/)
+
 > **Warning** <br /> This resource is in active development, content may be inaccurate or out of date!
 
 This is the home of the `kb.docs` resource. V2 Documentation is maintained here. This resource follows the `Diátaxis` guidelines, which you can read more about below.
