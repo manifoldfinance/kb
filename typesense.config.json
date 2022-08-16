@@ -1,20 +1,22 @@
 {
-    "index_name": "manifold-kb",
-    "allowed_domains": ["kb.manifoldfinance.com"],
-    "start_urls": [
-      {
-        "url": "https://www.manifoldfinance.com/"
-      }
-    ],
-    "selectors": {
-      "default": {
-        "lvl0": "article h1",
-        "lvl1": "article h2",
-        "lvl2": "article h3",
-        "lvl3": "article h4",
-        "text": "article p, article ul li, article table tbody tr"
-      }
-    },
-    "scrape_start_urls": false,
-    "strip_chars": " .,;:#"
-  }
+  "index_name": "manifold-kb",
+  "allowed_domains": [
+    "kb.manifoldfinance.com"
+  ],
+  "start_urls": [
+    {
+      "url": "https://kb.manifoldfinance.com/"
+    }
+  ],
+  "selectors": {
+    "default": {
+      "lvl0": "article h1",
+      "lvl1": "article h2",
+      "lvl2": "article h3",
+      "lvl3": "article h4",
+      "text": "article p, article ul li, article table tbody tr"
+    }
+  },
+  "scrape_start_urls": false,
+  "strip_chars": " .,;:#"
+}
