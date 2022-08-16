@@ -74,7 +74,6 @@ const config = {
       crossorigin: 'anonymous',
     },
   ],
-  themes: ['docusaurus-theme-search-typesense'],
   themeConfig: {
     liveCodeBlock: {
       /**
