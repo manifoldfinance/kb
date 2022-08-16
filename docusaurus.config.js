@@ -1,4 +1,4 @@
-// @ts-check
+
 // Note: type annotations allow type checking and IDEs autocompletion
 const math = require('remark-math');
 const katex = require('rehype-katex');
@@ -7,6 +7,7 @@ const lightCodeTheme = require('prism-react-renderer/themes/github');
 //const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const darkCodeTheme = require('./src/css/mfdoom');
 
+// @ts-check
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Manifold Finance KB',
@@ -205,7 +206,7 @@ const config = {
   plugins: [
     '@docusaurus/theme-live-codeblock',
     [
-      '@easyops-cn/docusaurus-search-local',
+      require.resolve('@easyops-cn/docusaurus-search-local'),
       {
         hashed: true,
         language: 'en',
