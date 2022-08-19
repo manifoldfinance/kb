@@ -5,7 +5,9 @@ description: RPC Error Types and Structures for DApps
 sidebar_position: 3
 ---
 
-# App Error Support 
+# DApp Error Support 
+
+> See the Error Encoding Guide for example codes
 
 ## Motivation
 
