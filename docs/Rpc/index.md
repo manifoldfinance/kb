@@ -38,6 +38,25 @@ Values of a field of `DATA` type **MUST** be encoded as a hexadecimal string wit
 -   A `Data` value **MUST** be “0x”-prefixed.
 -   A `Data` value **MUST** be expressed using two hex digits per byte.
 
+## What is the difference between `DATA` and `QUANTITY`?
+
+The difference between the types “`DATA`” and “`QUANTITY`” is that “`DATA`” always comes specified with a required length (ex: 20 Bytes), so you'll need to make sure the string you pass in is the right length. In contrast, `QUANTITY` does not have length requirements.
+
+For example given a parameter type: “DATA, 20 Bytes”, a valid input would be:
+
+```
+"0x0000000000000000000000000000000000000003"
+```
+
+_note: every two hex characters make one byte, so that string is `0x` followed by forty hex characters_
+
+However, if this were a QUANTITY, a valid input would be:
+
+```
+"0x3"
+```
+
+
 ### `Block Identifier`
 
 Since there is no way to clearly distinguish between a `Data` parameter and a `Quantity` parameter, [EIP-1898](https://eips.ethereum.org/EIPS/eip-1898) provides a format to specify a block either using the block hash or block number. The block identifier is a JSON `object` with the following fields:
@@ -95,106 +114,3 @@ They will be contained in the `data` field of the RPC error message as follows:
 | ---- | ----------------------- | ----------------------------------------------------------------------- |
 | 106  | Timeout                 | Should be used when an action timedout.                                 |
 | 107  | Conflict                | Should be used when an action conflicts with another (ongoing?) action. |
-
-## Flashbots RPC Methods Parameters
-
-| **Parameters** | **Description** |
-| --- | --- |
-| txs | Array[String], A list of signed transactions to execute in an atomic bundle |
-| blockNumber | String, a hex encoded block number for which this bundle is valid on |
-| minTimestamp(Optional) | Number, the minimum timestamp for which this bundle is valid, in seconds since the unix epoch |
-| maxTimestamp(Optional) | Number, the minimum timestamp for which this bundle is valid, in seconds since the unix epoch |
-| revertingTxHashes(Optional) | Array[String], list of tx hashes within the bundle that are allowed to revert |
-
-### Default Parameters
-
-The default block parameter The following methods have an extra default block parameter:
-
--   eth_getBalance
--   eth_getCode
--   eth_getTransactionCount
--   eth_getStorageAt
--   eth_call
-
-When requests are made that act on the state of Ethereum, the last default block parameter determines the height of the block.
-
-The following options are possible for the defaultBlock parameter:
-
-| **Encoding** | **param**  | **description**                    |
-| ------------ | ---------- | ---------------------------------- |
-| HEX          | String     | an integer block number            |
-| String       | "earliest" | for the earliest/genesis block     |
-| String       | "latest"   | for the latest mined block         |
-| String       | "pending"  | for the pending state/transactions |
-
-| **Type**          | **Code** | **Description**  | **0** |
-| ----------------- | -------- | ---------------- | ----- |
-| PARSE_ERROR:      | -32700,  | Parse error      | 1     |
-| INVALID_REQUEST:  | -32600,  | Invalid Request  | 2     |
-| METHOD_NOT_FOUND: | -32601,  | Method not found | 3     |
-| INVALID_PARAMS:   | -32602,  | Invalid params   | 4     |
-| INTERNAL_ERROR:   | -32603,  | Internal error   | 5     |
-| SERVER_ERROR:     | -32000,  | Server error     | 6     |
-
----
-
-### Reference: WalletConnect Typescript Error Encoding
-
-```typescript
-// source: https://github.com/WalletConnect/walletconnect-utils/blob/master/jsonrpc/utils/src/constants.ts#L1-#L20
-export const PARSE_ERROR = "PARSE_ERROR";
-export const INVALID_REQUEST = "INVALID_REQUEST";
-export const METHOD_NOT_FOUND = "METHOD_NOT_FOUND";
-export const INVALID_PARAMS = "INVALID_PARAMS";
-export const INTERNAL_ERROR = "INTERNAL_ERROR";
-export const SERVER_ERROR = "SERVER_ERROR";
-
-export const RESERVED_ERROR_CODES = [-32700, -32600, -32601, -32602, -32603];
-export const SERVER_ERROR_CODE_RANGE = [-32000, -32099];
-
-export const STANDARD_ERROR_MAP = {
-	[PARSE_ERROR]: { code: -32700, message: "Parse error" },
-	[INVALID_REQUEST]: { code: -32600, message: "Invalid Request" },
-	[METHOD_NOT_FOUND]: { code: -32601, message: "Method not found" },
-	[INVALID_PARAMS]: { code: -32602, message: "Invalid params" },
-	[INTERNAL_ERROR]: { code: -32603, message: "Internal error" },
-	[SERVER_ERROR]: { code: -32000, message: "Server error" },
-};
-
-export const DEFAULT_ERROR = SERVER_ERROR;
-```
-
-### Reference: Anvil Error Codes
-
-```rust
-// https://github.com/foundry-rs/foundry/blob/master/anvil/rpc/src/error.rs#L103-#L124
-impl ErrorCode {
-    /// Returns the error code as `i64`
-    pub fn code(&self) -> i64 {
-        match *self {
-            ErrorCode::ParseError => -32700,
-            ErrorCode::InvalidRequest => -32600,
-            ErrorCode::MethodNotFound => -32601,
-            ErrorCode::InvalidParams => -32602,
-            ErrorCode::InternalError => -32603,
-            ErrorCode::TransactionRejected => -32003,
-            ErrorCode::ExecutionError => 3,
-            ErrorCode::ServerError(c) => c,
-        }
-    }
-
-    /// Returns the message associated with the error
-    pub const fn message(&self) -> &'static str {
-        match *self {
-            ErrorCode::ParseError => "Parse error",
-            ErrorCode::InvalidRequest => "Invalid request",
-            ErrorCode::MethodNotFound => "Method not found",
-            ErrorCode::InvalidParams => "Invalid params",
-            ErrorCode::InternalError => "Internal error",
-            ErrorCode::TransactionRejected => "Transaction rejected",
-            ErrorCode::ServerError(_) => "Server error",
-            ErrorCode::ExecutionError => "Execution error",
-        }
-    }
-}
-```
