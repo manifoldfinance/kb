@@ -1,23 +1,27 @@
 ---
-id: rpc-errortypes
-title: RPC Error Types
-description: RPC Error Types and Structures
+id: rpc-dapp-support
+title: DApp Error Support
+description: RPC Error Types and Structures for DApps
 sidebar_position: 3
 ---
 
-# Motivation
+# App Error Support 
+
+## Motivation
 
 The [RPC specification](https://github.com/ethereum/wiki/wiki/JSON-RPC) implements a subset of the [JSON-RPC](http://www.jsonrpc.org/specification) specification. It defines the available RPC methods together with in- and outputs and serialization format. It however doesn't specify anything about the errors these methods can return. As a result, implementations return different errors which makes it hard for DApp developers to act appropriately. Another problem is that currently there are no well-defined error codes. This causes some clients (e.g. Mist) to do string matching to determine what happened. This is brittle and not generic.
 
-# DApp Error Support
+## DApp Error Support
 
-Define a standard for Ethereum JSON-RPC errors. One of the problems is finding the correct balance between informing a DApp what happened and being not too specific. Being too specific will make it hard to become fully compliant with the specification and would make DApp's more complicated. Being too generic DApps' won't be able to determine what happened.
+### Define a standard for Ethereum JSON-RPC errors.
+
+One of the problems is finding the correct balance between informing a DApp what happened and being not too specific. Being too specific will make it hard to become fully compliant with the specification and would make DApp's more complicated. Being too generic DApps' won't be able to determine what happened.
 
 This problem is tackled by introducing the concept of an error category and allowing a node to supply optional extra information about an error. This allows a DApp to get a general understanding of what went wrong by looking at the category error code. It also allows a node to provide additional information about an error that the DApp can decide to use.
 
 This proposal contains 2 parts. First, it describes how the errors are defined. The second part describes a list with standardized error categories and detailed error messages.
 
-## Error structure
+### Error structure
 
 JSON-RPC 2.0 has a [section](http://www.jsonrpc.org/specification#error_object) dedicated how errors are defined. The `code` field will be used for an error category. This field is mandatory and used by DApp's to get a general understanding of what happened. Together with the `code` field, the `message`` field is filled with a brief description of the category.
 
