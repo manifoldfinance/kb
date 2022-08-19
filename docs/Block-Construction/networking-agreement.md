@@ -1,23 +1,22 @@
 ---
-sidebar_position: 1
-id: blockconstruction-intro
-title: Block Construction
-description: Overview and introduction for Block Construction and Network Policies
+sidebar_position: 3
+id: blockconstruction-policies
+title: Network Filtering and Policies
+description: Network Filtering and Policies Agreement
 ---
 
 
-# Block Construction
+# Network Filtering and Policies
 
 > Networking and Peering program and policies
-
 
 ## Policy on Content Blocking
 
 Last updated: 2022.08.13
 
-## Requests for content blocking?
+## How does Manifold/CommodityStream handle requests for content blocking?
 
-CommodityStream does not block or filter any content through the _SecureRpc Resolver_, which is designed for gRPC/RPC connectivity, bidirectional streaming methods for forward and reverse tunneling, direct propagation of potential state changes,  custom bidirectional streaming which can be used to send messages back and forth, where the messages each act as RPC requests and responses, but on a single stream (for pinning/affinity, for example), and direct resolution for ENS and ENS like DNS Services, not for blocking or filtering content. CommodityStream does not block and filter transactions, malware and adult content.
+CommodityStream, Inc does not block or filter any content through the _SecureRpc Resolver_, which is designed for gRPC/RPC connectivity, bidirectional streaming methods for forward and reverse tunneling, direct propagation of potential state changes,  custom bidirectional streaming which can be used to send messages back and forth, where the messages each act as RPC requests and responses, but on a single stream (for pinning/affinity, for example), and direct resolution for ENS and ENS like DNS Services, not for blocking or filtering content. CommodityStream does not block and filter transactions, malware and adult content.
 
 In general, CommodityStream views government or civil requests to block content at the RPC level as ineffective, inefficient, and overboard. Since such a block would apply globally to all users of the resolver, regardless of where they are located, it would affect end users outside of the blocking government’s jurisdiction. A government request to block content through a globally available public recursive resolver like the _SecureRpc Gateway _ should therefore be evaluated as a request to block content globally.
 
