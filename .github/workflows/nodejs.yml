@@ -11,8 +11,10 @@ env:
   PULL_NUMBER: ${{ github.event.pull_request.number }}
   RUN_ID: ${{ github.run_id }}
   FORCE_COLOR: 2
-#  NEXT_TELEMETRY_DISABLED: 1
-#  NODE_ENV: production
+
+defaults:
+  run:
+    shell: bash
 
 jobs:
   pipeline:
@@ -28,7 +30,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
 
@@ -50,3 +52,21 @@ jobs:
       - name: Install project dependencies
         run: yarn run build
         id: production
+
+      - name: Install project dependencies
+        run: npm pack
+        id: pack
+
+        if: ${{ github.event_name == 'create' && github.event.ref_type == 'tag' }}
+      - run: echo "::set-output name=date::$(date +'%Y-%m-%d')" && npm pack
+      - run: echo "Deploying tag ${{ github.ref }}"
+      
+      - uses: 'marvinpinto/action-automatic-releases@latest'
+        with:
+          repo_token: '${{ secrets.GITHUB_TOKEN }}'
+          automatic_release_tag: 'latest'
+          prerelease: true
+          files: |
+            LICENSE.md
+            *.tgz
+        id: 'automatic_releases'
