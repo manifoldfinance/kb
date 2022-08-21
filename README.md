@@ -1,4 +1,5 @@
-# [`kb.docs`](#)
+# [`kb.manifoldfinance.com`](https://kb.manifoldfinance.com)
+
 
 [![nodejs](https://github.com/manifoldfinance/kb/actions/workflows/nodejs.yml/badge.svg)](https://github.com/manifoldfinance/kb/actions/workflows/nodejs.yml)
 
@@ -10,7 +11,7 @@ This is the home of the `kb.docs` resource. V2 Documentation is maintained here.
 
 If you have a question you can always post it on our discourse forums → [forums.manifoldfinance.com](https://forums.manifoldfinnce.com)
 
-### [Diátaxis](https://diataxis.fr/)
+## [Diátaxis](https://diataxis.fr/)
 
 > A systematic framework for technical documentation authoring. <br /> The Grand Unified Theory of Documentation <br /> —David Laing
 
@@ -30,7 +31,7 @@ This is a Docusarus Site templated with the Diataxis layout of creating and view
 
 Copyright 2022 (C) - CommodityStream Inc, & Manifold Finance, Inc. All Rights Reserved
 
-## Code Examples License
+### Code Examples License
 
 Example code provided is licensed under either of
 
