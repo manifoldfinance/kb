@@ -1,11 +1,13 @@
 ---
 sidebar_position: 5
 id: howto-get_blokcNumber
-title: Requesting eth_blockNumber
+title: Requesting eth_blockNumber using NodeJs
 description: How to request eth_blockNumber
 ---
 
-# Javascript Example `eth_blockNumber`
+# `eth_blockNumber`
+
+ Javascript Example
 
 ```javascript
 // SPDX-License-Identifier: UPL-1.0
