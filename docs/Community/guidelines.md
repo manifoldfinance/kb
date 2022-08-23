@@ -98,6 +98,8 @@ These rules are designed to help all of us build a pleasant, productive, and rob
 
 ## Coding Dogma
 
+0. Thou shalt provide attribution.
+
 1. Warn the users about what’s buggy and unstable in your release notes and the rest of your documentation.
 
 2. Document your assumptions where the user can see them.
@@ -107,6 +109,47 @@ These rules are designed to help all of us build a pleasant, productive, and rob
 4. Make your build reproducible, or offer a packaged distribution of your code. Consider using [nix](https://nixos.org).
 
 5. Have fun!
+
+
+## Communicating with the community
+
+In general, we should handle disputes and violations of community guidelines quietly. We must maintain our reputability on this point by enforcing the guidelines and moderation policies appropriately.
+
+However, occasionally these events will spill out into public. In those cases, please let the npm executive team decide how best to communicate with the public.
+
+### Principles of public communication
+
+> Demonstrate that the Communidty Guidelines and moderation policy is being enforced fairly.
+
+- Explain (briefly, neutrally, anonymously) what violation led to the enforcement action.
+- Help the community understand that they are not in danger of being attacked by capricious, punitive or irrational administrative actions.
+- When necessary, communicate via the official forums and/or changelog/devlog.
+
+When it's necessary to communicate enforcement of our policy, a brief public statement such as this would suffice:[^8]
+
+"[xThing] happened. This was a violation of our policy. We have taken [yAction]. This is a good time for [people] to review our policy at [location]. If anyone would like to discuss this further they can [contact us somehow]."
+
+
+
+#### Dealing with upset users
+People may be upset and wish to express their concerns to npm staff. We should be in "making the person feel heard" mode; it's important not to cross into "education mode". Hear them out, take notes as appropriate, thank them for their thoughts.
+
+We should not share additional details of the incident with uninvolved parties.
+
+If a user is upset and a staff member agrees that a wrong was done to them, it helps a lot to just say simply "I'm so sorry." (Rather than "but we tried really hard" or "no one told us" or etc., even if that was true. "I'm so sorry" goes a long way to defusing many people's anger.)
+
+Whether or not a staffer agrees that a wrong was done to them, the user should be armed with an authority they can appeal to if talking wasn't enough. "Please open an abuse support ticket at https://forums.manifoldfinance.com"
+
+#### Don't require or encourage apologies
+Do not ask for an apology to the victim. We have no responsibility to enforce friendship, reconciliation, or anything beyond lack of harassment between any two given users, and in fact doing so can contribute to someone's lack of safety while using our service.
+
+Forcing a victim of harassment to acknowledge an apology from their harasser forces further contact with their harasser. It also creates a social expectation that they will accept the apology, forgive their harasser, and return their social connection to its previous status. A person who has been harassed will often prefer to ignore or avoid their harasser entirely. Bringing them together with a third party mediator and other attempts to "repair" the situation which require further interaction between them should likewise be avoided.
+
+If the harasser offers to apologize to the victim (especially in person), strongly discourage it. In fact, discourage any further interaction with the offended party.
+
+If a community member relays an apology to the victim, it should be brief and not require a response. ("X apologizes and agrees to have no further contact with you" is brief. "X is very sorry that their attempts to woo you were not received in the manner that was intended and will try to do better next time, they're really really sorry and hope that you can find it in your heart to forgive them" is emphatically not.)
+
+If the harasser attempts to press an apology on someone who would clearly prefer to avoid them, or attempts to recruit others to relay messages on their behalf, this may constitute continued harassment.
 
 ## License
 
@@ -140,3 +183,6 @@ The Node.js Policy on Trolling, https://blog.izs.me/post/30036893703/policy-on-t
 [^5]: [Golang Moderators violating their own Code of Conduct](https://github.com/golang/go/issues/44577#issuecomment-1137822116)
 
 [^6]: [See this issue thread on the golang issues page for exactly how **not** to act](https://github.com/golang/go/issues/30141). [A positive example shown by a moderator, though YMMV](https://github.com/golang/go/issues/44577#issuecomment-1137822116).
+
+
+[^8]: And then move on with the program. Do not revist the issue. 
