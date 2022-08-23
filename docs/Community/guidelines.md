@@ -68,7 +68,7 @@ Effective immediately, OpenMEV shall codify and will support the following:
 
 ### Pro Community
 
--   **Pro-Community**. All OpenMEV projects will gladly accept and host integrations for Flashbots, Eden Network, and other MEV or EVM ecosystems, without consideration of the relationships, dispositions, or politics between these projects and those ecosystems, and they will provide non-discriminatory support for end-users, regardless of their disposition to or affiliation or association with other OpenMEV community members or ecosystems.
+-   **Pro-Community**. All OpenMEV projects will gladly accept and host integrations for Flashbots, Eden Network, and other MEV or EVM ecosystems, without consideration of the relationships, dispositions, or politics between these projects and those ecosystems, and they will provide non-discriminatory support for end-users, regardless of their disposition to or affiliation or association with other OpenMEV community members or ecosystems.[^1]
 
 -   _pro-community_, as OpenMEV hosts integrations for Sushiswap projects _swaps_ and _bentobox_, and hosts integrations for _OlympusDAO_,_LayerZero_ to date. Conflicting incentives should be considered and debated if it is possible that adding support for another project would conflict with existing integrations. However, I believe that making this behavior official will further increase trust and expand integrations, and also clearly set expectations for new projects being integrated into the OpenMEV solution sets.
 
@@ -76,7 +76,7 @@ Effective immediately, OpenMEV shall codify and will support the following:
 
 -   **Pro-Professionalism**. Although behavior within the OpenMEV organization projects is already governed by the [OpenMEV Code of Conduct](#), I want to strengthen this code of conduct by making it clear that ad hominem and career sabotage have no place within the community. Projects in the OpenMEV organization exist only to help engineers and developers solve problems, regardless of their religion, political affiliation, race, or disposition to or affiliation or association with other OpenMEV community members or ecosystems.
 
--   _pro-professionalism_, within OpenMEV official spaces (GitHub, Discourse, etc.), I have only ever seen welcoming, inclusive, and non-discriminatory behavior, without ad hominem or career sabotage. But explicitly committing to this high standard of professionalism can only help to set expectations and provide guidance for everyone as the organization continues to grow.
+-   _pro-professionalism_, within OpenMEV official spaces (GitHub, Discourse, etc.), I have only ever seen welcoming, inclusive, and non-discriminatory behavior, without ad hominem or career sabotage. But explicitly committing to this high standard of professionalism can only help to set expectations and provide guidance for everyone as the organization continues to grow.[^5]
 
 ### The Ethereum Ecosystem
 
@@ -89,7 +89,7 @@ It is not necessary that open source contributors have the same views or even li
 -   No well-actually's
 -   No feigning surprise
 -   No back-seat driving
--   No subtle -isms
+-   No subtle -isms[^6]
 -   Remember that everyone was new to Ethereum at some point.
 
 ### Why have social rules?
@@ -134,3 +134,9 @@ The Node.js Policy on Trolling, https://blog.izs.me/post/30036893703/policy-on-t
 #### Footnotes
 
 [^4]: [See, DerbyCon Clarifications, Inclusiveness, and Gender](https://web.archive.org/web/20190428142347/https://www.derbycon.com/blog/derbycon-clarifications-inclusiveness-and-gender/#:~:text=However%2C%20we%20do,found%20so%20concerning)
+
+[^1]: [See https://blog.brixit.nl/why-i-left-pine64/](https://blog.brixit.nl/why-i-left-pine64/) for an example of when a large ecosystem (Pine64) stops supporting multiple integrations in favor of one for the deleterious effects of mono-culture. Additionally we can substatiate this negative community effect by other blog posts made by different commnunity members, such as ["Pine64's weird Priorities"](https://drewdevault.com/2022/01/18/Pine64s-weird-priorities.html), and ["Pine has let its community down"](https://drewdevault.com/2022/08/18/PINE64-let-us-down.html)
+
+[^5]: [Golang Moderators violating their own Code of Conduct](https://github.com/golang/go/issues/44577#issuecomment-1137822116)
+
+[^6]: [See this issue thread on the golang issues page for exactly how **not** to act](https://github.com/golang/go/issues/30141). [A positive example shown by a moderator, though YMMV](https://github.com/golang/go/issues/44577#issuecomment-1137822116).
