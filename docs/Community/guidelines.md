@@ -3,13 +3,14 @@ sidebar_position: 1
 id: intro
 title: Contributing and Community Dogma
 description: Contributing and Community Dogma and Social Rules
+version: 2022.08.25
 ---
 
 # Contributing and Community Dogma
 
 :::caution
 
-These guidelines are a **living document**
+version: 2022.08.25
 
 :::
 
@@ -30,6 +31,22 @@ The effect – **the intended effect – is to diminish the prestige and autonom
 > This is undesirable as it both directly damages our self-correction process – and in its second-order effects. The habit of institutional tone policing, even when well-intentioned, too easily slides into the active censorship of disfavored views. --_The Right to be Rude_
 
 The cost of a culture in which avoiding offense trumps the liberty to speak is that subverters control the discourse. As such we must not internalize anticipatory surrender to these subverters.
+
+### Contributions come from happy users
+
+As the title says, contributions to projects come from happy users. Successful Open Source Projects need to communicate and help with communication to their ecosystems. 
+
+:::info
+
+What is Communication 
+• What you say 
+• What you write 
+• What you do 
+• What you build
+
+:::
+
+
 
 ### Conquest’s Second Law.
 
@@ -62,15 +79,46 @@ We must recognize that the actions of other organizations, protocols, etc. may h
 -   They undermine the trust that end-users and companies place in Ethereum
 -   They increase the risk involved in deploying solutions based on Ethereum
 -   They decrease the network value of Ethereum
--   They make OpenMEV look unprofessional to many developers, especially compared to the Ethereum/other ecosystems where major OSS projects would never behave in such a fashion
+-   They make OpenMEV look unprofessional to many developers, especially compared to the Ethereum/other ecosystems where major OSS projects would never behave in such a fashion.
 
-Effective immediately, OpenMEV shall codify and will support the following:
+### Areas of Principled Discussion
+
+Both Contributors and Users will have questions, 
+• Need to establish a place for them to ask questions 
+• Public is ideal: 
+  - Others can respond 
+  - Others benefit from the response
+
+[forums.manifoldfinance.com](https://forums.manifoldfinance.com) and the [ethereum-magicians](https://ethereum-magicians.org/) boards are considered the 'public forum ideals'. Ethereum R&D Discord, offical GitHub repo's are as well. If you think another venue should be added please submit a pull request to add it here.
+
+### Our Covenant
+
+Our Contributor Covenant
+
+> [source, Steve Francia "What every Open Source Project Needs"](https://spf13.com/presentation/what-every-open-source-project-needs/)
+
+#### Treat Contributors Well 
+• Happier developers will contribute more 
+• The more welcome people feel the more they will help your project
+
+#### Be Responsive 
+• Respond to Pull Requests in a timely manner 
+• Provide and contribute to a channel where people can ask questions 
+• Respond to issues quickly
+
+#### Invite Contributors 
+• Overcommunicate that contributions are welcome
+• Ask people to contribute
+• Ask. Ask. Ask. Invite. Invite. Invite.
+
 
 ### Pro Community
 
 -   **Pro-Community**. All OpenMEV projects will gladly accept and host integrations for Flashbots, Eden Network, and other MEV or EVM ecosystems, without consideration of the relationships, dispositions, or politics between these projects and those ecosystems, and they will provide non-discriminatory support for end-users, regardless of their disposition to or affiliation or association with other OpenMEV community members or ecosystems.[^1]
 
 -   _pro-community_, as OpenMEV hosts integrations for Sushiswap projects _swaps_ and _bentobox_, and hosts integrations for _OlympusDAO_,_LayerZero_ to date. Conflicting incentives should be considered and debated if it is possible that adding support for another project would conflict with existing integrations. However, I believe that making this behavior official will further increase trust and expand integrations, and also clearly set expectations for new projects being integrated into the OpenMEV solution sets.
+
+
 
 ### Pro Professionalism
 
@@ -84,6 +132,9 @@ It is not necessary that open source contributors have the same views or even li
 
 ## Social Rules
 
+Most projects have very few contributors, so in order to help facilitate getting contributors we enforce these social rules. These rules are from Recurse. The Recurse Center is an educational retreat for programmers who want to become dramatically better with a community of peers doing the same You must give if you want to get • Contributors are an investment in the future of the project • Contributors pay back many times what you put in
+Make it Easy to Contribute
+
 [These rules are adopted from recurse.com/manual#sec-environment](https://www.recurse.com/manual#sec-environment)
 
 -   No well-actually's
@@ -91,6 +142,19 @@ It is not necessary that open source contributors have the same views or even li
 -   No back-seat driving
 -   No subtle -isms[^6]
 -   Remember that everyone was new to Ethereum at some point.
+
+> The rules below are taken from the Recurse User Manual 
+
+#### No feigning surprise[^9]
+The first rule means you shouldn't act surprised when people say they don't know something. This applies to both technical things ("What?! I can't believe you don't know what the stack is!") and non-technical things ("You don't know who RMS is?!"). Feigning surprise has absolutely no social or educational benefit: When people feign surprise, it's usually to make them feel better about themselves and others feel worse. And even when that's not the intention, it's almost always the effect. As you've probably already guessed, this rule is tightly coupled to our belief in the importance of people **feeling comfortable saying "I don't know" and "I don't understand."**
+
+#### No well-actually's[^10]
+A well-actually happens when someone says something that's almost - but not entirely - correct, and you say, "well, actually…" and then give a minor correction. This is especially annoying when the correction has no bearing on the actual conversation. This doesn't mean we are not  about truth-seeking or that we don't care about being precise. **Almost all well-actually's in our experience are about grandstanding, not truth-seeking.** Moreover it points to a need for attention seeking, which is not a healthy behavior in general. 
+
+#### No back-seat driving[^11]
+If you overhear people working through a problem, you shouldn't intermittently lob advice in chat, on issues, etc. This can lead to the "too many cooks" problem, but more important, **it can be rude and disruptive to half-participate in a conversation.** This isn't to say you shouldn't help, offer advice, or join conversations. On the contrary, we encourage all those things. Rather, **it just means that when you want to help out or work with others, you should fully engage and not just butt in sporadically.**
+
+
 
 ### Why have social rules?
 
@@ -186,3 +250,7 @@ The Node.js Policy on Trolling, https://blog.izs.me/post/30036893703/policy-on-t
 
 
 [^8]: And then move on with the program. Do not revist the issue. 
+
+[^9]: [https://www.recurse.com/manual#:~:text=No%20feigning%20surprise](https://www.recurse.com/manual#:~:text=No%20feigning%20surprise)
+[^10]: [https://www.recurse.com/manual#:~:text=I%20don%27t%20understand.%22-,No%20well%2Dactually%27s,-A%20well%2Dactually](https://www.recurse.com/manual#:~:text=I%20don%27t%20understand.%22-,No%20well%2Dactually%27s,-A%20well%2Dactually)
+[^11]:  [https://www.recurse.com/manual#:~:text=No%20back%2Dseat%20driving](https://www.recurse.com/manual#:~:text=No%20back%2Dseat%20driving)
