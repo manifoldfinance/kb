@@ -63,6 +63,11 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/mfdoom'),
         },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+        }
+      },
       }),
     ],
   ],
