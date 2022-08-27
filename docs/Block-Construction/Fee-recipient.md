@@ -2,7 +2,6 @@
 title: Rewards and Fee Recipient
 sidebar_position: 3
 id: block-rewards
-title: Rewards and Fee Recipient
 description: Rewards and Fee Recipient and Liquid Staking
 ---
 
@@ -12,7 +11,7 @@ Every time a validator proposes a block, it will get the sum of all tips paid by
 
 > `COINBASE` / `ETHERBASE`
 
-## Types of Fee's
+### Types of Fee's
 
 1⃣ Consensus Rewards ⛓️
 2⃣ Execution Rewards 🖥️
