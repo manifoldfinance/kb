@@ -1,4 +1,4 @@
-
+// kb.manifoldfinance.com
 // Note: type annotations allow type checking and IDEs autocompletion
 const math = require('remark-math');
 const katex = require('rehype-katex');
@@ -67,7 +67,6 @@ const config = {
           changefreq: 'weekly',
           priority: 0.5,
         }
-      },
       }),
     ],
   ],
