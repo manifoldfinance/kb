@@ -17,7 +17,7 @@ Every time a validator proposes a block, it will get the sum of all tips paid by
 2⃣ Execution Rewards 🖥️ <br>
 3⃣ MEV Rewards 🤖 <br>
 
-> This is not technically true all the time, but we mention it
+> This is not technically true all the time, but we mention it <br>
 4⃣ Decrease in ETH supply 🔥 <br>
 
 
