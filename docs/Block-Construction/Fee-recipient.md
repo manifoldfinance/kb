@@ -26,9 +26,6 @@ Every time a validator proposes a block, it will get the sum of all tips paid by
 Lido: Operators to set the fee recipient to a dedicated fee vault and restakes it into `stETH`[^1]
 
 
-![eth2-rewards.png](/img/eth2-rewards.png)
-
-
 ## Rocket Pool
 
 Rocket Pool: Operator to set the fee recipient to the distributor contract address. Its oDAO (Oracle DAO) that monitors operator's behavior will monitor and penalize operators that do not comply.[^2]
