@@ -12,23 +12,23 @@ import * as color from 'color';
 export const quickLinks = [
   {
     title: 'Manifold Finance',
-    href: '#',
+    href: 'https://kb.manifoldfinance.com/docs/intro',
     icon: InformationCircleIcon,
     to: './docs/intro',
     text: `Tutorials that introduce, educate, lead to enable the newcomer to get started    `,
   },
   {
     title: 'Reference',
-    href: '#',
+    href: 'https://kb.manifoldfinance.com/docs/category/reference',
     icon: InformationCircleIcon,
-    to: './docs/Developers/intro',
+    to: './docs/category/reference',
     text: `Reference guides are technical descriptions of the machinery and how to operate it. Reference material is information-oriented`,
   },
   {
     title: 'Explanation',
-    href: '#',
+    href: 'https://kb.manifoldfinance.com/docs/general/general-model',
     icon: InformationCircleIcon,
-    to: './docs/Tutorials/intro',
+    to: './docs/general/general-model',
     text: `Explanation is discussion that clarifies and illuminates a particular topic. Explanation is understanding-oriented.`,
   },
 ];
@@ -37,24 +37,24 @@ export const Guides = [
   {
     title: 'How To',
     text: 'How-to guides are directions that take the reader through the steps required to solve a real-world problem. How-to guides are goal-oriented.',
-    to: '#',
+    to: './docscategory/how-to-guides',
   },
   {
     title: 'Conditional Imperatives.',
     text: 'If you want x, do y. To achieve w, do z.',
-    to: '#',
+    to: './docs/category/developers',
   },
   {
-    title: 'How to integrate application performance monitoring',
-    text: 'This guide shows you how to…',
-    to: '#',
+    title: 'How to use MetaMask and SecureRpc',
+    text: 'This guide shows you how to use MetaMask and SecureRpc',
+    to: './docs/How-To/howto-metamask',
   },
 ];
 
 export const github = [
   {
     title: 'OpenMEV SDK',
-    href: '#',
+    href: 'https://github.com/sushiswap/mev-router-devkit',
     icon: CodeIcon,
   },
   {
