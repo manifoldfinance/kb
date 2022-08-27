@@ -2,7 +2,6 @@
 sidebar_position: 3
 id: community-docguide
 title: DocGuide
-description: Document Guide: Contributing to the Knowledge Base
 ---
 
 # Document Guide: The Ground Truth
