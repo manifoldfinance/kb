@@ -1,4 +1,4 @@
-
+// kb.manifoldfinance.com
 // Note: type annotations allow type checking and IDEs autocompletion
 const math = require('remark-math');
 const katex = require('rehype-katex');
@@ -10,20 +10,15 @@ const darkCodeTheme = require('./src/css/mfdoom');
 // @ts-check
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Manifold Finance KB',
-  tagline: 'Knowledge base for Manifold Finance',
-  url: 'https://manifold-kb.netlify.app',
+  title: 'Manifold Finance Knowledgebase',
+  tagline: 'Knowledge base & Documentation for Manifold Finance',
+  url: 'https://kb.manifoldfinance.com',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'manifoldfinance', // Usually your GitHub org/user name.
-  projectName: 'knowledgebase', // Usually your repo name.
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
+  organizationName: 'manifoldfinance',
+  projectName: 'kb',
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -63,6 +58,10 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/mfdoom'),
         },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+        }
       }),
     ],
   ],
