@@ -37,7 +37,7 @@ export const Guides = [
   {
     title: 'How To',
     text: 'How-to guides are directions that take the reader through the steps required to solve a real-world problem. How-to guides are goal-oriented.',
-    to: './docscategory/how-to-guides',
+    to: './docs/category/how-to-guides',
   },
   {
     title: 'Conditional Imperatives.',
