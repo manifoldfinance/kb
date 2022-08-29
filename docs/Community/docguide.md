@@ -1,11 +1,10 @@
 ---
-sidebar_position: 2
-id: contributing
-title: Contributing to the Knowledge Base
-description: Preface and Introduction contributing to the Knowledge Base
+sidebar_position: 3
+id: community-docguide
+title: DocGuide
 ---
 
-# Ground Truth
+# Document Guide: The Ground Truth
 
 Stop thinking of documentation as a chore you do for others, and instead think of it as a way to explore your problem space. and the space in your head around your intuitions about the problem, so you can shine light into the murkier corners of both. Writing documentation can function as valuable knowledge capture about your problem domain even when you are the only expert about what you are trying to do.
 
