@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmanifold_kb=self.webpackChunkmanifold_kb||[]).push([[4121],{8070:function(s){s.exports=JSON.parse('[{"label":"mev boost","permalink":"/docs/tags/mev-boost","count":1},{"label":"eth2","permalink":"/docs/tags/eth-2","count":1},{"label":"flashbots","permalink":"/docs/tags/flashbots","count":1}]')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmanifold_kb=self.webpackChunkmanifold_kb||[]).push([[1713],{3457:function(a){a.exports=JSON.parse('[{"label":"manifold","permalink":"/blog/tags/manifold","count":1}]')}}]);

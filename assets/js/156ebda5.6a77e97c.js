@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmanifold_kb=self.webpackChunkmanifold_kb||[]).push([[7638],{4196:function(e){e.exports=JSON.parse('{"title":"Developers","slug":"/category/developers","permalink":"/docs/category/developers","navigation":{"previous":{"title":"Tutorials","permalink":"/docs/Tutorials/intro"},"next":{"title":"Developers","permalink":"/docs/Developers/intro"}}}')}}]);

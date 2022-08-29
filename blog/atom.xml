@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://kb.manifoldfinance.com/blog</id>
+    <title>Manifold Finance Knowledgebase Blog</title>
+    <updated>2022-06-19T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://kb.manifoldfinance.com/blog"/>
+    <subtitle>Manifold Finance Knowledgebase Blog</subtitle>
+    <icon>https://kb.manifoldfinance.com/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[June 2022 Report]]></title>
+        <id>changelog</id>
+        <link href="https://kb.manifoldfinance.com/blog/changelog"/>
+        <updated>2022-06-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[June 2022 update]]></summary>
+        <content type="html"><![CDATA[<p>Here is an outline of proposed publicly tracked metrics. See the snapshot link below for more information.</p><p>Total Dollar Value - External Submitted Successful Bundles/Transactions (venue)</p><ul><li>SushiswapV1 41.6 Billion</li><li>UniswapV2/V3 65.9 Billion</li></ul><blockquote><p><strong>Note: these dollar amounts are instantaneous, meaning realized at the USD value at that moment in time</strong></p></blockquote><h3 class="anchor anchorWithStickyNavbar_LWe7" id="grafana-snapshot">Grafana Snapshot<a class="hash-link" href="#grafana-snapshot" title="Direct link to heading">​</a></h3><p><a href="https://snapshots.raintank.io/dashboard/snapshot/b9YR507RWte8UJc1ecIfTW4MVW7k9dFd" target="_blank" rel="noopener noreferrer">See the Grafana Snapshot here</a></p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="metrics-by-venue-">Metrics by Venue <br><a class="hash-link" href="#metrics-by-venue-" title="Direct link to heading">​</a></h3><p>Latest Dollar Value - Send Transaction <br> SushiSwapV1 <br> Uniswap2/V3 <br></p><p>{' '}</p><br>Latest Dollar Value - External Successful Send Bundle <br>SushiSwapV1 <br>Uniswap2/V3 <br><br>Total Dollar Value - External Submitted Successful Bundles/Transactions <br>SushiSwapV1 <br>Uniswap2/V3 <br><br>Delta Dollar Value - External Successful Bundles 14day <br>SushiSwapV1 <br>Uniswap2/V3 <br><br><h3 class="anchor anchorWithStickyNavbar_LWe7" id="transaction-and-bundle-metrics-">Transaction and Bundle Metrics <br><a class="hash-link" href="#transaction-and-bundle-metrics-" title="Direct link to heading">​</a></h3><p>Successful Requests <br> Failed Requests <br> Failed Requests - Client Error <br> Failed Requests - Internal Error</p><br><h3 class="anchor anchorWithStickyNavbar_LWe7" id="transaction-routing-">Transaction Routing <br><a class="hash-link" href="#transaction-routing-" title="Direct link to heading">​</a></h3><p>Total Send Transaction Requests <br> Successful Send Transaction Requests <br> Failed Send Transaction Requests</p><br> Successful Relay Transaction Requests <br> Failed Relay Transaction Requests <br><h3 class="anchor anchorWithStickyNavbar_LWe7" id="bundle-routing-">Bundle Routing <br><a class="hash-link" href="#bundle-routing-" title="Direct link to heading">​</a></h3><p>Total Send Bundle Requests <br> Successful Send Bundle Requests <br> Failed Send Bundle Requests <br> Total Relay Bundle Requests <br></p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="json-rpc-metrics">JSON-RPC Metrics<a class="hash-link" href="#json-rpc-metrics" title="Direct link to heading">​</a></h2><h3 class="anchor anchorWithStickyNavbar_LWe7" id="requests-by-method-value-">Requests by Method Value <br><a class="hash-link" href="#requests-by-method-value-" title="Direct link to heading">​</a></h3><p>Requests by Method Value<br>
+<!-- -->eth_accounts<br>
+<!-- -->eth_blockNumber<br>
+<!-- -->eth_call<br>
+<!-- -->eth_chainId<br>
+<!-- -->eth_coinbase<br>
+<!-- -->eth_estimateGas<br>
+<!-- -->eth_gasPrice<br>
+<!-- -->eth_getBalance<br>
+<!-- -->eth_getBlockByHash<br>
+<!-- -->eth_getBlockByNumber<br>
+<!-- -->eth_getBlockTransactionCountByHash<br>
+<!-- -->eth_getBlockTransactionCountByNumber<br>
+<!-- -->eth_getCode<br>
+<!-- -->eth_getLogs<br>
+<!-- -->eth_getStorageAt<br>
+<!-- -->eth_getTransactionByBlockHashAndIndex<br>
+<!-- -->eth_getTransactionByBlockNumberAndIndex<br>
+<!-- -->eth_getTransactionByHash<br>
+<!-- -->eth_getTransactionCount<br>
+<!-- -->eth_getTransactionReceipt<br>
+<!-- -->eth_getUncleByBlockHashAndIndex<br>
+<!-- -->eth_getUncleByBlockNumberAndIndex<br>
+<!-- -->eth_getUncleCountByBlockHash<br>
+<!-- -->eth_getUncleCountByBlockNumber<br>
+<!-- -->eth_hashrate<br>
+<!-- -->eth_mining<br>
+<!-- -->eth_protocolVersion<br>
+<!-- -->eth_sendBundle<br>
+<!-- -->eth_sendRawTransaction<br>
+<!-- -->eth_sign<br>
+<!-- -->eth_signTypedData<br>
+<!-- -->eth_syncing<br>
+<!-- -->manifold_bundleStatus<br>
+<!-- -->manifold_getGasPrices<br>
+<!-- -->manifold_motd<br>
+<!-- -->manifold_sendBundle<br>
+<!-- -->manifold_sendTransaction<br>
+<!-- -->manifold_transactionStatus<br>
+<!-- -->net_listening<br>
+<!-- -->net_peerCount<br>
+<!-- -->net_version<br>
+<!-- -->web3_clientVersion<br>
+<!-- -->web3_sha3</p>]]></content>
+        <author>
+            <name>Sam Bacha</name>
+            <uri>https://github.com/endiliey</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Introducing OpenMEV]]></title>
+        <id>/2022/05/01/introducing-openmev</id>
+        <link href="https://kb.manifoldfinance.com/blog/2022/05/01/introducing-openmev"/>
+        <updated>2022-05-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[New OpenMEV release]]></summary>
+        <content type="html"><![CDATA[<p>In this post I'll provide an overview of our goals and priorities, and highlight some features.</p><hr><p>Meeting Minute</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[March 2022 Report]]></title>
+        <id>changelog</id>
+        <link href="https://kb.manifoldfinance.com/blog/changelog"/>
+        <updated>2022-03-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[March 2022 update]]></summary>
+        <content type="html"><![CDATA[<p>Here is an outline of proposed publicly tracked metrics. See the snapshot link below for more information.</p><p>Total Dollar Value - External Submitted Successful Bundles/Transactions (venue)</p><ul><li>SushiswapV1 41.6 Billion</li><li>UniswapV2/V3 65.9 Billion</li></ul><blockquote><p><strong>Note: these dollar amounts are instantaneous, meaning realized at the USD value at that moment in time</strong></p></blockquote><h3 class="anchor anchorWithStickyNavbar_LWe7" id="grafana-snapshot">Grafana Snapshot<a class="hash-link" href="#grafana-snapshot" title="Direct link to heading">​</a></h3><p><a href="https://snapshots.raintank.io/dashboard/snapshot/b9YR507RWte8UJc1ecIfTW4MVW7k9dFd" target="_blank" rel="noopener noreferrer">See the Grafana Snapshot here</a></p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="metrics-by-venue-">Metrics by Venue <br><a class="hash-link" href="#metrics-by-venue-" title="Direct link to heading">​</a></h3><p>Latest Dollar Value - Send Transaction <br> SushiSwapV1 <br> Uniswap2/V3 <br></p><p>{' '}</p><br>Latest Dollar Value - External Successful Send Bundle <br>SushiSwapV1 <br>Uniswap2/V3 <br><br>Total Dollar Value - External Submitted Successful Bundles/Transactions <br>SushiSwapV1 <br>Uniswap2/V3 <br><br>Delta Dollar Value - External Successful Bundles 14day <br>SushiSwapV1 <br>Uniswap2/V3 <br><br><h3 class="anchor anchorWithStickyNavbar_LWe7" id="transaction-and-bundle-metrics-">Transaction and Bundle Metrics <br><a class="hash-link" href="#transaction-and-bundle-metrics-" title="Direct link to heading">​</a></h3><p>Successful Requests <br> Failed Requests <br> Failed Requests - Client Error <br> Failed Requests - Internal Error</p><br><h3 class="anchor anchorWithStickyNavbar_LWe7" id="transaction-routing-">Transaction Routing <br><a class="hash-link" href="#transaction-routing-" title="Direct link to heading">​</a></h3><p>Total Send Transaction Requests <br> Successful Send Transaction Requests <br> Failed Send Transaction Requests</p><br> Successful Relay Transaction Requests <br> Failed Relay Transaction Requests <br><h3 class="anchor anchorWithStickyNavbar_LWe7" id="bundle-routing-">Bundle Routing <br><a class="hash-link" href="#bundle-routing-" title="Direct link to heading">​</a></h3><p>Total Send Bundle Requests <br> Successful Send Bundle Requests <br> Failed Send Bundle Requests <br> Total Relay Bundle Requests <br></p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="json-rpc-metrics">JSON-RPC Metrics<a class="hash-link" href="#json-rpc-metrics" title="Direct link to heading">​</a></h2><h3 class="anchor anchorWithStickyNavbar_LWe7" id="requests-by-method-value-">Requests by Method Value <br><a class="hash-link" href="#requests-by-method-value-" title="Direct link to heading">​</a></h3><p>Requests by Method Value<br>
+<!-- -->eth_accounts<br>
+<!-- -->eth_blockNumber<br>
+<!-- -->eth_call<br>
+<!-- -->eth_chainId<br>
+<!-- -->eth_coinbase<br>
+<!-- -->eth_estimateGas<br>
+<!-- -->eth_gasPrice<br>
+<!-- -->eth_getBalance<br>
+<!-- -->eth_getBlockByHash<br>
+<!-- -->eth_getBlockByNumber<br>
+<!-- -->eth_getBlockTransactionCountByHash<br>
+<!-- -->eth_getBlockTransactionCountByNumber<br>
+<!-- -->eth_getCode<br>
+<!-- -->eth_getLogs<br>
+<!-- -->eth_getStorageAt<br>
+<!-- -->eth_getTransactionByBlockHashAndIndex<br>
+<!-- -->eth_getTransactionByBlockNumberAndIndex<br>
+<!-- -->eth_getTransactionByHash<br>
+<!-- -->eth_getTransactionCount<br>
+<!-- -->eth_getTransactionReceipt<br>
+<!-- -->eth_getUncleByBlockHashAndIndex<br>
+<!-- -->eth_getUncleByBlockNumberAndIndex<br>
+<!-- -->eth_getUncleCountByBlockHash<br>
+<!-- -->eth_getUncleCountByBlockNumber<br>
+<!-- -->eth_hashrate<br>
+<!-- -->eth_mining<br>
+<!-- -->eth_protocolVersion<br>
+<!-- -->eth_sendBundle<br>
+<!-- -->eth_sendRawTransaction<br>
+<!-- -->eth_sign<br>
+<!-- -->eth_signTypedData<br>
+<!-- -->eth_syncing<br>
+<!-- -->manifold_bundleStatus<br>
+<!-- -->manifold_getGasPrices<br>
+<!-- -->manifold_motd<br>
+<!-- -->manifold_sendBundle<br>
+<!-- -->manifold_sendTransaction<br>
+<!-- -->manifold_transactionStatus<br>
+<!-- -->net_listening<br>
+<!-- -->net_peerCount<br>
+<!-- -->net_version<br>
+<!-- -->web3_clientVersion<br>
+<!-- -->web3_sha3</p>]]></content>
+        <author>
+            <name>Sam Bacha</name>
+            <uri>https://github.com/endiliey</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MDX Blog Post]]></title>
+        <id>mdx-blog-post</id>
+        <link href="https://kb.manifoldfinance.com/blog/mdx-blog-post"/>
+        <updated>2021-08-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Blog posts support Docusaurus Markdown features, such as MDX.]]></summary>
+        <content type="html"><![CDATA[<p>Blog posts support <a href="https://docusaurus.io/docs/markdown-features" target="_blank" rel="noopener noreferrer">Docusaurus Markdown features</a>, such as <a href="https://mdxjs.com/" target="_blank" rel="noopener noreferrer">MDX</a>.</p><div class="theme-admonition theme-admonition-tip alert alert--success admonition_LlT9"><div class="admonitionHeading_tbUL"><span class="admonitionIcon_kALy"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>tip</div><div class="admonitionContent_S0QG"><p>Use the power of React to create interactive blog posts.</p><div class="language-js codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-js codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">button onClick</span><span class="token operator" style="color:#393A34">=</span><span class="token punctuation" style="color:#393A34">{</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:#393A34">=&gt;</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">alert</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'button clicked!'</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">}</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token maybe-class-name">Click</span><span class="token plain"> me</span><span class="token operator" style="color:#393A34">!</span><span class="token operator" style="color:#393A34">&lt;</span><span class="token operator" style="color:#393A34">/</span><span class="token plain">button</span><span class="token operator" style="color:#393A34">&gt;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><button>Click me!</button></div></div>]]></content>
+        <author>
+            <name>Sam Bacha</name>
+            <uri>https://github.com/endiliey</uri>
+        </author>
+        <category label="manifold" term="manifold"/>
+    </entry>
+</feed>
