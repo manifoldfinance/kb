@@ -48,6 +48,10 @@ const config = {
           remarkPlugins: [math],
           rehypePlugins: [katex],
           editUrl: 'https://github.com/manifoldfinance/kb/tree/trunk/',
+          admonitions: {
+            tag: ':::',
+            keywords: ['note', 'tip', 'info', 'caution', 'danger'],
+          },
         },
         blog: {
           showReadingTime: true,
