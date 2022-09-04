@@ -179,7 +179,7 @@ These rules are designed to help all of us build a pleasant, productive, and rob
 
 In general, we should handle disputes and violations of community guidelines quietly. We must maintain our reputability on this point by enforcing the guidelines and moderation policies appropriately.
 
-However, occasionally these events will spill out into public. In those cases, please let the npm executive team decide how best to communicate with the public.
+However, occasionally these events will spill out into public. In those cases, please let the npm executive team decide how best to communicate with them.
 
 ### Principles of public communication
 
