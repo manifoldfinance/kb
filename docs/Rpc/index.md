@@ -56,7 +56,6 @@ However, if this were a QUANTITY, a valid input would be:
 "0x3"
 ```
 
-
 ### `Block Identifier`
 
 Since there is no way to clearly distinguish between a `Data` parameter and a `Quantity` parameter, [EIP-1898](https://eips.ethereum.org/EIPS/eip-1898) provides a format to specify a block either using the block hash or block number. The block identifier is a JSON `object` with the following fields:

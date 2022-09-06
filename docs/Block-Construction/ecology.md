@@ -5,17 +5,13 @@ title: Block Construction
 description: Overview and introduction for Block Construction
 ---
 
-
 # Block Ecology
 
 > Block Construction, Proposals, and Propagation
 
 ## Eth2 Data Formatting
 
-
 > Follow the spec at https://github.com/ethereum/consensus-specs/blob/dev/ssz/simple-serialize.md#bitvectorn
-
-
 
 ### Attnets
 
@@ -25,8 +21,6 @@ description: Overview and introduction for Block Construction
         if (encoded_bytes[i // 8] & (1 << (i % 8))) != 0:
             counts[i] += 1
 ```
-
-
 
 #### `Bitvector[N]`
 
@@ -49,17 +43,15 @@ array[len(value) // 8] |= 1 << (len(value) % 8)
 return bytes(array)
 ```
 
-
-
 ## SimpleSerialize (SSZ)
 
 ### Constants
 
-| Name | Value | Description |
-| --- | --- | --- |
-| `BYTES_PER_CHUNK` | `32` | Number of bytes per chunk. |
-| `BYTES_PER_LENGTH_OFFSET` | `4` | Number of bytes per serialized length offset. |
-| `BITS_PER_BYTE` | `8` | Number of bits per byte. |
+| Name                      | Value | Description                                   |
+| ------------------------- | ----- | --------------------------------------------- |
+| `BYTES_PER_CHUNK`         | `32`  | Number of bytes per chunk.                    |
+| `BYTES_PER_LENGTH_OFFSET` | `4`   | Number of bytes per serialized length offset. |
+| `BITS_PER_BYTE`           | `8`   | Number of bits per byte.                      |
 
 ### Typing
 
@@ -71,15 +63,15 @@ return bytes(array)
 #### Composite types
 
 -   **container**: ordered heterogeneous collection of values
-    
+
     -   python dataclass notation with key-type pairs, e.g.
-    
+
     ```python
     class ContainerExample(Container):
         foo: uint64
         bar: boolean
     ```
-    
+
 -   **vector**: ordered fixed-length homogeneous collection, with `N` values
     -   notation `Vector[type, N]`, e.g. `Vector[uint64, N]`
 -   **list**: ordered variable-length homogeneous collection, limited to `N` values
@@ -110,16 +102,16 @@ For convenience we alias:
 
 Assuming a helper function `default(type)` which returns the default value for `type`, we can recursively define the default value for all types.
 
-| Type | Default Value |
-| --- | --- |
-| `uintN` | `0` |
-| `boolean` | `False` |
-| `Container` | `[default(type) for type in container]` |
-| `Vector[type, N]` | `[default(type)] * N` |
-| `Bitvector[N]` | `[False] * N` |
-| `List[type, N]` | `[]` |
-| `Bitlist[N]` | `[]` |
-| `Union[type_0, type_1, ...]` | `default(type_0)` |
+| Type                         | Default Value                           |
+| ---------------------------- | --------------------------------------- |
+| `uintN`                      | `0`                                     |
+| `boolean`                    | `False`                                 |
+| `Container`                  | `[default(type) for type in container]` |
+| `Vector[type, N]`            | `[default(type)] * N`                   |
+| `Bitvector[N]`               | `[False] * N`                           |
+| `List[type, N]`              | `[]`                                    |
+| `Bitlist[N]`                 | `[]`                                    |
+| `Union[type_0, type_1, ...]` | `default(type_0)`                       |
 
 ##### `is_zero`
 

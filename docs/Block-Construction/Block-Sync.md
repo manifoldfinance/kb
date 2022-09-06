@@ -3,17 +3,15 @@ title: sync and the merge
 version: v1.0
 ---
 
-
 # Sync & The Merge
 
 > [source: https://raw.githubusercontent.com/fjl/p2p-drafts/master/merge-sync/merge-sync.md](https://raw.githubusercontent.com/fjl/p2p-drafts/master/merge-sync/merge-sync.md)
 
-****Warning!**** This is a work in progress. After initial review, it seems that the sync scheme presented here will not work without modifications. See end of document for known issues and potential solutions. For now, you should read this as a description of the ideal sync algorithm, keeping in mind that it will become more complicated later.
+\***\*Warning!\*\*** This is a work in progress. After initial review, it seems that the sync scheme presented here will not work without modifications. See end of document for known issues and potential solutions. For now, you should read this as a description of the ideal sync algorithm, keeping in mind that it will become more complicated later.
 
 In this document, we (the geth team) present our ideas for implementing chain synchronization on the merged eth1 + eth2 chain. After the merge event, eth1 and eth2 clients run in tandem. The eth2 client maintains the connection to the beacon chain and performs fork choice. The eth1 client, a.k.a. the 'execution layer', receives block data from the eth2 client, executes/verifies it and maintains the application state.
 
 The interface that eth2 and eth1 use to communicate is uni-directional: all cross-client communication is initiated by eth2, and happens in the form of requests. Eth1 responds to requests, but cannot request any information from eth2.
-
 
 ## Definitions
 
@@ -27,9 +25,7 @@ Please note that this document is an abstract description of the sync algorithm 
 
 In diagrams, not all responses to eth2 requests are shown.
 
-
 ## Sync
-
 
 ### eth2 perspective
 
@@ -50,7 +46,6 @@ The eth1 client signals that it is done by responding with synced(B<sub>F+t</sub
 The eth2 client should now submit the execution-layer block data of all non-finalized beacon blocks to the eth1 client for processing (5). The sync procedure completes when the current head block b<sub>H</sub> is reached.
 
 ![img](./img/beacon-2.svg "Processing non-finalized blocks")
-
 
 ### eth1 perspective
 
@@ -75,11 +70,10 @@ When the genesis header H<sub>G</sub> is reached, block body data can be downloa
 -   The client can perform 'full sync', downloading blocks and executing their state transitions. This recreates the application state incrementally up to the latest block. Sync is complete when the latest finalized block B<sub>F+t</sub> has been processed.
 
 -   The client can perform state synchronization by downloading the blocks B<sub>G+1</sub>&#x2026;B<sub>F</sub> and their application state without EVM execution. This is expected to be faster than full sync, and is equally secure because the state root of B<sub>F</sub> was finalized by eth2. The state download can happen concurrently with steps (2) and (3).
-    
+
     The peer-to-peer network can only provide the state of very recent blocks. Since it is expected that the state of B<sub>F</sub> will gradually become unavailable as the chain advances, the client must occasionally re-target its state sync to a more recent 'pivot block'. Conveniently, the newly-finalized blocks B<sub>F+1</sub>&#x2026;B<sub>F+t</sub> received from eth2 can be used for this purpose. You can read more about the pivot block in the [snap sync protocol specification](https://github.com/ethereum/devp2p/blob/master/caps/snap.md#synchronization-algorithm).
 
 After reporting sync completion of B<sub>F+t</sub> to the eth2 client (4), the execution layer is done and switches to its ordinary mode of operation: individual blocks are received from the eth2 client, the blocks are processed, and their validity reported back to the eth2 client. Reorgs of non-finalized blocks may also be triggered after sync has completed. Reorg handling is discussed later in this document.
-
 
 ### Handling restarts and errors
 
@@ -93,7 +87,6 @@ To make this skipping operation work efficiently, we recommend that clients stor
 
 Now assume that the sync cycle terminates unexpectedly at block height s. When the next cycle starts, it first loads marker records of previous sync cycles. As the new cycle progresses downloading parents, it will eventually cross the previous height F. If the header hash matches the previously-stored header H<sub>F</sub>, the marker can be used to resume sync at height s where the first cycle left off.
 
-
 ## Reorg processing and state availability
 
 It is common knowledge that the application state of eth1 can become quite large. As such, eth1 clients usually only store exactly one full copy of this state.
@@ -105,7 +98,6 @@ For the tree of non-finalized blocks beyond B<sub>F</sub>, the state diff of eac
 While reorgs below B<sub>F</sub> cannot happen during normal operation of the beacon chain, it may still be necessary to roll back to an earlier state when EVM processing flaws cause the client to deviate from the canonical chain. As a safety net for this exceptional case, we recommend that eth1 clients to maintain a way to manually reorg up to 90,000 blocks (roughly 2 weeks), as this would provide sufficient time to fix issues.
 
 To make this 'manual intervention reorg' work, eth1 client can maintain backward diffs in a persistent store. If an intervention is requested, these diffs can be incrementally applied to the state of B<sub>F</sub>, resetting the client to an earlier state.
-
 
 ## Issues
 
@@ -120,6 +112,6 @@ We have decided to tackle this issue in the following way:
 -   At head H, define the 'calcified' block B<sub>C</sub> with C = max(H-512, F). This puts an upper bound of 512 blocks on the number of states kept in memory.
 -   Define that clients should keep the state of B<sub>C</sub> in persistent storage.
 -   Use B<sub>C</sub> as the initial sync target. This has implications on the sync trigger because the eth1 client can no longer rely on final(B) to start sync (B<sub>C</sub> may be non-final).
--   Add a new call ****reset(B)**** to reset the eth1 client to a historical block. Require that clients must be able to satisfy any reset in range B<sub>F</sub>&#x2026;B<sub>H</sub>. They will probably have to implement something like the persistent reverse diffs recommended in the reorg section.
+-   Add a new call \***\*reset(B)\*\*** to reset the eth1 client to a historical block. Require that clients must be able to satisfy any reset in range B<sub>F</sub>&#x2026;B<sub>H</sub>. They will probably have to implement something like the persistent reverse diffs recommended in the reorg section.
 
 Adding the calcified block also adds some tricky new corner cases and failure modes. In particular, if the eth1 client just performed snap sync, it will not be able to reorg below B<sub>C</sub>, because reverse diffs down to B<sub>F</sub> will not be available. We may solve this by recommending that nodes should attempt snap sync if reset(B) cannot be satisfied. For sure, some nodes will be synced enough to serve the target state. In the absolute worst case, we need to make reverse diffs available for download in snap sync.
