@@ -5,7 +5,7 @@ title: User Swaps
 description: Example User Swap workflow and response
 ---
 
-## Transaction Workflow from user perspective 
+## Transaction Workflow from user perspective
 
 0. Swap Tx Generated
 
@@ -13,12 +13,12 @@ description: Example User Swap workflow and response
 
 2. Tx relayed by SushiGuard (success)
 
-> **Note**   
+> **Note**  
 > Message error populated back to user
 
-### Example: JSON API Response 
+### Example: JSON API Response
 
-```json
+````json
 {
   "Ethermine RPC": {
     "response": {
@@ -78,4 +78,4 @@ description: Example User Swap workflow and response
     }
   }
 }
-```
+````

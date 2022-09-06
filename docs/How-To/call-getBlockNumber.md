@@ -7,7 +7,7 @@ description: How to request eth_blockNumber
 
 # `eth_blockNumber`
 
- Javascript Example
+Javascript Example
 
 ```javascript
 // SPDX-License-Identifier: UPL-1.0

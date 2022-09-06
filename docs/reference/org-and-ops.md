@@ -13,7 +13,6 @@ sidebar_position: 5
 ARIN_ORG_ID=ARIN-20211011-X463239
 ```
 
-
 ## Peering
 
 -   Publicly routable address space (at least one /24)
@@ -30,5 +29,3 @@ ARIN_ORG_ID=ARIN-20211011-X463239
 | 200982  | ZT-TOMSK-AS:           | 20.02k      |
 | 13335   | CLOUDFLARENET:         | 14.36k      |
 | 24940   | HETZNER-AS:            | 89k         |
-
-

@@ -5,26 +5,25 @@ id: block-rewards
 description: Rewards and Fee Recipient and Liquid Staking
 ---
 
-# Fee Receipent 
+# Fee Receipent
 
-Every time a validator proposes a block, it will get the sum of all tips paid by all the transactions contained in that block. 
+Every time a validator proposes a block, it will get the sum of all tips paid by all the transactions contained in that block.
 
 > `COINBASE` / `ETHERBASE`
 
 ### Types of Fee's
 
-- Consensus Rewards ⛓️    
-- Execution Rewards 🖥️    
-- MEV Rewards 🤖    
+-   Consensus Rewards ⛓️
+-   Execution Rewards 🖥️
+-   MEV Rewards 🤖
 
-> This is not technically true all the time, but we mention it    
-- Decrease in ETH supply    
+> This is not technically true all the time, but we mention it
 
+-   Decrease in ETH supply
 
 ## Lido
 
 Lido: Operators to set the fee recipient to a dedicated fee vault and restakes it into `stETH`[^1]
-
 
 ## Rocket Pool
 
