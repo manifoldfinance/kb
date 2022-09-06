@@ -1,20 +1,24 @@
+---
+title:  MEV Boost
+sidebar_position: 1
+id: mev-nutshell
+description: MEV Boost in a Nutshell
+---
+
+
 # MEV-Boost in a Nutshell
-
-Created: September 5, 2022 7:19 PM URL: https://boost.flashbots.net/
-
-[MEV-Boost%20in%20a%20Nutshell%20aff422483d384e169dc750a734964c38/image](MEV-Boost%20in%20a%20Nutshell%20aff422483d384e169dc750a734964c38/image)
 
 MEV-Boost is free, open-source, neutral software built with love, for the community. For information on MEV-Boost software and roadmap, see the [MEV-Boost Repository](https://github.com/flashbots/mev-boost/).
 
-1. Connect MEV-Boost to desired network relay URL from the [relay list](https://boost.flashbots.net/#block-8816bf07534945d08658c0dc35c7e48b) using the commands below. For node operators that have been assigned a unique identifier, replace **<identifier>** with the one assigned.
+1. Connect MEV-Boost to desired network relay URL from the [relay list](https://boost.flashbots.net/#block-8816bf07534945d08658c0dc35c7e48b) using the commands below. For node operators that have been assigned a unique identifier, replace `**<identifier>** `with the one assigned.
 
-# Flashbots Goerli Relay (without identifier)
+## Flashbots Goerli Relay (without identifier)
 
 ```bash
 ./mev-boost -goerli -relays https://0xafa4c6985aa049fb79dd37010438cfebeb0f2bd42b115b89dd678dab0670c1de38da0c4e9138c9290a398ecd9a0b3110@builder-relay-goerli.flashbots.net
 ```
 
-# Flashbots Goerli Relay (with identifier)
+## Flashbots Goerli Relay (with identifier)
 
 ```bash
 ./mev-boost -goerli -relays https://0xafa4c6985aa049fb79dd37010438cfebeb0f2bd42b115b89dd678dab0670c1de38da0c4e9138c9290a398ecd9a0b3110@builder-relay-goerli.flashbots.net?id=<identifier>
@@ -22,7 +26,7 @@ MEV-Boost is free, open-source, neutral software built with love, for the commun
 
 Remember to use the appropriate network flag for the specific network and relay URL, e.g. `-mainnet`, `-kiln`, `-ropsten`, `-sepolia` or ` -goerli`. You can add multiple relays comma-separated to the -relays flag,
 
-like this: -relays https://relay1,https://relay2
+like this: `-relays https://relay1,https://relay2`
 
 Configure a supported consensus client. Detailed instructions are available on the MEV-boost testing wiki, and guides for connecting the client to mev-boost can be found in the consensus client compatibility table below.
 
