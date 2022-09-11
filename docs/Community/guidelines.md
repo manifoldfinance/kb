@@ -172,15 +172,15 @@ This document is distributed under a [Creative Commons Attribution-ShareAlike li
 
 <!-- prettier-ignore-start -->
 
-The Scala Community, https://scala-lang.org/conduct/; 2022 June 10 <br> 
-The ZIO Community, https://github.com/zio; 2022 June 10 <br> 
-The Rust Code of Conduct, https://www.rust-lang.org/policies/code-of-conduct 2022 June 10 <br> 
-The Node.js Policy on Trolling, https://blog.izs.me/post/30036893703/policy-on-trolling 
-<br> ["ZIO Professionalism"](https://degoes.net/articles/zio-professionalism), 2022 June 10 <br> 
-["Big Tent"](https://degoes.net/articles/big-tent). 2022 June 10 <br> 
-["Travis Brown, Abuser"](https://degoes.net/articles/travis-brown-abuser). 2022 June 10 <br> 
-["The Right to be Rude"](http://esr.ibiblio.org/?p=8609), 2022 July 01 <br> 
-["Tracking down Conquest’s law on organisations", Martin Vogel](https://vogelwakefield.com/2018/12/tracking-down-conquests-law-on-organisations/), 2022 July 01 <br>
+The Scala Community, https://scala-lang.org/conduct/; 2022 June 10      
+The ZIO Community, https://github.com/zio; 2022 June 10      
+The Rust Code of Conduct, https://www.rust-lang.org/policies/code-of-conduct 2022 June 10      
+The Node.js Policy on Trolling, https://blog.izs.me/post/30036893703/policy-on-trolling   
+["ZIO Professionalism"](https://degoes.net/articles/zio-professionalism), 2022 June 10      
+["Big Tent"](https://degoes.net/articles/big-tent). 2022 June 10      
+["Travis Brown, Abuser"](https://degoes.net/articles/travis-brown-abuser). 2022 June 10      
+["The Right to be Rude"](http://esr.ibiblio.org/?p=8609), 2022 July 01      
+["Tracking down Conquest’s law on organisations", Martin Vogel](https://vogelwakefield.com/2018/12/tracking-down-conquests-law-on-organisations/), 2022 July 01     
 [DerbyCon2019 - Every Beginning has an End, DerbyCon Team](https://web.archive.org/web/20190428142347/https://www.derbycon.com/blog/derbycon-9-0-every-beginning-has-an-end/#:~:text=This%20year%2C%20we,were%20in%20tears).
 
 <!-- prettier-ignore-end -->
