@@ -18,7 +18,7 @@ description: Example User Swap workflow and response
 
 ### Example: JSON API Response
 
-````json
+```json
 {
   "Ethermine RPC": {
     "response": {
@@ -45,10 +45,11 @@ description: Example User Swap workflow and response
     }
   }
 }
+```
 
-3. Tx mined successfully
+**3. Tx mined successfully**
 
-4. Swap Successful
+**4. Swap Successful**
 
 
 ```json
