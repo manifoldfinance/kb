@@ -1,25 +1,132 @@
 ---
 sidebar_position: 6
 id: howto-send_setup_teku
-title: MEV Boost\Builder API
+title: Teku and Builder API
 description: How to guide use Teku and Builder API
 ---
 
 # MEV Boost & Builder API (Teku)
 
-**This document is deprecated. Please refer to https://docs.teku.consensys.net/en/latest/HowTo/Builder-Network/ for the official documentation.**
 
-#### Useful Links
 
-https://github.com/flashbots/mev-boost/wiki
-https://ethereum.github.io/builder-specs/
+## Connect to the SecureRpc Builder Network 
 
-#### Table of Contents
 
-* [Setup](#Setup)
-* [Logging](#Logging)
+You can connect to a [builder network](https://mainnnet-relay.securerpc.com) to generate execution payloads for the consensus client 
 
-## Setup 
+The builder recommends new blocks that are validated by the consensus client. If the builder goes down, the local execution client proposes a block instead.
+
+> The guide below is for the Teku client
+
+## Configure an endpoint
+
+To configure a builder endpoint:
+
+-   [enable blinded block production](https://docs.teku.consensys.net/en/latest/HowTo/Builder-Network/#enable-blinded-block-production)
+-   [specify the builder endpoint](https://docs.teku.consensys.net/en/latest/HowTo/Builder-Network/#specify-the-builder-endpoint)
+-   [register the validator](https://docs.teku.consensys.net/en/latest/HowTo/Builder-Network/#register-the-validator)
+
+### Enable blinded block production
+
+Enable blinded block production using the [`--validators-proposer-blinded-blocks-enabled`](https://docs.teku.consensys.net/en/latest/Reference/CLI/CLI-Syntax/#validators-proposer-blinded-blocks-enabled) command line option.
+
+### Specify the builder endpoint[](https://docs.teku.consensys.net/en/latest/HowTo/Builder-Network/#specify-the-builder-endpoint "Permanent link")
+
+Specify the builder endpoint using [`--builder-endpoint`](https://docs.teku.consensys.net/en/latest/Reference/CLI/CLI-Syntax/#builder-endpoint)
+
+```
+--builder-endpoint="https://builder-relay-sepolia.flashbots.net/"
+
+```
+
+View the [list of relay endpoints](https://list.mevrelay.com)
+
+
+```
+--builder-endpoint=http://127.0.0.1:18550
+
+```
+
+### Register the validator
+
+You must register your validator with the builder before proposing a block. Enable registration for all validators using [`--validators-builder-registration-default-enabled`](https://docs.teku.consensys.net/en/latest/Reference/CLI/CLI-Syntax/#validators-builder-registration-default-enabled)
+
+To enable registration for specific validators only, use the [–validators-proposal-config](https://docs.teku.consensys.net/en/latest/Reference/CLI/CLI-Syntax/#validators-proposer-config) option and specify the enabled validators in the `proposer_config` of the proposer configuration JSON file.
+
+Note the `default_config` applies to all validators who don’t have their own proposer configuration.
+
+`proposerConfig.json`
+
+```jsonc
+{
+  "proposer_config": {
+    "0xa057816155ad77931185101128655c0191bd0214c201ca48ed887f6c4c6adf334070efcd75140eada5ac83a92506dd7a": {
+      "fee_recipient": "0x50155530FCE8a85ec7055A5F8b2bE214B3DaeFd3",
+      "builder": {
+        "enabled": true,
+        "gas_limit": "12345654321"
+      }
+    }
+  },
+  "default_config": {
+    "fee_recipient": "0x6e35733c5af9B61374A128e6F85f553aF09ff89A",
+    "builder": {
+      "enabled": false
+    }
+  }
+}
+
+```
+
+In this example, validator `0xa057816...` is registered with the builder, but any validator using the default configuration is not.
+
+### Example builder configurations
+
+Validator client and beacon node in a single process
+
+```console
+teku --validators-proposer-default-fee-recipient="0xA0766B65A4f7B1da79a1AF79aC695456eFa28644" --ee-endpoint="http://127.0.0.1:8551" --ee-jwt-secret-file="/etc/jwt-secret.hex" --validators-builder-registration-default-enabled=true --builder-endpoint="http://127.0.0.1:18550"
+
+```
+
+Validator client and beacon node in separate processes
+
+Validator client parameters
+
+```console
+teku validator-client --validators-proposer-blinded-blocks-enabled=true --validators-proposer-config="/etc/teku/proposerConfig.json"
+```
+
+Proposer configuration
+
+```jsonc
+{
+  "proposer_config": {
+    "0xa057816155ad77931185101128655c0191bd0214c201ca48ed887f6c4c6adf334070efcd75140eada5ac83a92506dd7a": {
+      "fee_recipient": "0xA0766B65A4f7B1da79a1AF79aC695456eFa28644",
+    }
+  },
+  "default_config": {
+    "fee_recipient": "0xA0766B65A4f7B1da79a1AF79aC695456eFa28644",
+    "builder": {
+      "enabled": true
+    }
+  }
+}
+
+```
+
+Beacon node paramaters
+
+```console
+teku --validators-proposer-default-fee-recipient="0xA0766B65A4f7B1da79a1AF79aC695456eFa28644" --ee-endpoint="http://127.0.0.1:8551" --ee-jwt-secret-file="/etc/jwt-secret.hex" --builder-endpoint="http://127.0.0.1:18550"
+
+```
+
+
+
+https://docs.teku.consensys.net/en/latest/HowTo/Builder-Network/ for the official documentation.**
+
 
 The following steps need to be taken in order to enable mev boost (builder flow) in Teku. If everything is setup correctly, new blocks will be recommended by the builder and the proposers (validators) will start receiving MEV Rewards.
 
@@ -41,17 +148,6 @@ If `--validators-builder-registration-default-enabled` is set to true, then `--v
 ### Specify Builder endpoint
 
 A builder endpoint must be specified.
-
-`--builder-endpoint=&#34;https://builder-relay-kiln.flashbots.net/&#34;`
-
-The following builder relay endpoints are live and can be used for testing.
-
-| Network | Endpoint |
-| -------- | -------- |
-| Kiln | https://0xb5246e299aeb782fbc7c91b41b3284245b1ed5206134b0028b81dfb974e5900616c67847c2354479934fc4bb75519ee1@builder-relay-kiln.flashbots.net | 
-| Ropsten | https://0xb124d80a00b80815397b4e7f1f05377ccc83aeeceb6be87963ba3649f1e6efa32ca870a88845917ec3f26a8e2aa25c77@builder-relay-ropsten.flashbots.net |  
-| Sepolia | https://0x845bd072b7cd566f02faeb0a4033ce9399e42839ced64e8b2adcfc859ed1e8e1a5a293336a49feac6d9a5edb779be53a@builder-relay-sepolia.flashbots.net |
-| Goerli | https://0xafa4c6985aa049fb79dd37010438cfebeb0f2bd42b115b89dd678dab0670c1de38da0c4e9138c9290a398ecd9a0b3110@builder-relay-goerli.flashbots.net |
 
 To use multiple relays, a middleware like [mev-boost](https://github.com/flashbots/mev-boost) can be used.
 
@@ -103,18 +199,19 @@ An example of a proposer config is:
 
 ```json
 {
-  &#34;proposer_config &#34;: {
-    &#34;0xa057816155ad77931185101128655c0191bd0214c201ca48ed887f6c4c6adf334070efcd75140eada5ac83a92506dd7a &#34;: {
-      &#34;fee_recipient &#34;: &#34;0x50155530FCE8a85ec7055A5F8b2bE214B3DaeFd3 &#34;,
-      &#34;builder &#34;: {
-        &#34;enabled &#34;: true,
-        &#34;gas_limit &#34;: &#34;12345654321 &#34;}
+  "proposer_config": {
+    "0xa057816155ad77931185101128655c0191bd0214c201ca48ed887f6c4c6adf334070efcd75140eada5ac83a92506dd7a": {
+      "fee_recipient": "0x50155530FCE8a85ec7055A5F8b2bE214B3DaeFd3",
+      "builder": {
+        "enabled": true,
+        "gas_limit": "12345654321"
+      }
     }
   },
-  &#34;default_config &#34;: {
-    &#34;fee_recipient &#34;: &#34;0x6e35733c5af9B61374A128e6F85f553aF09ff89A &#34;,
-    &#34;builder &#34;: {
-      &#34;enabled &#34;: false
+  "default_config": {
+    "fee_recipient": "0x6e35733c5af9B61374A128e6F85f553aF09ff89A",
+    "builder": {
+      "enabled": false
     }
   }
 }
@@ -135,24 +232,26 @@ These values could also be overriden via `registration_overrides` field in the p
 
 ```json
 {
-  &#34;proposer_config &#34;: {
-    &#34;0xa057816155ad77931185101128655c0191bd0214c201ca48ed887f6c4c6adf334070efcd75140eada5ac83a92506dd7a &#34;: {
-      &#34;fee_recipient &#34;: &#34;0x50155530FCE8a85ec7055A5F8b2bE214B3DaeFd3 &#34;,
-      &#34;builder &#34;: {
-        &#34;enabled &#34;: true,
-        &#34;registration_overrides &#34;: {
-          &#34;timestamp &#34;: &#34;1234 &#34;,
-          &#34;public_key &#34;: &#34;0xb53d21a4cfd562c469cc81514d4ce5a6b577d8403d32a394dc265dd190b47fa9f829fdd7963afdf972e5e77854051f6f &#34;}
+  "proposer_config": {
+    "0xa057816155ad77931185101128655c0191bd0214c201ca48ed887f6c4c6adf334070efcd75140eada5ac83a92506dd7a": {
+      "fee_recipient": "0x50155530FCE8a85ec7055A5F8b2bE214B3DaeFd3",
+      "builder": {
+        "enabled": true,
+        "registration_overrides": {
+          "timestamp": "1234",
+          "public_key": "0xb53d21a4cfd562c469cc81514d4ce5a6b577d8403d32a394dc265dd190b47fa9f829fdd7963afdf972e5e77854051f6f"
+        }
       }
     }
   },
-  &#34;default_config &#34;: {
-    &#34;fee_recipient &#34;: &#34;0x6e35733c5af9B61374A128e6F85f553aF09ff89A &#34;,
-    &#34;builder &#34;: {
-      &#34;enabled &#34;: false,
-      &#34;registration_overrides &#34;: {
-        &#34;timestamp &#34;: &#34;1235 &#34;,
-        &#34;public_key &#34;: &#34;0xa491d1b0ecd9bb917989f0e74f0dea0422eac4a873e5e2644f368dffb9a6e20fd6e10c1b77654d067c0618f6e5a7f79a &#34;}
+  "default_config": {
+    "fee_recipient": "0x6e35733c5af9B61374A128e6F85f553aF09ff89A",
+    "builder": {
+      "enabled": false,
+      "registration_overrides": {
+        "timestamp": "1235",
+        "public_key": "0xa491d1b0ecd9bb917989f0e74f0dea0422eac4a873e5e2644f368dffb9a6e20fd6e10c1b77654d067c0618f6e5a7f79a"
+      }
     }
   }
 }
@@ -243,3 +342,5 @@ INFO | validator-async-3 | 500 out of 2500 validator(s) registrations were succe
 ERROR | validator-async-3 | Validator   *** Failed to send validator registrations to Beacon Node
 java.util.concurrent.CompletionException:java.util.concurrent.CompletionException...............
 ```
+
+> source: https://hackmd.io/@StefanBratanov/BkMlo1RO9
