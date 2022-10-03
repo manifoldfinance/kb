@@ -1,6 +1,6 @@
 ---
-sidebar_position: 1
-id: intro
+sidebar_position: 5
+id: eth2
 title: Liquid Rational Staking
 description: Liquid Staking in Eth2
 ---
