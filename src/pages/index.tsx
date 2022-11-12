@@ -249,7 +249,7 @@ export default function Home() {
           <div>
             <h2>Learning Oriented</h2>
             <p>
-              learning-oriented phase: We begin by learning, and learning a skill means diving
+              Learning-oriented phase: We begin by learning, and learning a skill means diving
               straight in to do it - under the guidance of a teacher, if we’re lucky
             </p>
             <div>
@@ -277,7 +277,7 @@ export default function Home() {
           </div>
           <div>
             <h2>Developer Tasks</h2>
-            <p>Ttask-oriented phase: Next we want to put the skill to work.</p>
+            <p>Task-oriented phase: Next we want to put the skill to work.</p>
             {github.map((action) => (
               <Link style={{ textDecoration: 'none' }} href={action.href}>
                 <Card key={action.title} style={{ marginBottom: '1rem' }}>
