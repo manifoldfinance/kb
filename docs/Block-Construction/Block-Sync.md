@@ -1,5 +1,5 @@
 ---
-title: sync and the merge
+title: Sync & The Merge
 version: v1.0
 ---
 
