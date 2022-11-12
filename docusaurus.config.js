@@ -100,6 +100,16 @@ const config = {
           label: 'KB',
         },
         {
+          to: '/docs/general/general-token',
+          label: 'Protocol Overview',
+          position: 'left',
+        },
+        {
+         to: '/docs/category/how-to-guides',
+         label: 'Guides',
+         position: 'left',
+        },
+        {
           to: '/docs/Block-Construction',
           label: 'Block Construction',
           position: 'left',
