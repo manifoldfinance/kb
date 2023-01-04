@@ -7,15 +7,33 @@ description: An introduction to Manifold Finance
 
 # Ethereum network
 
-The Ethereum network is a distributed consensus platform that allows users to write and compute smart contracts in a distributed manner. Smart contracts are essentially Turing complete programs that are available at a unique address of the network. When the smart contract is run as part of a transaction, the result and the current state of the contract are stored in a verifiable consensus that is agreed upon by the entire network of nodes.
+Ethereum is a decentralized, open-source blockchain platform that runs turing complete smart contracts: applications that run exactly as programmed without any possibility of downtime, censorship, fraud, or third-party interference. These apps run on a custom built blockchain, an enormously powerful shared global infrastructure that can move value around and represent the ownership of property. This enables developers to create markets, store registries of debts or promises, move funds in accordance with instructions given long in the past (like a will or a futures contract) and many other things that have not been invented yet, all without a middleman or counterparty risk.
 
-## Ethereum2
+The Ethereum platform is powered by ether, a cryptocurrency that serves as fuel for the distributed applications running on the Ethereum network. Ether is used to pay for the gas that is required to execute smart contracts and decentralized applications on the Ethereum platform.
 
-Ethereum will soon transition from a Proof of Work (PoW) to a Proof of Stake (PoS) consensus protocol. This transition has been worked on for years and is happening in multiple steps.
+Ethereum was initially proposed in 2013 by Vitalik Buterin, a cryptocurrency researcher and programmer. Development of Ethereum was funded by an online crowdsale in 2014. The system went live on 30 July 2015, with 11.9 million coins "premined" for the crowdsale. This accounts for approximately 13 percent of the total circulating supply. In 2016, as a result of the collapse of The DAO project, Ethereum was split into Ethereum (ETH) and Ethereum Classic (ETC). Ethereum (ETH) has continued to grow in popularity and value since its launch, with ether becoming one of the top cryptocurrencies by market capitalization.
 
-Ethereum’s consensus is currently secured by miners who run hardware optimized to solve the proof of work challenge. The move from a PoW to a PoS consensus means the network becomes secured by validators, who stake security deposits of 32 ETH and vote to come to a consensus on the state of the beacon chain. Validators are economically incentivized to do this via rewards for good behavior and penalties (slashing) for downtime or malicious behavior.
+## Ethereum upgrades
 
-### Block Construction in Eth2
+As with any software, Ethereum is subject to updates and improvements over time. These updates are referred to as "upgrades" and can be implemented through a process called a "hard fork."
+
+A hard fork is a change to the Ethereum protocol that is not backwards-compatible. This means that in order to implement the upgrade, all users and miners must upgrade their software to the latest version. If some users do not upgrade, the network will be split into two separate chains: one running the new version of the software, and one running the old version.
+
+Hard forks are used to introduce new features and functionality to the Ethereum network, as well as to fix security vulnerabilities and address other issues. Some examples of upgrades that have been implemented through hard forks on the Ethereum network include:
+
+    Byzantium: This hard fork introduced several new features to the Ethereum network, including improved smart contract functionality and increased privacy. It was implemented on October 16, 2017.
+
+    Constantinople: This hard fork introduced additional optimizations and improvements to the Ethereum network, including changes to the way that transaction fees are calculated. It was implemented on February 28, 2019.
+
+    Istanbul: This hard fork introduced additional improvements to the Ethereum network, including changes to the EVM to improve its efficiency and security. It was implemented on December 7, 2019.
+
+    Berlin: This hard fork introduced further improvements to the Ethereum network, including changes to the way that the EVM handles certain types of arithmetic operations. It was implemented on April 14, 2021.
+
+    London: This hard fork introduced EIP-1559; a dynamic fee market that adjusts the fees based on demand, which should reduce fees for users and make the network more efficient. It was implemented on August 5th, 2021.
+
+    Paris: This hard fork switched off the proof-of-work mining algorithm and associated consensus logic and switched on proof-of-stake instead. It was implemented on September 15th, 2022.
+
+### Block Construction in Ethereum 2.0
 
 Manifold Finance enables and provides access to high-value transaction pools on EVM-compatible chains, through our infrastructure: _SecureRPC_. We aggregate multiple endpoints along with maintaining direct access to disparate mining pools/validator nodes.
 
